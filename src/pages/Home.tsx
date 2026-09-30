@@ -180,7 +180,7 @@ export default function Home() {
     },
     {
       title: 'Stores',
-      subtitle: 'Bateau & romain',
+      subtitle: 'Bateaux & Romains',
       image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
       link: '/realisations/stores',
     },
@@ -192,7 +192,7 @@ export default function Home() {
     },
     {
       title: 'Outdoor',
-      subtitle: 'Banquettes, coussins & transat',
+      subtitle: 'Banquettes, coussins & transats',
       image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
       link: '/realisations/bateaux',
     },
