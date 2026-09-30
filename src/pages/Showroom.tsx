@@ -90,12 +90,14 @@ export default function Showroom() {
                 Nous vous recommandons de prendre rendez-vous pour bénéficier d'un conseil
                 personnalisé et d'une attention entièrement dédiée à votre projet.
               </p>
-              <Link
-                to="/contact"
-                className="inline-block mt-5 font-['MaisonNeue'] font-bold text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
-              >
-                Prendre rendez-vous
-              </Link>
+              <div className="text-center mt-5">
+                <Link
+                  to="/contact"
+                  className="inline-block font-['MaisonNeue'] font-bold text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
+                >
+                  Prendre rendez-vous
+                </Link>
+              </div>
             </div>
           </div>
 
