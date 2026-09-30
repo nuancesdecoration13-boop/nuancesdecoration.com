@@ -7,7 +7,8 @@ const categories = [
   { label: 'Voilages', subtitle: 'Transparents & légers', link: '/realisations/voilages' },
   { label: 'Stores', subtitle: 'Bateaux & Romains', link: '/realisations/stores' },
   { label: 'Indoor', subtitle: 'Banquettes & linge de maison', link: '/realisations/banquettes' },
-  { label: 'Outdoor & bateaux', subtitle: 'Banquettes, coussins & transats', link: '/realisations/bateaux' },
+  { label: 'Outdoor', subtitle: 'Banquettes, coussins & transats', link: '/realisations/banquettes-exterieur-sur-mesure' },
+  { label: 'Bateaux', subtitle: 'Sellerie nautique', link: '/realisations/bateaux' },
 ];
 
 export default function Navigation() {

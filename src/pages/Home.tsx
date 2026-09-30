@@ -194,7 +194,7 @@ export default function Home() {
       title: 'Outdoor',
       subtitle: 'Banquettes, coussins & transats',
       image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
-      link: '/realisations/bateaux',
+      link: '/realisations/banquettes-exterieur-sur-mesure',
     },
   ];
   const total = slides.length;

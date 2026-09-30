@@ -11,6 +11,7 @@ import RevetementInterieur from './pages/RevetementInterieur';
 import RevetementExterieur from './pages/RevetementExterieur';
 import Banquettes from './pages/Banquettes';
 import Bateaux from './pages/Bateaux';
+import BanquettesExterieurSurMesure from './pages/BanquettesExterieurSurMesure';
 import Histoire from './pages/Histoire';
 import Contact from './pages/Contact';
 import Showroom from './pages/Showroom';
@@ -44,6 +45,7 @@ function App() {
             <Route path="/realisations/revetement-exterieur" element={<RevetementExterieur />} />
             <Route path="/realisations/banquettes" element={<Banquettes />} />
             <Route path="/realisations/bateaux" element={<Bateaux />} />
+            <Route path="/realisations/banquettes-exterieur-sur-mesure" element={<BanquettesExterieurSurMesure />} />
             <Route path="/histoire" element={<Histoire />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/showroom" element={<Showroom />} />
