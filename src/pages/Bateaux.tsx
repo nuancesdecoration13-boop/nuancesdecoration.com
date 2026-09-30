@@ -5,16 +5,16 @@ import RealisationsOutdoor from '../components/RealisationsOutdoor';
 export default function Bateaux() {
   return (
     <CategoryPage
-      title="Outdoor & Bateaux"
-      subtitle="Sellerie nautique"
-      description="Donnez vie à vos espaces extérieurs avec des réalisations textiles entièrement sur mesure. Banquettes, coussins, bains de soleil, ou encore transats : nous concevons chaque projet dans notre atelier, en vous proposant une large sélection de tissus techniques et étanches spécialement conçus pour l'extérieur."
+      title="SELLERIE BATEAU"
+      subtitle="Sellerie nautique sur mesure"
+      description="Nous réalisons des projets de sellerie nautique entièrement sur mesure pour votre bateau : banquettes, coussins de cockpit, bains de soleil, couchages… Chaque réalisation est confectionnée dans notre atelier avec une large sélection de tissus techniques et étanches spécialement conçus pour résister aux conditions marines."
       features={[
-        'Banquettes d\'extérieur',
-        'Coussins de salon de jardin',
-        'Bains de soleil & transats',
+        'Banquettes de bateau',
+        'Coussins de cockpit',
+        'Bains de soleil',
+        'Couchages & matelas de cabine',
         'Mousses sur mesure',
-        'Large sélection de tissus traités pour l\'extérieur : résistants aux UV, intempéries, imperméables, étanches...',
-        'Conseil personnalisés style et finitions',
+        'Large sélection de tissus nautiques techniques',
       ]}
       heroImage={`${import.meta.env.BASE_URL}outdoor-cat.jpg`}
       heroDraw={drawNautical}

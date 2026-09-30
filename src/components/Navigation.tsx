@@ -8,7 +8,7 @@ const categories = [
   { label: 'Stores', subtitle: 'Bateaux & Romains', link: '/realisations/stores' },
   { label: 'Indoor', subtitle: 'Banquettes & linge de maison', link: '/realisations/banquettes' },
   { label: 'Outdoor', subtitle: 'Banquettes, coussins & transats', link: '/realisations/banquettes-exterieur-sur-mesure' },
-  { label: 'Bateaux', subtitle: 'Sellerie nautique', link: '/realisations/bateaux' },
+  { label: 'Bateaux', subtitle: 'Sellerie nautique', link: '/realisations/nautique-sellerie-sur-mesure' },
 ];
 
 export default function Navigation() {

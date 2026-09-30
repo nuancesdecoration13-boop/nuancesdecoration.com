@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -44,7 +44,8 @@ function App() {
             <Route path="/realisations/revetement-interieur" element={<RevetementInterieur />} />
             <Route path="/realisations/revetement-exterieur" element={<RevetementExterieur />} />
             <Route path="/realisations/banquettes" element={<Banquettes />} />
-            <Route path="/realisations/bateaux" element={<Bateaux />} />
+            <Route path="/realisations/nautique-sellerie-sur-mesure" element={<Bateaux />} />
+            <Route path="/realisations/bateaux" element={<Navigate to="/realisations/nautique-sellerie-sur-mesure" replace status={301} />} />
             <Route path="/realisations/banquettes-exterieur-sur-mesure" element={<BanquettesExterieurSurMesure />} />
             <Route path="/histoire" element={<Histoire />} />
             <Route path="/contact" element={<Contact />} />

@@ -36,6 +36,7 @@ function safeCopyPublicDir(): Plugin {
           'realisations/revetement-exterieur',
           'realisations/banquettes',
           'realisations/bateaux',
+          'realisations/nautique-sellerie-sur-mesure',
           'realisations/banquettes-exterieur-sur-mesure',
           'histoire',
           'contact',
