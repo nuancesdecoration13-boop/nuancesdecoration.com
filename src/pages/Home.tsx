@@ -88,11 +88,13 @@ function StepsCarousel() {
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
             </div>
             <div className="px-8 py-8 flex flex-col flex-1 bg-[var(--grege-p)]">
-              <div className="w-6 h-[1px] bg-[var(--primary)] mb-4"></div>
-              <span className="font-['MaisonNeue'] font-light text-[11px] tracking-[2px] text-[var(--primary)] mb-2">{step.number}</span>
-              <h3 className="font-['FreeSerif'] font-black text-[21px] text-[var(--moka)] mb-3 leading-tight">
-                {step.label}
-              </h3>
+              <div className="flex items-baseline gap-2 mb-3">
+                <span className="font-['FreeSerif'] font-black text-[30px] text-[var(--moka)] leading-none">{step.number}.</span>
+                <h3 className="font-['FreeSerif'] font-black text-[21px] text-[var(--moka)] leading-tight">
+                  {step.label}
+                </h3>
+              </div>
+              <div className="w-8 h-[1px] bg-[#A0716B] mb-4"></div>
               <p className="font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
                 {step.description}
               </p>
@@ -132,11 +134,13 @@ function StepsCarousel() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.5)] to-transparent" />
               </div>
               <div className="px-4 py-5 flex flex-col bg-[var(--grege-p)]">
-                <div className="w-5 h-[1px] bg-[var(--primary)] mb-3"></div>
-                <span className="font-['MaisonNeue'] font-light text-[10px] tracking-[2px] text-[var(--primary)] mb-1">{step.number}</span>
-                <h3 className="font-['FreeSerif'] font-black text-[17px] text-[var(--moka)] mb-2 leading-tight">
-                  {step.label}
-                </h3>
+                <div className="flex items-baseline gap-1.5 mb-2">
+                  <span className="font-['FreeSerif'] font-black text-[24px] text-[var(--moka)] leading-none">{step.number}.</span>
+                  <h3 className="font-['FreeSerif'] font-black text-[17px] text-[var(--moka)] leading-tight">
+                    {step.label}
+                  </h3>
+                </div>
+                <div className="w-8 h-[1px] bg-[#A0716B] mb-3"></div>
                 <p className="font-['MaisonNeue'] font-light text-[11px] text-[var(--warm)] leading-[1.8]">
                   {step.description}
                 </p>
