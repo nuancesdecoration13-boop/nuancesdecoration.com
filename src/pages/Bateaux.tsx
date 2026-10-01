@@ -1,6 +1,5 @@
 import CategoryPage from './CategoryPage';
-import { drawNautical, drawWeave } from '../utils/canvasDrawing';
-import RealisationsOutdoor from '../components/RealisationsOutdoor';
+import { drawNautical } from '../utils/canvasDrawing';
 
 export default function Bateaux() {
   return (
@@ -16,17 +15,9 @@ export default function Bateaux() {
         'Mousses sur mesure',
         'Large sélection de tissus nautiques techniques',
       ]}
-      heroImage={`${import.meta.env.BASE_URL}outdoor-cat.jpg`}
+      heroImage={`${import.meta.env.BASE_URL}Capture_d’écran_2026-10-01_à_09.48.32.png`}
+      heroAlt="Sellerie bateau sur mesure – Nuances Décoration"
       heroDraw={drawNautical}
-      galleryDraws={[
-        drawNautical,
-        (c) => drawWeave(c, '#8A9EA8', '#6B8090'),
-        drawNautical,
-        (c) => drawWeave(c, '#7A8E98', '#5B7080'),
-        drawNautical,
-        (c) => drawWeave(c, '#9AAEB8', '#7B90A0'),
-      ]}
-      extraContent={<RealisationsOutdoor />}
     />
   );
 }
