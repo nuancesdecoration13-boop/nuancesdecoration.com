@@ -5,7 +5,7 @@ import RealisationsOutdoor from '../components/RealisationsOutdoor';
 export default function Bateaux() {
   return (
     <CategoryPage
-      title="SELLERIE BATEAU"
+      title="Sellerie bateau"
       subtitle="Sellerie nautique sur mesure"
       description="Nous réalisons des projets de sellerie nautique entièrement sur mesure pour votre bateau : banquettes, coussins de cockpit, bains de soleil, couchages… Chaque réalisation est confectionnée dans notre atelier avec une large sélection de tissus techniques et étanches spécialement conçus pour résister aux conditions marines."
       features={[

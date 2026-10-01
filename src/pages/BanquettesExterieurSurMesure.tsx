@@ -5,7 +5,7 @@ import RealisationsOutdoor from '../components/RealisationsOutdoor';
 export default function BanquettesExterieurSurMesure() {
   return (
     <CategoryPage
-      title="OUTDOOR"
+      title="Outdoor"
       subtitle="Banquettes extérieures sur mesure"
       description="Donnez vie à vos espaces extérieurs avec des réalisations textiles entièrement sur mesure. Banquettes, coussins, bains de soleil, ou encore transats : nous concevons chaque projet dans notre atelier, en vous proposant une large sélection de tissus techniques et étanches spécialement conçus pour l'extérieur."
       features={[
