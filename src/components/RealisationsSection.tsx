@@ -81,7 +81,7 @@ export default function RealisationsSection({
   if (halfBuffer.length > 0) rows.push({ span: 'half', items: halfBuffer });
 
   return (
-    <section className="bg-white px-8 md:px-12 py-16 md:py-20">
+    <section className="bg-white px-8 md:px-12 pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
