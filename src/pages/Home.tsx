@@ -71,7 +71,7 @@ function StepsCarousel() {
     <section className="bg-[var(--grege-p)] pt-14 md:pt-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
         <h2 className="font-['FreeSerif'] font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
-          Un service <em>sur mesure</em>
+          Un service de confection de décoration&nbsp;<em>sur mesure</em>
         </h2>
       </div>
 
