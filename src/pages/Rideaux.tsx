@@ -6,7 +6,7 @@ export default function Rideaux() {
   return (
     <CategoryPage
       title="Rideaux"
-      subtitle="Collections sur mesure"
+      subtitle="Rideaux sur mesure"
       description="Nos rideaux sur mesure allient élégance et fonctionnalité. Chaque pièce est conçue avec soin, en tenant compte de vos besoins en matière de lumière, d'intimité et d'esthétique. Notre vaste sélection de tissus nobles et notre savoir-faire artisanal garantissent des créations uniques qui sublimeront vos intérieurs."
       features={[
         'Confection sur mesure adaptée à vos dimensions',

@@ -6,7 +6,7 @@ export default function Banquettes() {
   return (
     <CategoryPage
       title="Indoor"
-      subtitle="Assises & mobilier"
+      subtitle="Décoration d'intérieur sur mesure"
       description="Nos banquettes et assises sur mesure transforment chaque coin de votre intérieur en espace de confort et d'élégance. Créées avec des matériaux nobles et un rembourrage de qualité supérieure, elles allient esthétique raffinée et durabilité. Chaque pièce est unique, pensée pour s'intégrer harmonieusement à votre décoration."
       features={[
         'Conception sur mesure adaptée à vos espaces',

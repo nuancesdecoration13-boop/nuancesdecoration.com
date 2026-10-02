@@ -6,7 +6,7 @@ export default function Stores() {
   return (
     <CategoryPage
       title="Stores"
-      subtitle="Occultation & lumière"
+      subtitle="Store sur mesure"
       description="Nos stores sur mesure allient esthétique et performance. Du store bateau au store enrouleur, en passant par les stores romains et vénitiens, chaque modèle est conçu pour maîtriser la lumière et sublimer vos fenêtres avec élégance."
       features={[
         'Stores bateau, romains et enrouleurs sur mesure',

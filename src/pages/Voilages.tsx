@@ -6,7 +6,7 @@ export default function Voilages() {
   return (
     <CategoryPage
       title="Voilages"
-      subtitle="Légèreté & transparence"
+      subtitle="Voilages sur mesure"
       description="Nos voilages apportent douceur et luminosité à vos espaces. Conçus pour filtrer délicatement la lumière naturelle tout en préservant votre intimité, ils créent une atmosphère aérienne et raffinée. Chaque voilage est confectionné avec des tissus légers et élégants, choisis pour leur capacité à sublimer la lumière."
       features={[
         'Tissus légers et transparents de haute qualité',
