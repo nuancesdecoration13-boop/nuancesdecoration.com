@@ -259,7 +259,7 @@ export default function Home() {
                     <h3 className="font-['FreeSerif'] font-black text-[30px] text-[var(--linen)] leading-[1.1] mb-[5px]">
                       {s.title}
                     </h3>
-                    <p className="font-['MaisonNeue'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)]">
+                    <p className="h-[20px] font-['MaisonNeue'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)] leading-[1.2]">
                       {s.subtitle}
                     </p>
                   </div>
@@ -325,7 +325,7 @@ export default function Home() {
                 <h3 className="font-['FreeSerif'] font-black text-[28px] text-[var(--linen)] leading-none mb-2 uppercase">
                   {slides[currentSlide].title}
                 </h3>
-                <p className="font-['MaisonNeue'] font-normal text-[11px] tracking-[2.5px] uppercase text-[rgba(248,244,240,0.85)]">
+                <p className="h-[27px] font-['MaisonNeue'] font-normal text-[11px] tracking-[2.5px] uppercase text-[rgba(248,244,240,0.85)] leading-[1.2]">
                   {slides[currentSlide].subtitle}
                 </p>
               </div>
