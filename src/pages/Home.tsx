@@ -71,7 +71,8 @@ function StepsCarousel() {
     <section className="bg-[var(--grege-p)] pt-14 md:pt-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
         <h2 className="font-['FreeSerif'] font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
-          Un service de confection de décoration&nbsp;<em>sur mesure</em>
+          <span className="block">Un accompagnement sur mesure,</span>
+          <em className="block text-[27px] md:text-[36px] leading-[1.2]">du conseil à la pose</em>
         </h2>
       </div>
 
@@ -88,12 +89,13 @@ function StepsCarousel() {
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
             </div>
             <div className="px-8 py-8 flex flex-col flex-1 bg-[var(--grege-p)]">
-              <div className="flex items-baseline gap-2 mb-3">
-                <span className="font-['FreeSerif'] font-black text-[30px] text-[var(--moka)] leading-none">{step.number}.</span>
-                <h3 className="font-['FreeSerif'] font-black text-[21px] text-[var(--moka)] leading-tight">
+              <div className="mb-3">
+                <span className="block font-['FreeSerif'] font-black text-[30px] text-[var(--moka)] leading-none">{step.number}.</span>
+                <h3 className="font-['FreeSerif'] font-black text-[21px] text-[var(--moka)] leading-tight whitespace-nowrap">
                   {step.label}
                 </h3>
               </div>
+              <div className="w-8 h-[1px] bg-[#A0716B] mb-4"></div>
               <p className="font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] leading-[1.85] flex-1">
                 {step.description}
               </p>
@@ -133,12 +135,13 @@ function StepsCarousel() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.5)] to-transparent" />
               </div>
               <div className="px-4 py-5 flex flex-col bg-[var(--grege-p)]">
-                <div className="flex items-baseline gap-1.5 mb-2">
-                  <span className="font-['FreeSerif'] font-black text-[24px] text-[var(--moka)] leading-none">{step.number}.</span>
-                  <h3 className="font-['FreeSerif'] font-black text-[15px] md:text-[17px] text-[var(--moka)] leading-tight">
+                <div className="mb-2">
+                  <span className="block font-['FreeSerif'] font-black text-[24px] text-[var(--moka)] leading-none">{step.number}.</span>
+                  <h3 className="font-['FreeSerif'] font-black text-[15px] text-[var(--moka)] leading-tight whitespace-nowrap">
                     {step.label}
                   </h3>
                 </div>
+                <div className="w-8 h-[1px] bg-[#A0716B] mb-3"></div>
                 <p className="font-['MaisonNeue'] font-light text-[11px] text-[var(--warm)] leading-[1.8]">
                   {step.description}
                 </p>
