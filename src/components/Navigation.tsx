@@ -35,7 +35,7 @@ export default function Navigation() {
           >
             <button className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)] flex items-center gap-1 bg-transparent border-none cursor-pointer py-2">
               Nos réalisations
-              <ChevronDown size={12} className={`transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
+              <ChevronDown size={16} className={`transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
             </button>
 
             {showDropdown && (
