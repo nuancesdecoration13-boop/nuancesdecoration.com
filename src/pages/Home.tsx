@@ -70,9 +70,9 @@ function StepsCarousel() {
   return (
     <section className="bg-[var(--grege-p)] pt-14 md:pt-20 animate-[fadeUp_0.7s_0.15s_ease_both]">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
-        <h2 className="font-['FreeSerif'] font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.4]">
+        <h2 className="font-['FreeSerif'] font-normal text-[22px] md:text-[30px] text-[var(--moka)] leading-[1.1]">
           <span className="block">Un accompagnement sur mesure,</span>
-          <em className="block text-[27px] md:text-[36px] leading-[1.2]">du conseil à la pose</em>
+          <em className="block">du conseil à la pose</em>
         </h2>
       </div>
 
@@ -88,10 +88,10 @@ function StepsCarousel() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.45)] to-transparent" />
             </div>
-            <div className="px-8 py-8 flex flex-col flex-1 bg-[var(--grege-p)]">
-              <div className="mb-3">
-                <span className="block font-['FreeSerif'] font-black text-[30px] text-[var(--moka)] leading-none">{step.number}.</span>
-                <h3 className="font-['FreeSerif'] font-black text-[21px] text-[var(--moka)] leading-tight whitespace-nowrap">
+            <div className="px-4 py-8 flex flex-col flex-1 bg-[var(--grege-p)]">
+              <div className="flex items-baseline gap-1.5 mb-3">
+                <span className="shrink-0 font-['FreeSerif'] font-black text-[30px] text-[var(--moka)] leading-none">{step.number}.</span>
+                <h3 className="min-w-0 font-['FreeSerif'] font-black text-[21px] text-[var(--moka)] leading-tight md:whitespace-nowrap">
                   {step.label}
                 </h3>
               </div>
@@ -135,9 +135,9 @@ function StepsCarousel() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(40,20,10,0.5)] to-transparent" />
               </div>
               <div className="px-4 py-5 flex flex-col bg-[var(--grege-p)]">
-                <div className="mb-2">
-                  <span className="block font-['FreeSerif'] font-black text-[24px] text-[var(--moka)] leading-none">{step.number}.</span>
-                  <h3 className="font-['FreeSerif'] font-black text-[15px] text-[var(--moka)] leading-tight whitespace-nowrap">
+                <div className="flex items-baseline gap-1.5 mb-2">
+                  <span className="shrink-0 font-['FreeSerif'] font-black text-[24px] text-[var(--moka)] leading-none">{step.number}.</span>
+                  <h3 className="min-w-0 font-['FreeSerif'] font-black text-[15px] text-[var(--moka)] leading-tight md:whitespace-nowrap">
                     {step.label}
                   </h3>
                 </div>
