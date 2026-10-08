@@ -11,6 +11,8 @@ interface CategoryPageProps {
   heroImage?: string;
   heroAlt?: string;
   galleryDraws?: Array<(canvas: HTMLCanvasElement) => void>;
+  hideFeatures?: boolean;
+  heroActions?: React.ReactNode;
   extraContent?: React.ReactNode;
 }
 
@@ -22,6 +24,8 @@ export default function CategoryPage({
   heroDraw,
   heroImage,
   heroAlt,
+  hideFeatures = false,
+  heroActions,
   extraContent,
 }: CategoryPageProps) {
   const { pathname } = useLocation();
@@ -44,6 +48,7 @@ export default function CategoryPage({
           <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9] max-w-md">
             {description}
           </p>
+          {heroActions}
         </div>
         <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
           {heroImage ? (
@@ -54,45 +59,47 @@ export default function CategoryPage({
         </div>
       </section>
 
-      <section className="px-8 md:px-12 pt-8 pb-16 md:pt-10 md:pb-20 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
-              Nos prestations
-            </h3>
-            <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
-            <div className="flex-1">
-              <ul className="space-y-4">
-                {features.map((feature, i) => (
-                  <li
-                    key={i}
-                    className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.7] flex items-start gap-3"
-                  >
-                    <span className="text-[var(--primary)] mt-1">•</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+      {!hideFeatures && (
+        <section className="px-8 md:px-12 pt-8 pb-16 md:pt-10 md:pb-20 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
+                Nos prestations
+              </h3>
+              <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
             </div>
-            <div className="flex-none md:w-64 flex flex-col gap-4 md:pt-10">
-              <Link
-                to="/contact"
-                className="text-center font-['MaisonNeue'] font-bold text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
-              >
-                Prendre rendez-vous
-              </Link>
-              <Link
-                to="/contact"
-                className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase border border-[var(--moka)] text-[var(--moka)] py-4 px-8 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
-              >
-                Nous contacter
-              </Link>
+            <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+              <div className="flex-1">
+                <ul className="space-y-4">
+                  {features.map((feature, i) => (
+                    <li
+                      key={i}
+                      className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.7] flex items-start gap-3"
+                    >
+                      <span className="text-[var(--primary)] mt-1">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-none md:w-64 flex flex-col gap-4 md:pt-10">
+                <Link
+                  to="/contact"
+                  className="text-center font-['MaisonNeue'] font-bold text-[10px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--charcoal)]"
+                >
+                  Prendre rendez-vous
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-center font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase border border-[var(--moka)] text-[var(--moka)] py-4 px-8 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+                >
+                  Nous contacter
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {extraContent}
 

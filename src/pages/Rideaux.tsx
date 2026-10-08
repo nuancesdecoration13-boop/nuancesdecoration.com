@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CategoryPage from './CategoryPage';
 import { drawFolds, drawWeave } from '../utils/canvasDrawing';
 import RealisationsSection from '../components/RealisationsSection';
@@ -7,7 +8,7 @@ export default function Rideaux() {
     <CategoryPage
       title="Rideaux"
       subtitle="Rideaux sur mesure"
-      description="Nos rideaux sur mesure allient élégance et fonctionnalité. Chaque pièce est conçue avec soin, en tenant compte de vos besoins en matière de lumière, d'intimité et d'esthétique. Notre vaste sélection de tissus nobles et notre savoir-faire artisanal garantissent des créations uniques qui sublimeront vos intérieurs."
+      description="Nous confectionnons vos rideaux sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le tombé, les finitions et la doublure, thermique ou occultante. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       features={[
         'Confection sur mesure adaptée à vos dimensions',
         'Large choix de tissus haute qualité et matières nobles',
@@ -18,6 +19,23 @@ export default function Rideaux() {
       ]}
       heroDraw={(c) => drawFolds(c, '#C0A890', '#D8C8B4', '#A89070', 8)}
       heroImage={`${import.meta.env.BASE_URL}rideaux-hero.jpg`}
+      hideFeatures
+      heroActions={
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 items-stretch sm:items-start">
+          <Link
+            to="/contact"
+            className="inline-block w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
+          >
+            PRENDRE RENDEZ-VOUS
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-block w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] bg-transparent border border-[var(--moka)] py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+          >
+            NOUS CONTACTER
+          </Link>
+        </div>
+      }
       galleryDraws={[
         (c) => drawFolds(c, '#C8B4A0', '#D8C8B4', '#A89078', 6),
         (c) => drawFolds(c, '#B8A090', '#CCBCAC', '#988078', 7),
@@ -33,7 +51,7 @@ export default function Rideaux() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
-                  Ce que vous découvrirez
+                  Vos rideaux sur mesure
                 </h2>
                 <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
               </div>
@@ -48,7 +66,7 @@ export default function Rideaux() {
                     />
                   </div>
                   <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                    Plus de 500 références de tissus
+                    1. Choisissez votre tissu
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Lin, velours, tweed, coton, doublures thermiques, occultants, outdoor... Trouvez la matière qui saura répondre à vos envies !
@@ -64,7 +82,7 @@ export default function Rideaux() {
                     />
                   </div>
                   <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                    De nombreuses finitions disponibles
+                    2. Choisissez votre finition
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Wave, œillets, plis flamands, pince plate, galon fronceur... Chaque finition est réalisée avec soin pour correspondre au rendu souhaité.
@@ -80,7 +98,7 @@ export default function Rideaux() {
                     />
                   </div>
                   <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                    Nos supports d'accroche
+                    3. Choissisez votre support
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Tringle ou rails — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu et la finition choisis. Nous proposons une gamme complète en laiton, nickel satiné, noir ou blanc, brillant ou mat, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.
