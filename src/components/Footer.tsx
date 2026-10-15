@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -14,7 +15,7 @@ export default function Footer() {
       <ul className="flex flex-wrap justify-center gap-4 md:gap-7 list-none max-w-[280px] md:max-w-none">
         <li>
           <Link
-            to="/realisations/rideaux"
+            to="/realisations/rideaux/"
             className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Nos réalisations
@@ -22,7 +23,7 @@ export default function Footer() {
         </li>
         <li>
           <Link
-            to="/showroom"
+            to="/showroom/"
             className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Notre showroom
@@ -30,7 +31,7 @@ export default function Footer() {
         </li>
         <li>
           <Link
-            to="/histoire"
+            to="/histoire/"
             className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Notre histoire
@@ -38,7 +39,7 @@ export default function Footer() {
         </li>
         <li>
           <Link
-            to="/contact"
+            to="/contact/"
             className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             Contact
@@ -46,7 +47,7 @@ export default function Footer() {
         </li>
         <li>
           <Link
-            to="/cgv"
+            to="/cgv/"
             className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >
             CGV
