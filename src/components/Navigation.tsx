@@ -62,7 +62,7 @@ export default function Navigation() {
 
           <li>
             <Link
-              to="/showroom"
+              to="/showroom/"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Notre showroom
@@ -71,7 +71,7 @@ export default function Navigation() {
 
           <li>
             <Link
-              to="/histoire"
+              to="/histoire/"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Notre histoire
@@ -80,7 +80,7 @@ export default function Navigation() {
 
           <li>
             <Link
-              to="/contact"
+              to="/contact/"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Contact
@@ -89,7 +89,7 @@ export default function Navigation() {
         </ul>
 
         <Link
-          to="/contact"
+          to="/contact/"
           className="hidden md:inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
           Prendre rendez-vous
@@ -97,7 +97,7 @@ export default function Navigation() {
 
         <div className="md:hidden flex items-center gap-1">
           <Link
-            to="/contact"
+            to="/contact/"
             className="bg-transparent border-none cursor-pointer text-[var(--moka)] p-2 flex items-center"
             aria-label="Prendre rendez-vous"
           >
@@ -147,7 +147,7 @@ export default function Navigation() {
 
             <li>
               <Link
-                to="/showroom"
+                to="/showroom/"
                 onClick={() => setShowMobileMenu(false)}
                 className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
@@ -157,7 +157,7 @@ export default function Navigation() {
 
             <li>
               <Link
-                to="/histoire"
+                to="/histoire/"
                 onClick={() => setShowMobileMenu(false)}
                 className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
@@ -167,7 +167,7 @@ export default function Navigation() {
 
             <li>
               <Link
-                to="/contact"
+                to="/contact/"
                 onClick={() => setShowMobileMenu(false)}
                 className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
@@ -177,7 +177,7 @@ export default function Navigation() {
 
             <li className="pt-2">
               <Link
-                to="/contact"
+                to="/contact/"
                 onClick={() => setShowMobileMenu(false)}
                 className="block text-center font-['MaisonNeue'] font-bold text-[11px] tracking-[2px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors"
               >
