@@ -170,38 +170,40 @@ function StepsCarousel() {
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const visible = 4;
-  const slides = [
-    {
-      title: 'Rideaux',
-      subtitle: 'Décoratifs & occultants',
-      image: `${import.meta.env.BASE_URL}header-rideaux.jpg`,
-      link: '/realisations/rideaux',
-    },
-    {
-      title: 'Voilages',
-      subtitle: 'Transparents & légers',
-      image: `${import.meta.env.BASE_URL}voilages-home.jpg`,
-      link: '/realisations/voilages',
-    },
-    {
-      title: 'Stores',
-      subtitle: 'Bateaux & Romains',
-      image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
-      link: '/realisations/stores',
-    },
-    {
-      title: 'Indoor',
-      subtitle: 'Banquettes, coussins & Linge de maison',
-      image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
-      link: '/realisations/banquettes',
-    },
-    {
-      title: 'Outdoor',
-      subtitle: 'Banquettes, coussins & transats',
-      image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
-      link: '/realisations/banquettes-exterieur-sur-mesure',
-    },
-  ];
+  
+const slides = [
+  {
+    title: 'Rideaux',
+    subtitle: 'Décoratifs & occultants',
+    image: `${import.meta.env.BASE_URL}header-rideaux.jpg`,
+    link: '/realisations/rideaux/',
+  },
+  {
+    title: 'Voilages',
+    subtitle: 'Transparents & légers',
+    image: `${import.meta.env.BASE_URL}voilages-home.jpg`,
+    link: '/realisations/voilages/',
+  },
+  {
+    title: 'Stores',
+    subtitle: 'Bateaux & Romains',
+    image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
+    link: '/realisations/stores/',
+  },
+  {
+    title: 'Indoor',
+    subtitle: 'Banquettes, coussins & Linge de maison',
+    image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
+    link: '/realisations/banquettes/',
+  },
+  {
+    title: 'Outdoor',
+    subtitle: 'Banquettes, coussins & transats',
+    image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
+    link: '/realisations/banquettes-exterieur-sur-mesure/',
+  },
+];
+
   const total = slides.length;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
