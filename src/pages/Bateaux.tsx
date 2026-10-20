@@ -1,6 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawNautical } from '../utils/canvasDrawing';
-import RealisationsSection from '../components/RealisationsSection';
+import RealisationsGrid from '../components/RealisationsGrid';
+import { bateauxGallery } from '../data/galleryItems';
 
 export default function Bateaux() {
   return (
@@ -21,7 +22,7 @@ export default function Bateaux() {
       heroImage={`${import.meta.env.BASE_URL}Capture_d’écran_2026-10-01_à_09.48.32.png`}
       heroAlt="Sellerie bateau sur mesure – Nuances Décoration"
       heroDraw={drawNautical}
-      extraContent={<RealisationsSection />}
+      extraContent={<RealisationsGrid items={bateauxGallery} />}
     />
   );
 }

@@ -1,6 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
-import RealisationsIndoor from '../components/RealisationsIndoor';
+import RealisationsGrid from '../components/RealisationsGrid';
+import { indoorGallery } from '../data/galleryItems';
 
 export default function Banquettes() {
   return (
@@ -28,7 +29,7 @@ export default function Banquettes() {
         (c) => drawFolds(c, '#B0A090', '#C8B8A8', '#907868', 5),
         (c) => drawWeave(c, '#A8988', '#887068'),
       ]}
-      extraContent={<RealisationsIndoor />}
+      extraContent={<RealisationsGrid items={indoorGallery} />}
     />
   );
 }

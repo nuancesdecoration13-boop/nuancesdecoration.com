@@ -1,6 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawSheer, drawWeave } from '../utils/canvasDrawing';
-import RealisationsSection from '../components/RealisationsSection';
+import RealisationsGrid from '../components/RealisationsGrid';
+import { voilagesGallery } from '../data/galleryItems';
 
 export default function Voilages() {
   return (
@@ -34,21 +35,7 @@ export default function Voilages() {
         drawSheer,
         (c) => drawWeave(c, '#E4E0D8', '#D4D0C8'),
       ]}
-      extraContent={
-        <RealisationsSection
-          media={[
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-177.jpg`, alt: 'Réalisation voilages' },
-            { type: 'video', src: `${import.meta.env.BASE_URL}IMG_1595.MOV` },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-180.jpg`, alt: 'Réalisation voilages' },
-            { type: 'video', src: `${import.meta.env.BASE_URL}IMG_1595.MOV`, alt: 'Réalisation voilages' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}IMG_1555.jpg`, alt: 'Réalisation voilages' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-198.jpg`, alt: 'Réalisation voilages' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-200.jpg`, alt: 'Réalisation voilages' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-192.jpg`, alt: 'Réalisation voilages' },
-          ]}
-          layout={['half', 'half', 'full', 'half', 'half', 'half', 'half', 'full']}
-        />
-      }
+      extraContent={<RealisationsGrid items={voilagesGallery} />}
     />
   );
 }

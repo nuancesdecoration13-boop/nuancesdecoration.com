@@ -1,6 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
-import RealisationsSection from '../components/RealisationsSection';
+import RealisationsGrid from '../components/RealisationsGrid';
+import { storesGallery } from '../data/galleryItems';
 
 export default function Stores() {
   return (
@@ -28,19 +29,7 @@ export default function Stores() {
         (c) => drawWeave(c, '#B8ACA0', '#988880'),
         (c) => drawFolds(c, '#A89888', '#C0B0A0', '#887868', 6),
       ]}
-      extraContent={
-        <RealisationsSection
-          media={[
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-172.jpg`, alt: 'Réalisation stores' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-178.jpg`, alt: 'Réalisation stores' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-179.jpg`, alt: 'Réalisation stores' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-193.jpg`, alt: 'Réalisation stores' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-196.jpg`, alt: 'Réalisation stores' },
-            { type: 'image', src: `${import.meta.env.BASE_URL}naunces-195.jpg`, alt: 'Réalisation stores' },
-          ]}
-          layout={['half', 'half', 'full', 'full', 'half', 'half']}
-        />
-      }
+      extraContent={<RealisationsGrid items={storesGallery} />}
     />
   );
 }

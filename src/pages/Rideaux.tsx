@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import CategoryPage from './CategoryPage';
 import { drawFolds, drawWeave } from '../utils/canvasDrawing';
-import RealisationsSection from '../components/RealisationsSection';
+import RealisationsGrid from '../components/RealisationsGrid';
+import { rideauxGallery } from '../data/galleryItems';
 
 export default function Rideaux() {
   return (
@@ -107,19 +108,7 @@ export default function Rideaux() {
               </div>
             </div>
           </section>
-          <RealisationsSection
-            media={[
-              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-177.jpg`, alt: 'Réalisation rideaux' },
-              { type: 'video', src: `${import.meta.env.BASE_URL}IMG_1595.MOV` },
-              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-180.jpg`, alt: 'Réalisation rideaux' },
-              { type: 'video', src: `${import.meta.env.BASE_URL}IMG_1595.MOV`, alt: 'Réalisation rideaux' },
-              { type: 'image', src: `${import.meta.env.BASE_URL}IMG_1555.jpg`, alt: 'Réalisation rideaux' },
-              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-198.jpg`, alt: 'Réalisation rideaux' },
-              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-200.jpg`, alt: 'Réalisation rideaux' },
-              { type: 'image', src: `${import.meta.env.BASE_URL}naunces-192.jpg`, alt: 'Réalisation rideaux' },
-            ]}
-            layout={['half', 'half', 'full', 'half', 'half', 'half', 'half', 'full']}
-          />
+          <RealisationsGrid items={rideauxGallery} />
         </div>
       }
     />

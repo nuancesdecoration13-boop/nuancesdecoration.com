@@ -1,0 +1,50 @@
+export interface GalleryItem {
+  image: string;
+  alt?: string;
+  reference: string;
+  finish: string;
+}
+
+export const rideauxGallery: GalleryItem[] = [
+  { image: 'naunces-177.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-180.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'IMG_1555.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-198.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-200.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-192.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+];
+
+export const voilagesGallery: GalleryItem[] = [
+  { image: 'naunces-177.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-180.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'IMG_1555.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-198.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-200.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-192.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+];
+
+export const storesGallery: GalleryItem[] = [
+  { image: 'naunces-172.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-178.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-179.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-193.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-196.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-195.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+];
+
+export const indoorGallery: GalleryItem[] = [
+  { image: 'naunces-177.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-189.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-202.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-200.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+];
+
+export const outdoorGallery: GalleryItem[] = [
+  { image: 'naunces-181.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-182.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'IMG_1597.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'IMG_1594.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'IMG_1596.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+];
+
+export const bateauxGallery: GalleryItem[] = [];
