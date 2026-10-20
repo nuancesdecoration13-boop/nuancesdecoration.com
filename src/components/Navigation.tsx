@@ -34,7 +34,7 @@ export default function Navigation() {
           />
         </Link>
 
-        <ul className="hidden md:flex gap-9 list-none items-center">
+        <ul className="hidden md:flex gap-6 list-none items-center">
           <li
             className="relative"
             onMouseEnter={() => setShowDropdown(true)}
@@ -87,19 +87,18 @@ export default function Navigation() {
 
           <li>
             <Link
-              to="/histoire"
-              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
-            >
-              Notre histoire
-            </Link>
-          </li>
-
-          <li>
-            <Link
               to="/contact"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/conseils"
+              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+            >
+              Nos conseils
             </Link>
           </li>
         </ul>
@@ -183,15 +182,6 @@ export default function Navigation() {
               </Link>
             </li>
 
-            <li>
-              <Link
-                to="/histoire"
-                onClick={() => setShowMobileMenu(false)}
-                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
-              >
-                Notre histoire
-              </Link>
-            </li>
 
             <li>
               <Link
@@ -200,6 +190,16 @@ export default function Navigation() {
                 className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
                 Contact
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/conseils"
+                onClick={() => setShowMobileMenu(false)}
+                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+              >
+                Nos conseils
               </Link>
             </li>
 

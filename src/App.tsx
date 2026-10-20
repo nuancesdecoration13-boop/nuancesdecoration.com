@@ -17,6 +17,7 @@ import Contact from './pages/Contact';
 import Showroom from './pages/Showroom';
 import Professionnels from './pages/Professionnels';
 import CGV from './pages/CGV';
+import Conseils from './pages/Conseils';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -53,6 +54,7 @@ function App() {
             <Route path="/professionnels" element={<Professionnels />} />
             <Route path="/showroom" element={<Showroom />} />
             <Route path="/cgv" element={<CGV />} />
+            <Route path="/conseils" element={<Conseils />} />
           </Routes>
         </main>
         <Footer />
