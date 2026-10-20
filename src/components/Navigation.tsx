@@ -22,7 +22,7 @@ export default function Navigation() {
         to="/professionnels"
         className="h-9 flex items-center justify-center bg-[#3E2416] text-[#F6F4F0] no-underline font-['DM_Sans'] font-normal text-[12px] tracking-[0.05em]"
       >
-        <span className="hidden md:inline">Architectes, hôtels, restaurants : découvrez notre offre professionnelle →</span>
+        <span className="hidden md:inline">&nbsp;CONFECTION DE DÉCORATION SUR MESURE À MARSEILLE</span>
         <span className="md:hidden">Professionnels : découvrez notre offre →</span>
       </Link>
       <div className="flex items-center justify-between px-4 md:px-12 py-4 md:py-6">
