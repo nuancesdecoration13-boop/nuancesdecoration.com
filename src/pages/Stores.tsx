@@ -12,7 +12,7 @@ export default function Stores() {
       hideFeatures
       showHeroActions
       features={[
-        'Stores bateau, romains et enrouleurs sur mesure',
+        'Stores bateau et enrouleurs sur mesure',
         'Large gamme de tissus occultants et tamisant',
         'Mécanismes motorisés disponibles',
         'Finitions soignées et matières durables',
