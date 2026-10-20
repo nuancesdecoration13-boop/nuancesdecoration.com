@@ -32,9 +32,9 @@ export const indoorGallery: GalleryItem[] = [
 ];
 
 export const outdoorGallery: GalleryItem[] = [
-  { image: 'naunces-181.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-182.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'IMG_1597.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-181.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Cicada', finish: 'banquettes & coussins avec passepoils' },
+  { image: 'naunces-182.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Cicada', finish: 'banquettes & coussins avec passepoils' },
+  { image: 'IMG_1597.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Polyskin', finish: 'banquettes & coussins avec passepoils' },
   { image: 'IMG_1594.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
   { image: 'IMG_1596.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
 ];
