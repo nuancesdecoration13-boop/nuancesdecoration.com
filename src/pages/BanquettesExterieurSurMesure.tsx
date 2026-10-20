@@ -6,8 +6,16 @@ export default function BanquettesExterieurSurMesure() {
   return (
     <CategoryPage
       title="Outdoor"
-      subtitle="Décoration d'extérieur sur mesure"
-      description="Donnez vie à vos espaces extérieurs avec des réalisations textiles entièrement sur mesure. Banquettes, coussins, bains de soleil, ou encore transats : nous concevons chaque projet dans notre atelier, en vous proposant une large sélection de tissus techniques et étanches spécialement conçus pour l'extérieur."
+      subtitle="BANQUETTES & COUSSINS D'EXTÉRIEUR"
+      description="Nous confectionnons vos banquettes, coussins, bains de soleil et transats d'extérieur sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble les mousses et des tissus techniques traités pour l'extérieur, résistants aux UV et aux intempéries. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
+      hideFeatures
+      showHeroActions
+      discoveryTitle="Vos banquettes & coussins d'extérieur sur mesure"
+      discoveryCards={[
+        { title: '1. Banquettes et coussins', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-181.jpg` },
+        { title: '2. Bains de soleil et transats', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-182.jpg` },
+        { title: '3. Tissus techniques extérieurs', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}IMG_1597.jpg` },
+      ]}
       features={[
         'Banquettes d\'extérieur',
         'Coussins de salon de jardin',

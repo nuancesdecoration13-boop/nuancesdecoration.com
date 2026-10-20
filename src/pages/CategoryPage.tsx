@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import CanvasImage from '../components/CanvasImage';
 import Seo from '../components/Seo';
+import CategoryDiscoverySection, { DiscoveryCard } from '../components/CategoryDiscoverySection';
 
 interface CategoryPageProps {
   title: string;
@@ -12,7 +13,10 @@ interface CategoryPageProps {
   heroAlt?: string;
   galleryDraws?: Array<(canvas: HTMLCanvasElement) => void>;
   hideFeatures?: boolean;
+  showHeroActions?: boolean;
   heroActions?: React.ReactNode;
+  discoveryTitle?: string;
+  discoveryCards?: DiscoveryCard[];
   extraContent?: React.ReactNode;
 }
 
@@ -25,7 +29,10 @@ export default function CategoryPage({
   heroImage,
   heroAlt,
   hideFeatures = false,
+  showHeroActions = false,
   heroActions,
+  discoveryTitle,
+  discoveryCards,
   extraContent,
 }: CategoryPageProps) {
   const { pathname } = useLocation();
@@ -48,7 +55,22 @@ export default function CategoryPage({
           <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9] max-w-md">
             {description}
           </p>
-          {heroActions}
+          {heroActions ?? (showHeroActions && (
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 items-stretch sm:items-start">
+              <Link
+                to="/contact"
+                className="inline-block w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
+              >
+                PRENDRE RENDEZ-VOUS
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-block w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] bg-transparent border border-[var(--moka)] py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
+              >
+                NOUS CONTACTER
+              </Link>
+            </div>
+          ))}
         </div>
         <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
           {heroImage ? (
@@ -99,6 +121,10 @@ export default function CategoryPage({
             </div>
           </div>
         </section>
+      )}
+
+      {discoveryTitle && discoveryCards && (
+        <CategoryDiscoverySection title={discoveryTitle} cards={discoveryCards} />
       )}
 
       {extraContent}

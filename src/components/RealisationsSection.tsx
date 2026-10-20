@@ -90,23 +90,31 @@ export default function RealisationsSection({
           <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          {rows.map((row, ri) => (
-            <div
-              key={ri}
-              className={row.span === 'full' ? 'flex' : 'flex gap-4 items-stretch'}
-            >
-              {row.items.map((item, ii) => (
-                <div
-                  key={ii}
-                  className={row.span === 'half' ? 'flex-1 flex' : 'w-full'}
-                >
-                  <MediaView item={item} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+        {rows.length > 0 ? (
+          <div className="flex flex-col gap-4">
+            {rows.map((row, ri) => (
+              <div
+                key={ri}
+                className={row.span === 'full' ? 'flex' : 'flex gap-4 items-stretch'}
+              >
+                {row.items.map((item, ii) => (
+                  <div
+                    key={ii}
+                    className={row.span === 'half' ? 'flex-1 flex' : 'w-full'}
+                  >
+                    <MediaView item={item} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="min-h-48 bg-[var(--pale)] flex items-center justify-center">
+            <span className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)]">
+              Contenu à définir
+            </span>
+          </div>
+        )}
       </div>
     </section>
   );

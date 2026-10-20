@@ -6,8 +6,16 @@ export default function Banquettes() {
   return (
     <CategoryPage
       title="Indoor"
-      subtitle="Décoration d'intérieur sur mesure"
-      description="Nos banquettes et assises sur mesure transforment chaque coin de votre intérieur en espace de confort et d'élégance. Créées avec des matériaux nobles et un rembourrage de qualité supérieure, elles allient esthétique raffinée et durabilité. Chaque pièce est unique, pensée pour s'intégrer harmonieusement à votre décoration."
+      subtitle="BANQUETTES & COUSSINS D'INTÉRIEUR"
+      description="Nous confectionnons vos banquettes, coussins et linge de maison sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, la mousse, les dimensions et les finitions. Nous prenons les mesures, réalisons la confection, puis assurons la livraison et la pose."
+      hideFeatures
+      showHeroActions
+      discoveryTitle="Vos banquettes & coussins d'intérieur sur mesure"
+      discoveryCards={[
+        { title: '1. Conception sur mesure', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-177.jpg` },
+        { title: "2. Tissus d'ameublement", description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-189.jpg` },
+        { title: '3. Rembourrage et finitions', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-202.jpg` },
+      ]}
       features={[
         'Conception sur mesure adaptée à vos espaces',
         'Sélection de tissus d\'ameublement haut de gamme',
