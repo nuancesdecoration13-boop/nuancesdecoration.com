@@ -7,7 +7,7 @@ export interface GalleryItem {
 
 export const rideauxGallery: GalleryItem[] = [
   { image: 'naunces-177.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-180.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'A06E76D1-D8ED-442E-B697-76A033053A7F.JPG', alt: 'Rideau blanc sur mesure à plis ondulés, fixé sur rail au plafond', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
   { image: 'IMG_1555.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
   { image: 'naunces-198.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
   { image: 'naunces-200.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
