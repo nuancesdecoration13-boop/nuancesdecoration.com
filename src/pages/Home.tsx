@@ -406,7 +406,7 @@ export default function Home() {
               <br />
               réalisations
             </div>
-            <span className="inline-block mt-2 md:mt-3 font-['MaisonNeue'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+            <span className="inline-block mt-2 md:mt-3 font-['MaisonNeue'] font-thin text-[11px] md:text-[12px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
               Découvrir →
             </span>
           </div>
@@ -430,8 +430,8 @@ export default function Home() {
               <br />
               showroom
             </div>
-            <span className="inline-block mt-2 md:mt-3 font-['MaisonNeue'] font-thin text-[11px] md:text-[9px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
-              Nous trouver →
+            <span className="inline-block mt-2 md:mt-3 font-['MaisonNeue'] font-thin text-[11px] md:text-[11px] tracking-[2.5px] md:tracking-[3px] uppercase text-[rgba(248,244,240,0.75)] md:text-[rgba(248,244,240,0.55)] border-b border-[rgba(248,244,240,0.25)] pb-[2px] transition-all group-hover:text-[rgba(248,244,240,0.9)] group-hover:border-[rgba(248,244,240,0.6)]">
+              <span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '10px' }}><span style={{ fontSize: '12px' }}>Nous trouver →</span></span></span></span></span></span></span></span></span></span></span>
             </span>
           </div>
         </Link>
