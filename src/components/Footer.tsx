@@ -26,13 +26,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#8d6963] px-6 py-10 md:px-12 md:py-12">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-4 md:gap-x-10 md:gap-y-12">
-        <div className="col-span-2 flex flex-col items-center pt-6 text-center md:col-span-1 md:items-start md:pt-10 md:text-left">
+        <div className="col-span-2 flex flex-col items-center text-center md:col-span-1 md:items-start md:text-left">
           <img
             src={`${import.meta.env.BASE_URL}assets/shortlogo+baseline_negatif.png`}
             alt="Nuances Décoration — L'art du sur-mesure"
             className="h-24 w-auto object-contain md:h-28"
           />
-          <p className="mt-5 max-w-[220px] font-['MaisonNeue'] text-[12px] leading-[1.6] text-white">
+          <p className="mt-8 max-w-[220px] font-['MaisonNeue'] text-[12px] leading-[1.6] text-white">
             Atelier de confection de décoration
             <div>sur mesure à Marseille.</div>
           </p>
