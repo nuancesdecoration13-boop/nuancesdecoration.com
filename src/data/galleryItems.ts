@@ -32,7 +32,7 @@ export const indoorGallery: GalleryItem[] = [
 ];
 
 export const outdoorGallery: GalleryItem[] = [
-  { image: 'naunces-181.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Cicada', finish: 'banquettes & coussins avec passepoils' },
+  { image: 'img/realisations/banquettes/2BA180A9-17BD-47E5-8FCD-FAF25F65F5C3_4_5005_c copy.jpeg', alt: 'Banquette sur mesure en tissu terracotta avec passepoil blanc et trois coussins', reference: 'Tissu Cicada', finish: 'banquettes & coussins avec passepoils' },
   { image: 'naunces-182.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Cicada', finish: 'banquettes & coussins avec passepoils' },
   { image: 'IMG_1597.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Polyskin', finish: 'banquettes & coussins avec passepoils' },
   { image: 'IMG_1594.jpg', alt: 'Réalisation outdoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
