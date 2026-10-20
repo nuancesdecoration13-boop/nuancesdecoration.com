@@ -33,7 +33,8 @@ export default function Footer() {
             className="h-24 w-auto object-contain md:h-28"
           />
           <p className="mt-5 max-w-[220px] font-['MaisonNeue'] text-[12px] leading-[1.6] text-white">
-            Atelier de confection de décoration sur mesure à Marseille.
+            Atelier de confection de décoration
+            <div>sur mesure à Marseille.</div>
           </p>
         </div>
 
