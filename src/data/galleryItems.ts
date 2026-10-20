@@ -3,15 +3,15 @@ export interface GalleryItem {
   alt?: string;
   reference: string;
   finish: string;
+  finishClassName?: string;
 }
 
 export const rideauxGallery: GalleryItem[] = [
-  { image: 'naunces-177.jpg', alt: 'Réalisation rideaux', reference: 'Lin Viscose', finish: 'finition wave' },
-  { image: 'A06E76D1-D8ED-442E-B697-76A033053A7F.JPG', alt: 'Rideau blanc sur mesure à plis ondulés, fixé sur rail au plafond', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-177.jpg', alt: 'Réalisation rideaux', reference: 'Tissu Lin Viscose', finish: 'finition wave', finishClassName: 'text-[12px]' },
+  { image: 'A06E76D1-D8ED-442E-B697-76A033053A7F.JPG', alt: 'Rideau blanc sur mesure à plis ondulés, fixé sur rail au plafond', reference: 'Tissu Lin Viscose', finish: 'Finition WAVE', finishClassName: 'text-[12px]' },
   { image: 'IMG_1555.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-198.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-200.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-192.jpg', alt: 'Réalisation rideaux', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-198.jpg', alt: 'Réalisation rideaux', reference: 'Tissu Lin Viscose', finish: 'Finition Passe Tringle', finishClassName: 'text-[12px]' },
+  { image: 'naunces-200.jpg', alt: 'Réalisation rideaux', reference: 'Tissu Lin Viscose', finish: 'Finition Passe Tringle', finishClassName: 'text-[12px] tracking-[1.8px]' },
 ];
 
 export const voilagesGallery: GalleryItem[] = [
@@ -20,7 +20,6 @@ export const voilagesGallery: GalleryItem[] = [
   { image: 'IMG_1555.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
   { image: 'naunces-198.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
   { image: 'naunces-200.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-192.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
 ];
 
 export const storesGallery: GalleryItem[] = [

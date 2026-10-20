@@ -29,7 +29,7 @@ export default function RealisationsGrid({ items }: { items: GalleryItem[] }) {
                 </p>
               )}
               {item.finish && (
-                <p className="font-['DM_Sans'] uppercase tracking-[0.15em] text-[11px] text-[#7B514A] mt-1">
+                <p className={`font-['DM_Sans'] uppercase tracking-[0.15em] text-[#7B514A] mt-1 ${item.finishClassName ?? 'text-[11px]'}`}>
                   {item.finish}
                 </p>
               )}
