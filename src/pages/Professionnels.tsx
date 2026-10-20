@@ -75,8 +75,8 @@ export default function Professionnels() {
   return (
     <CategoryPage
       title="Professionnels"
-      subtitle="PROFESSIONNELS"
-      description="Architectes, décorateurs, hôtels, restaurants, chambres d'hôtes : nous accompagnons vos projets d'aménagement textile, de l'étude à la pose. Chaque pièce est confectionnée dans notre atelier, à vos dimensions et selon votre cahier des charges. Un seul interlocuteur suit votre projet du début à la fin. Nous proposons une large sélection de tissus non feu (classés M1), adaptés aux établissements recevant du public."
+      subtitle="PROJETS POUR PROFESSIONNELS"
+      description="Architectes, décorateurs, hôtels, restaurants, chambres d'hôtes : nous vous accompagnons dans vos projets d'aménagement textile, de l'étude à la pose. Chaque pièce est confectionnée dans notre atelier, selon votre cahier des charges. Nous proposons une large sélection de tissus non feu (classés M1), adaptés aux établissements recevant du public."
       features={[]}
       heroDraw={() => undefined}
       heroImage={`${import.meta.env.BASE_URL}fabrication-locale.jpg`}
