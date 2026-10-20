@@ -29,6 +29,8 @@ export const storesGallery: GalleryItem[] = [
   { image: 'naunces-193.jpg', alt: 'Réalisation stores', reference: 'Tissu Colin', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px] tracking-[1.65px]' },
   { image: 'naunces-196.jpg', alt: 'Réalisation stores', reference: 'Tissu Colin', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px] tracking-[1.65px]' },
   { image: 'naunces-195.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'img/realisations/stores/7DC42922-EB15-40AC-902C-43C2911E8AF5.JPG', alt: 'Store bateau sur mesure en lin écru, plis plats, devant une fenêtre ouverte sur la verdure', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'img/realisations/stores/nuances-store-1.jpg', alt: 'Store en lin sur mesure dans une salle de bain, devant une fenêtre donnant sur une terrasse', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
 ];
 
 export const indoorGallery: GalleryItem[] = [
