@@ -185,7 +185,7 @@ export default function Home() {
     },
     {
       title: 'Stores',
-      subtitle: 'Bateaux & Romains',
+      subtitle: 'Bateaux',
       image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
       link: '/realisations/stores',
     },
@@ -260,7 +260,15 @@ export default function Home() {
                       {s.title}
                     </h3>
                     <p className="h-[20px] font-['MaisonNeue'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)] leading-[1.2]">
-                      {s.subtitle}
+                      {s.title === 'Indoor' ? (
+                        <span style={{ fontSize: '9px' }}>
+                          <span style={{ fontSize: '10px' }}>{s.subtitle}</span>
+                        </span>
+                      ) : ['Rideaux', 'Voilages', 'Stores'].includes(s.title) ? (
+                        <span style={{ fontSize: '10px' }}>{s.subtitle}</span>
+                      ) : (
+                        s.subtitle
+                      )}
                     </p>
                   </div>
                 </div>
