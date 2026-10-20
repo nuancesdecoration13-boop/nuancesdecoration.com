@@ -36,7 +36,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navigation />
-        <main className="flex-1 pt-[73px] md:pt-[89px]">
+        <main className="flex-1 pt-[124px] md:pt-[148px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/realisations/rideaux" element={<Rideaux />} />

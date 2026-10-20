@@ -18,6 +18,13 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-white animate-[fadeUp_0.5s_ease_both]">
+      <Link
+        to="/professionnels"
+        className="h-9 flex items-center justify-center bg-[#3E2416] text-[#F6F4F0] no-underline font-['DM_Sans'] font-normal text-[12px] tracking-[0.05em]"
+      >
+        <span className="hidden md:inline">Architectes, hôtels, restaurants : découvrez notre offre professionnelle →</span>
+        <span className="md:hidden">Professionnels : découvrez notre offre →</span>
+      </Link>
       <div className="flex items-center justify-between px-4 md:px-12 py-4 md:py-6">
         <Link to="/" className="no-underline" onClick={() => setShowMobileMenu(false)}>
           <img
@@ -54,17 +61,19 @@ export default function Navigation() {
                     </span>
                   </Link>
                 ))}
+                <Link
+                  to="/professionnels"
+                  className="block mx-2 mt-2 px-4 pt-3 pb-2 border-t border-[rgba(160,113,107,0.35)] no-underline transition-colors hover:bg-[var(--linen)] group"
+                >
+                  <span className="block font-['MaisonNeue'] font-light text-[11px] tracking-[2.5px] uppercase text-[var(--moka)] group-hover:text-[var(--charcoal)]">
+                    Professionnels
+                  </span>
+                  <span className="block font-['MaisonNeue'] font-light text-[10px] tracking-[1px] uppercase text-[var(--warm)] mt-[2px] opacity-70">
+                    Restaurants, hôtels, architectes
+                  </span>
+                </Link>
               </div>
             )}
-          </li>
-
-          <li>
-            <Link
-              to="/professionnels"
-              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
-            >
-              Professionnels
-            </Link>
           </li>
 
           <li>
@@ -148,18 +157,20 @@ export default function Navigation() {
                       </span>
                     </Link>
                   ))}
+                  <Link
+                    to="/professionnels"
+                    onClick={() => setShowMobileMenu(false)}
+                    className="block mt-2 pt-3 pb-2 border-t border-[rgba(160,113,107,0.35)] no-underline transition-colors"
+                  >
+                    <span className="block font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--warm)]">
+                      Professionnels
+                    </span>
+                    <span className="block font-['MaisonNeue'] font-light text-[10px] tracking-[0.5px] uppercase text-[var(--warm)] opacity-55 mt-[1px]">
+                      Restaurants, hôtels, architectes
+                    </span>
+                  </Link>
                 </div>
               )}
-            </li>
-
-            <li>
-              <Link
-                to="/professionnels"
-                onClick={() => setShowMobileMenu(false)}
-                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
-              >
-                Professionnels
-              </Link>
             </li>
 
             <li>
