@@ -12,9 +12,9 @@ export default function Voilages() {
       showHeroActions
       discoveryTitle="Vos voilages sur mesure"
       discoveryCards={[
-        { title: '1. Tissus légers et transparents', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-177.jpg` },
-        { title: '2. Filtration de la lumière', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-180.jpg` },
-        { title: '3. Finitions soignées', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}IMG_1555.jpg` },
+        { title: '1. Choisissez votre tissu', description: 'Lin, velours, tweed, coton, doublures thermiques, occultants, outdoor... Trouvez la matière qui saura répondre à vos envies !', image: `${import.meta.env.BASE_URL}500-references.jpg` },
+        { title: '2. Choisissez votre finition', description: 'Wave, œillets, plis flamands, pince plate, galon fronceur... Chaque finition est réalisée avec soin pour correspondre au rendu souhaité.', image: `${import.meta.env.BASE_URL}finissions.jpg` },
+        { title: '3. Choissisez votre support', description: 'Tringle ou rails — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu et la finition choisis. Nous proposons une gamme complète en laiton, nickel satiné, noir ou blanc, brillant ou mat, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.', image: `${import.meta.env.BASE_URL}supports.jpg` },
       ]}
       features={[
         'Tissus légers et transparents de haute qualité',

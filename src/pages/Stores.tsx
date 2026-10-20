@@ -10,12 +10,6 @@ export default function Stores() {
       description="Nous confectionnons vos stores bateaux et stores romains sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le type de store, les finitions et le niveau d'occultation. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       hideFeatures
       showHeroActions
-      discoveryTitle="Vos stores sur mesure"
-      discoveryCards={[
-        { title: '1. Stores bateau et romains', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-172.jpg` },
-        { title: '2. Tissus et occultation', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-178.jpg` },
-        { title: '3. Finitions sur mesure', description: 'Contenu à définir', image: `${import.meta.env.BASE_URL}naunces-179.jpg` },
-      ]}
       features={[
         'Stores bateau, romains et enrouleurs sur mesure',
         'Large gamme de tissus occultants et tamisant',
