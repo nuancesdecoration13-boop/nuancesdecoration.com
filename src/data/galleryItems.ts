@@ -25,10 +25,10 @@ export const storesGallery: GalleryItem[] = [
 ];
 
 export const indoorGallery: GalleryItem[] = [
-  { image: 'naunces-177.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-189.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-202.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-200.jpg', alt: 'Réalisation indoor', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-177.jpg', alt: 'Réalisation indoor', reference: 'Tissu Lin Viscose', finish: 'FINITION WAVE', finishClassName: 'text-[12px]' },
+  { image: 'naunces-189.jpg', alt: 'Réalisation indoor', reference: 'Tissu BAA', finish: 'BANQUETTE ET COUSSIN', finishClassName: 'text-[12px]' },
+  { image: 'naunces-202.jpg', alt: 'Réalisation indoor', reference: 'Tissu Flare et Gaze de Coton', finish: 'coussins & dessus de lit', finishClassName: 'text-[12px]' },
+  { image: 'naunces-200.jpg', alt: 'Réalisation indoor', reference: 'Tissu Lin Viscose', finish: 'FINITION WAVE', finishClassName: 'text-[12px]' },
 ];
 
 export const outdoorGallery: GalleryItem[] = [
