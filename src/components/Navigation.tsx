@@ -20,7 +20,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-white animate-[fadeUp_0.5s_ease_both]">
       <Link
         to="/professionnels"
-        className="h-9 flex items-center justify-center bg-[#3E2416] text-[#F6F4F0] no-underline font-['DM_Sans'] font-normal text-[12px] tracking-[0.05em]"
+        className="h-9 flex items-center justify-center bg-[#A0716B] text-[#F6F4F0] no-underline font-['DM_Sans'] font-normal text-[11px] md:text-[12px] tracking-[0.15em]"
       >
         <span className="hidden md:inline">&nbsp;CONFECTION DE DÉCORATION SUR MESURE À MARSEILLE</span>
         <span className="md:hidden">Professionnels : découvrez notre offre →</span>
