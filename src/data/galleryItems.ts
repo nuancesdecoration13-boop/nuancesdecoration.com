@@ -25,9 +25,9 @@ export const voilagesGallery: GalleryItem[] = [
 export const storesGallery: GalleryItem[] = [
   { image: 'naunces-172.jpg', alt: 'Réalisation stores', reference: 'Toile de jute', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px]' },
   { image: 'naunces-178.jpg', alt: 'Réalisation stores', reference: 'Toile de jute', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px] tracking-[1.65px]' },
-  { image: 'naunces-179.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-193.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-196.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
+  { image: 'naunces-179.jpg', alt: 'Réalisation stores', reference: 'Tissu Colin', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px] tracking-[1.65px]' },
+  { image: 'naunces-193.jpg', alt: 'Réalisation stores', reference: 'Tissu Colin', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px] tracking-[1.65px]' },
+  { image: 'naunces-196.jpg', alt: 'Réalisation stores', reference: 'Tissu Colin', finish: 'STORE BATEAU À BALEINE', finishClassName: 'text-[12px] tracking-[1.65px]' },
   { image: 'naunces-195.jpg', alt: 'Réalisation stores', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
 ];
 
