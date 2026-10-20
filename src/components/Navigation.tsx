@@ -60,6 +60,15 @@ export default function Navigation() {
 
           <li>
             <Link
+              to="/professionnels"
+              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+            >
+              Professionnels
+            </Link>
+          </li>
+
+          <li>
+            <Link
               to="/showroom"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
@@ -141,6 +150,16 @@ export default function Navigation() {
                   ))}
                 </div>
               )}
+            </li>
+
+            <li>
+              <Link
+                to="/professionnels"
+                onClick={() => setShowMobileMenu(false)}
+                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+              >
+                Professionnels
+              </Link>
             </li>
 
             <li>

@@ -22,6 +22,14 @@ export default function Footer() {
         </li>
         <li>
           <Link
+            to="/professionnels"
+            className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
+          >
+            Professionnels
+          </Link>
+        </li>
+        <li>
+          <Link
             to="/showroom"
             className="font-['MaisonNeue'] font-normal text-[10px] md:text-[9px] tracking-[2px] uppercase text-white no-underline transition-colors hover:text-white/70"
           >

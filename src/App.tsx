@@ -15,6 +15,7 @@ import BanquettesExterieurSurMesure from './pages/BanquettesExterieurSurMesure';
 import Histoire from './pages/Histoire';
 import Contact from './pages/Contact';
 import Showroom from './pages/Showroom';
+import Professionnels from './pages/Professionnels';
 import CGV from './pages/CGV';
 
 function ScrollToTop() {
@@ -49,6 +50,7 @@ function App() {
             <Route path="/realisations/banquettes-exterieur-sur-mesure" element={<BanquettesExterieurSurMesure />} />
             <Route path="/histoire" element={<Histoire />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/professionnels" element={<Professionnels />} />
             <Route path="/showroom" element={<Showroom />} />
             <Route path="/cgv" element={<CGV />} />
           </Routes>
