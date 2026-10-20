@@ -383,7 +383,7 @@ export default function Home() {
           to="/contact"
           className="inline-block font-['MaisonNeue'] font-normal text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
-          Prendre rendez-vous
+          <span style={{ fontWeight: 700 }}>Prendre rendez-vous</span>
         </Link>
       </div>
 
