@@ -14,14 +14,6 @@ export const rideauxGallery: GalleryItem[] = [
   { image: 'naunces-200.jpg', alt: 'Réalisation rideaux', reference: 'Tissu Lin Viscose', finish: 'Finition Passe Tringle', finishClassName: 'text-[12px] tracking-[1.8px]' },
 ];
 
-export const voilagesGallery: GalleryItem[] = [
-  { image: 'naunces-177.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-180.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'IMG_1555.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-198.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-  { image: 'naunces-200.jpg', alt: 'Réalisation voilages', reference: 'Tissu à renseigner', finish: 'Finition à renseigner' },
-];
-
 export const storesGallery: GalleryItem[] = [
   { image: 'img/realisations/stores/7DC42922-EB15-40AC-902C-43C2911E8AF5.JPG', alt: 'Store bateau sur mesure en lin écru, plis plats, devant une fenêtre ouverte sur la verdure', reference: 'Tissu à renseigner', finish: 'STORE BATEAU', finishClassName: 'text-[12px] tracking-[1.8px]' },
   { image: 'img/realisations/stores/nuances-store-1.jpg', alt: 'Store en lin sur mesure dans une salle de bain, devant une fenêtre donnant sur une terrasse', reference: 'Tissu Mistolino', finish: 'STORE BATEAU À BALEINES', finishClassName: 'text-[12px] tracking-[1.8px]' },

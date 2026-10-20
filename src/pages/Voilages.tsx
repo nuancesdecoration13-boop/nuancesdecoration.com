@@ -1,7 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawSheer, drawWeave } from '../utils/canvasDrawing';
 import RealisationsGrid from '../components/RealisationsGrid';
-import { voilagesGallery } from '../data/galleryItems';
+import { rideauxGallery } from '../data/galleryItems';
 
 export default function Voilages() {
   return (
@@ -35,7 +35,7 @@ export default function Voilages() {
         drawSheer,
         (c) => drawWeave(c, '#E4E0D8', '#D4D0C8'),
       ]}
-      extraContent={<RealisationsGrid items={voilagesGallery} />}
+      extraContent={<RealisationsGrid items={rideauxGallery} />}
     />
   );
 }
