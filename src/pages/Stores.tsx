@@ -8,7 +8,7 @@ export default function Stores() {
     <CategoryPage
       title="Stores"
       subtitle="STORES SUR MESURE"
-      description="Nous confectionnons vos stores bateaux et stores romains sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le type de store, les finitions et le niveau d'occultation. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
+      description="Nous confectionnons vos stores bateaux sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le type de store, les finitions et le niveau d'occultation. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       hideFeatures
       showHeroActions
       features={[
