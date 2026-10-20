@@ -19,7 +19,9 @@ export default function Banquettes() {
         'Coussins et garnitures personnalisables',
         'Finitions soignées et détails artisanaux',
       ]}
-      heroImage={`${import.meta.env.BASE_URL}indoor-cat.jpg`}
+      heroImage={`${import.meta.env.BASE_URL}img/realisations/rideaux/naunces_-_206.jpg`}
+      heroAlt="Chambre avec coussins sur mesure en lin et velours, rideaux en lin et store bateau"
+      heroObjectPosition="25% 80%"
       heroDraw={(c) => drawWeave(c, '#B0A090', '#907060')}
       galleryDraws={[
         (c) => drawWeave(c, '#B8A898', '#90786A'),

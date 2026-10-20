@@ -11,6 +11,7 @@ interface CategoryPageProps {
   heroDraw: (canvas: HTMLCanvasElement) => void;
   heroImage?: string;
   heroAlt?: string;
+  heroObjectPosition?: string;
   galleryDraws?: Array<(canvas: HTMLCanvasElement) => void>;
   hideFeatures?: boolean;
   showHeroActions?: boolean;
@@ -28,6 +29,7 @@ export default function CategoryPage({
   heroDraw,
   heroImage,
   heroAlt,
+  heroObjectPosition,
   hideFeatures = false,
   showHeroActions = false,
   heroActions,
@@ -74,7 +76,12 @@ export default function CategoryPage({
         </div>
         <div className="relative overflow-hidden aspect-[4/3] md:aspect-auto order-1 md:order-2">
           {heroImage ? (
-            <img src={heroImage} alt={heroAlt ?? title} className="absolute inset-0 w-full h-full object-cover" />
+            <img
+                src={heroImage}
+                alt={heroAlt ?? title}
+                className="absolute inset-0 w-full h-full object-cover"
+                style={heroObjectPosition ? { objectPosition: heroObjectPosition } : undefined}
+              />
           ) : (
             <CanvasImage draw={heroDraw} className="absolute inset-0 w-full h-full block" />
           )}
