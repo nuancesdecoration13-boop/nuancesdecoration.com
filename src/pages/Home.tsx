@@ -170,40 +170,38 @@ function StepsCarousel() {
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const visible = 4;
-  
-const slides = [
-  {
-    title: 'Rideaux',
-    subtitle: 'Décoratifs & occultants',
-    image: `${import.meta.env.BASE_URL}header-rideaux.jpg`,
-    link: '/realisations/rideaux/',
-  },
-  {
-    title: 'Voilages',
-    subtitle: 'Transparents & légers',
-    image: `${import.meta.env.BASE_URL}voilages-home.jpg`,
-    link: '/realisations/voilages/',
-  },
-  {
-    title: 'Stores',
-    subtitle: 'Bateaux & Romains',
-    image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
-    link: '/realisations/stores/',
-  },
-  {
-    title: 'Indoor',
-    subtitle: 'Banquettes, coussins & Linge de maison',
-    image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
-    link: '/realisations/banquettes/',
-  },
-  {
-    title: 'Outdoor',
-    subtitle: 'Banquettes, coussins & transats',
-    image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
-    link: '/realisations/banquettes-exterieur-sur-mesure/',
-  },
-];
-
+  const slides = [
+    {
+      title: 'Rideaux',
+      subtitle: 'Décoratifs & occultants',
+      image: `${import.meta.env.BASE_URL}header-rideaux.jpg`,
+      link: '/realisations/rideaux',
+    },
+    {
+      title: 'Voilages',
+      subtitle: 'Transparents & légers',
+      image: `${import.meta.env.BASE_URL}voilages-home.jpg`,
+      link: '/realisations/voilages',
+    },
+    {
+      title: 'Stores',
+      subtitle: 'Bateaux & Romains',
+      image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
+      link: '/realisations/stores',
+    },
+    {
+      title: 'Indoor',
+      subtitle: 'Banquettes, coussins & Linge de maison',
+      image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
+      link: '/realisations/banquettes',
+    },
+    {
+      title: 'Outdoor',
+      subtitle: 'Banquettes, coussins & transats',
+      image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
+      link: '/realisations/banquettes-exterieur-sur-mesure',
+    },
+  ];
   const total = slides.length;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -355,13 +353,13 @@ const slides = [
         <div className="max-w-xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact/"
+              to="/contact"
               className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
             >
               Prendre rendez-vous
             </Link>
             <Link
-              to="/contact/"
+              to="/contact"
               className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
             >
               Nous contacter
@@ -374,7 +372,7 @@ const slides = [
 
       <div className="bg-white py-10 flex justify-center">
         <Link
-          to="/contact/"
+          to="/contact"
           className="inline-block font-['MaisonNeue'] font-normal text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
           Prendre rendez-vous
@@ -383,7 +381,7 @@ const slides = [
 
       <section className="grid grid-cols-2 gap-[2px] bg-[var(--pale)]">
         <Link
-          to="/realisations/rideaux/"
+          to="/realisations/rideaux"
           className="relative overflow-hidden cursor-pointer aspect-[4/3] no-underline group"
         >
           <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
@@ -407,13 +405,13 @@ const slides = [
         </Link>
 
         <Link
-          to="/showroom/"
+          to="/showroom"
           className="relative overflow-hidden cursor-pointer aspect-[4/3] no-underline group"
         >
           <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
             <img
               src={`${import.meta.env.BASE_URL}header-showroom.jpg`}
-              alt="Notre showroom/"
+              alt="Notre showroom"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
@@ -447,7 +445,7 @@ const slides = [
             Née de la rencontre entre deux passionnées de création, de décoration et de belles matières, Nuances Décoration est une maison marseillaise dédiée au textile sur mesure. Rideaux, voilages, banquettes d'intérieur et d'extérieur, coussins et aménagements personnalisés prennent vie dans notre atelier, où chaque pièce est confectionnée avec soin. De la première inspiration à la pose finale, nous accompagnons chaque projet pour créer des espaces uniques.
           </p>
           <Link
-            to="/histoire/"
+            to="/histoire"
             className="inline-block font-['MaisonNeue'] font-light text-[9px] tracking-[3px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-[3px] no-underline transition-colors hover:text-[var(--primary)] w-fit"
           >
             Découvrir notre histoire
@@ -465,13 +463,13 @@ const slides = [
       <section className="py-10 px-6 md:px-12 bg-white text-center">
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            to="/contact/"
+            to="/contact"
             className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
           >
             Prendre rendez-vous
           </Link>
           <Link
-            to="/contact/"
+            to="/contact"
             className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
           >
             Nous contacter

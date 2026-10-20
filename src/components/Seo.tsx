@@ -9,11 +9,7 @@ interface SeoProps {
 const SITE_URL = 'https://nuancesdecoration.com';
 
 export default function Seo({ title, description, path }: SeoProps) {
-  const normalizedPath = path === '/'
-  ? '/'
-  : `/${path.replace(/^\/+|\/+$/g, '')}/`;
-
-const fullUrl = `${SITE_URL}${normalizedPath}`;
+  const fullUrl = `${SITE_URL}${path}`;
 
   useEffect(() => {
     document.title = title;
