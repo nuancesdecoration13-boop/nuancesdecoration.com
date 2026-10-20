@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import CategoryPage from './CategoryPage';
-import RealisationsGrid from '../components/RealisationsGrid';
-import type { GalleryItem } from '../data/galleryItems';
+
 
 const steps = [
   {
@@ -29,13 +28,6 @@ const steps = [
     image: `${import.meta.env.BASE_URL}pose-installation.jpg`,
   },
 ];
-
-const gallery: GalleryItem[] = Array.from({ length: 6 }, (_, index) => ({
-  image: 'nos-realisation.jpg',
-  alt: 'Image de réalisation professionnelle à venir',
-  reference: `Projet professionnel ${index + 1} — image à venir`,
-  finish: 'Détails à venir',
-}));
 
 function WorkingMethod() {
   return (
@@ -115,52 +107,35 @@ export default function Professionnels() {
                 </h2>
                 <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
-                <div>
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-4xl mx-auto">
+                <div className="text-center flex flex-col">
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3 min-h-[54px] flex items-start justify-center">
                     Architectes & décorateurs
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Nous réalisons vos prescriptions avec précision, sur plans ou sur site.
                   </p>
                 </div>
-                <div>
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
+                <div className="text-center flex flex-col">
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3 min-h-[54px] flex items-start justify-center">
                     Hôtels & chambres d'hôtes
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Rideaux, voilages, têtes de lit et coussins en tissus non feu, pour des chambres pensées dans le détail.
                   </p>
                 </div>
-                <div>
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
+                <div className="text-center flex flex-col">
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3 min-h-[54px] flex items-start justify-center">
                     Restaurants & bars
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Banquettes, assises et coussins sur mesure en tissus non feu, pour l'intérieur comme pour la terrasse.
                   </p>
                 </div>
-                <div>
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                    Bateaux & ports
-                  </h3>
-                  <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                    Sellerie nautique pour les professionnels du nautisme et de la location.
-                  </p>
-                </div>
               </div>
             </div>
           </section>
           <WorkingMethod />
-          <section className="bg-white pt-16 md:pt-20">
-            <div className="text-center mb-12 px-8 md:px-12">
-              <h2 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
-                Nos réalisations professionnelles
-              </h2>
-              <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
-            </div>
-            <RealisationsGrid items={gallery} />
-          </section>
         </div>
       }
     />
