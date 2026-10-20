@@ -19,7 +19,7 @@ export default function Bateaux() {
         'Mousses sur mesure',
         'Large sélection de tissus nautiques techniques',
       ]}
-      heroImage={`${import.meta.env.BASE_URL}Capture_d’écran_2026-10-01_à_09.48.32.png`}
+      heroImage={`${import.meta.env.BASE_URL}img/realisations/bateaux/naunces_-_203.jpg`}
       heroAlt="Sellerie bateau sur mesure – Nuances Décoration"
       heroDraw={drawNautical}
       extraContent={<RealisationsGrid items={bateauxGallery} />}
