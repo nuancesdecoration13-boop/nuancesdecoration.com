@@ -45,7 +45,7 @@ export default function CategoryPage({
     <div className="min-h-screen">
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] bg-[var(--grege-p)]">
         <div className="flex flex-col justify-center px-8 py-16 md:px-16 md:py-20 order-2 md:order-1">
-          <span className="font-['MaisonNeue'] font-thin text-[9px] tracking-[4px] uppercase text-[var(--primary)] mb-5 block">
+          <span className="font-['MaisonNeue'] font-thin text-[10px] tracking-[4px] uppercase text-[var(--primary)] mb-5 block">
             {subtitle}
           </span>
           <h1 className="font-['FreeSerif'] font-black text-[44px] md:text-[60px] text-[var(--moka)] leading-[1.05] mb-6">
