@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Seo from '../components/Seo';
-import { ArticleCard, ProjectBlock } from '../components/BlogSections';
+import { ArticleCard, ProjectBlock, ReassuranceStrip } from '../components/BlogSections';
 import { articles, getArticle, type ArticleBodyBlock } from '../data/articles';
 
 function BodyBlock({ block }: { block: ArticleBodyBlock }) {
@@ -30,5 +30,6 @@ export default function Article() {
     </div>
     <section className="max-w-6xl mx-auto px-6 md:px-12 py-14 md:py-20"><div className="flex items-baseline justify-between mb-8"><h2 className="font-['FreeSerif'] font-black text-[34px] text-[var(--moka)]">À lire aussi</h2><Link to="/conseils" className="font-['MaisonNeue'] font-bold text-[10px] tracking-[2px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-1 no-underline">TOUS LES CONSEILS</Link></div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{relatedArticles.map((relatedArticle) => <ArticleCard key={relatedArticle.slug} article={relatedArticle} />)}</div></section>
     <ProjectBlock />
+    <ReassuranceStrip />
   </div>;
 }

@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import CanvasImage from '../components/CanvasImage';
 import Seo from '../components/Seo';
 import CategoryDiscoverySection, { DiscoveryCard } from '../components/CategoryDiscoverySection';
+import { ProjectBlock, ReassuranceStrip } from '../components/BlogSections';
 
 interface CategoryPageProps {
   title: string;
@@ -137,6 +138,9 @@ export default function CategoryPage({
       )}
 
       {extraContent}
+
+      <ProjectBlock />
+      <ReassuranceStrip />
 
       <section className="px-12 py-16 bg-[var(--moka)] text-center">
         <h2 className="font-['FreeSerif'] italic font-normal text-[32px] text-[var(--linen)] leading-[1.5] mb-8">
