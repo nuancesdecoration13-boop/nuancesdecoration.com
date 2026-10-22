@@ -250,6 +250,7 @@ export default function Home() {
         description="Nuances Décoration, atelier de confection textile sur mesure à Marseille. Rideaux, voilages, stores, banquettes, revêtements et sellerie nautique. Conseils, prise de mesures, fabrication locale et pose."
         path="/"
       />
+      <h1 className="sr-only">Décoration sur mesure à Marseille</h1>
       <section className="animate-[fadeUp_0.6s_0.1s_ease_both] hidden md:block">
         <div className="relative overflow-hidden">
           <div
@@ -367,9 +368,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-12 pb-8 md:pt-12 md:pb-10 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+      <section className="pt-8 pb-8 md:pt-10 md:pb-10 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
-          <h1 className="font-['DM_Sans'] font-normal text-[13px] md:text-[15px] tracking-[0.25em] uppercase text-[#7B514A] whitespace-nowrap mb-7">Décoration sur mesure à Marseille</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"

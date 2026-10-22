@@ -19,6 +19,7 @@ import Professionnels from './pages/Professionnels';
 import CGV from './pages/CGV';
 import Conseils from './pages/Conseils';
 import Article from './pages/Article';
+import { useBlogVisibility } from './lib/blogVisibility';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,6 +33,7 @@ function ScrollToTop() {
 
 function App() {
   const basename = import.meta.env.BASE_URL;
+  const isBlogVisible = useBlogVisibility();
 
   return (
     <BrowserRouter basename={basename}>
@@ -55,8 +57,8 @@ function App() {
             <Route path="/professionnels" element={<Professionnels />} />
             <Route path="/showroom" element={<Showroom />} />
             <Route path="/cgv" element={<CGV />} />
-            <Route path="/conseils/:articleSlug" element={<Article />} />
-            <Route path="/conseils" element={<Conseils />} />
+            <Route path="/conseils/:articleSlug" element={isBlogVisible ? <Article /> : <Navigate to="/" replace />} />
+            <Route path="/conseils" element={isBlogVisible ? <Conseils /> : <Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />

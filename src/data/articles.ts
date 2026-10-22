@@ -25,6 +25,7 @@ export interface Article {
   body: ArticleBodyBlock[];
   tags: string[];
   relatedArticles: string[];
+  status: 'brouillon' | 'publié';
 }
 
 const image = (name: string) => `${import.meta.env.BASE_URL}${name}`;
@@ -33,6 +34,7 @@ export const articles: Article[] = [
   {
     title: 'Lin, coton, velours : choisir le tissu de ses rideaux selon la lumière',
     slug: 'choisir-tissu-rideaux-selon-lumiere',
+    status: 'publié',
     category: 'Matières et tissus',
     excerpt: 'Une pièce au nord ne s’habille pas comme un séjour plein sud. L’exposition, l’usage de la pièce et le tombé recherché guident le choix de la matière.',
     date: '14 octobre 2026',
@@ -62,6 +64,7 @@ export const articles: Article[] = [
   {
     title: 'Prendre ses mesures avant un rideau sur mesure : la méthode de l’équipe',
     slug: 'prendre-mesures-rideau-sur-mesure',
+    status: 'publié',
     category: 'Conseils rideaux',
     excerpt: 'Largeur de tringle, hauteur sous plafond, retour au mur. Les cotes que nous relevons à chaque visite, et pourquoi elles comptent.',
     date: '8 octobre 2026',
@@ -81,6 +84,7 @@ export const articles: Article[] = [
   {
     title: 'Quelle mousse choisir pour une banquette sur mesure',
     slug: 'choisir-mousse-banquette-sur-mesure',
+    status: 'publié',
     category: 'Conseils banquette',
     excerpt: 'Densité, portance, épaisseur : comment l’assise se décide selon l’usage, le repas, la lecture ou la sieste.',
     date: '1 octobre 2026',
@@ -100,6 +104,7 @@ export const articles: Article[] = [
   {
     title: 'Les tons terre s’invitent aux fenêtres cet automne',
     slug: 'tons-terre-fenetres-automne',
+    status: 'publié',
     category: 'Tendance',
     excerpt: 'Ocre, argile, tabac : des couleurs chaudes qui s’accordent à la lumière du Sud et aux intérieurs clairs.',
     date: '24 septembre 2026',
@@ -117,6 +122,7 @@ export const articles: Article[] = [
   {
     title: 'Voilage ou store bateau pour une fenêtre exposée plein sud',
     slug: 'voilage-ou-store-bateau',
+    status: 'publié',
     category: 'Conseils rideaux',
     excerpt: 'Filtrer la lumière sans assombrir la pièce : ce que chaque solution apporte, et les tissus qui supportent le soleil.',
     date: '17 septembre 2026',
@@ -135,6 +141,7 @@ export const articles: Article[] = [
   {
     title: 'Comprendre la laize d’un tissu avant de commander',
     slug: 'comprendre-laize-tissu',
+    status: 'publié',
     category: 'Matières et tissus',
     excerpt: 'La laize, c’est la largeur utile du tissu. Elle décide du nombre de lés, des raccords de motif et, au final, du métrage.',
     date: '10 septembre 2026',
@@ -153,6 +160,7 @@ export const articles: Article[] = [
   {
     title: 'Une banquette dans une niche : assise, dossier et housse déhoussable',
     slug: 'banquette-dans-une-niche',
+    status: 'publié',
     category: 'Conseils banquette',
     excerpt: 'Les trois choix qui font une banquette confortable et facile à vivre, de la prise de mesures à la pose.',
     date: '3 septembre 2026',
@@ -171,6 +179,7 @@ export const articles: Article[] = [
   {
     title: 'Entretenir des rideaux en lin sans les abîmer',
     slug: 'entretenir-rideaux-lin',
+    status: 'publié',
     category: 'Matières et tissus',
     excerpt: 'Les gestes simples pour conserver la souplesse, le tombé et la lumière d’un lin lavé au fil des saisons.',
     date: '27 août 2026',
@@ -191,6 +200,6 @@ export const articles: Article[] = [
 
 export const articleCategories = ['Tout', 'Conseils rideaux', 'Conseils banquette', 'Matières et tissus', 'Tendance'] as const;
 
-export function getArticle(slug: string) {
-  return articles.find((article) => article.slug === slug);
+export function getArticle(slug: string, includeDrafts = false) {
+  return articles.find((article) => article.slug === slug && (includeDrafts || article.status === 'publié'));
 }

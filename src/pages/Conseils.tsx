@@ -3,19 +3,23 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { ArticleCard, ProjectBlock, ReassuranceStrip } from '../components/BlogSections';
 import { articles, articleCategories } from '../data/articles';
+import { SHOW_BLOG } from '../config';
+import { useBlogVisibility } from '../lib/blogVisibility';
 
 export default function Conseils() {
   const [activeCategory, setActiveCategory] = useState<(typeof articleCategories)[number]>('Tout');
+  const isBlogVisible = useBlogVisibility();
+  const visibleArticles = articles.filter((article) => isBlogVisible || article.status === 'publié');
   const filteredArticles = useMemo(
-    () => activeCategory === 'Tout' ? articles : articles.filter((article) => article.category === activeCategory),
-    [activeCategory],
+    () => activeCategory === 'Tout' ? visibleArticles : visibleArticles.filter((article) => article.category === activeCategory),
+    [activeCategory, isBlogVisible],
   );
-  const featuredArticle = articles[0];
+  const featuredArticle = visibleArticles[0];
   const latestArticles = filteredArticles.filter((article) => article.slug !== featuredArticle.slug);
 
   return (
     <div className="bg-[var(--linen)]">
-      <Seo title="Conseils & inspirations — Nuances Décoration" description="Les conseils de l'équipe Nuances Décoration pour choisir vos tissus, prendre vos mesures et préparer votre projet sur mesure." path="/conseils" />
+      <Seo title="Conseils & inspirations — Nuances Décoration" description="Les conseils de l'équipe Nuances Décoration pour choisir vos tissus, prendre vos mesures et préparer votre projet sur mesure." path="/conseils" noIndex={!SHOW_BLOG} />
       <section className="bg-[var(--deep)] px-6 py-14 md:px-12 md:py-20">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center">
           <h1 className="font-['FreeSerif'] font-black text-[46px] md:text-[68px] text-[var(--linen)] leading-[0.96]">Les conseils de l’équipe</h1>

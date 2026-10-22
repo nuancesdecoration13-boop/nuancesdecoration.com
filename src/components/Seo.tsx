@@ -4,11 +4,12 @@ interface SeoProps {
   title: string;
   description: string;
   path: string;
+  noIndex?: boolean;
 }
 
 const SITE_URL = 'https://nuancesdecoration.com';
 
-export default function Seo({ title, description, path }: SeoProps) {
+export default function Seo({ title, description, path, noIndex = false }: SeoProps) {
   const fullUrl = `${SITE_URL}${path}`;
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Seo({ title, description, path }: SeoProps) {
     setMeta('og:type', 'website', 'property');
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
+    setMeta('robots', noIndex ? 'noindex' : 'index');
 
     const link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!link) {
@@ -41,7 +43,7 @@ export default function Seo({ title, description, path }: SeoProps) {
     } else {
       link.href = fullUrl;
     }
-  }, [title, description, fullUrl]);
+  }, [title, description, fullUrl, noIndex]);
 
   return null;
 }

@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { ArticleCard, ProjectBlock, ReassuranceStrip } from '../components/BlogSections';
 import { articles, getArticle, type ArticleBodyBlock } from '../data/articles';
+import { SHOW_BLOG } from '../config';
+import { useBlogVisibility } from '../lib/blogVisibility';
 
 function BodyBlock({ block }: { block: ArticleBodyBlock }) {
   if (block.type === 'heading') return <h2 id={block.id} className="font-['FreeSerif'] font-black text-[28px] md:text-[34px] text-[var(--moka)] leading-[1.1] mt-10 mb-4 scroll-mt-32">{block.content}</h2>;
@@ -16,13 +18,14 @@ function BodyBlock({ block }: { block: ArticleBodyBlock }) {
 
 export default function Article() {
   const { articleSlug = '' } = useParams();
-  const article = getArticle(articleSlug);
-  const relatedArticles = useMemo(() => article ? article.relatedArticles.map((slug) => getArticle(slug)).filter((relatedArticle): relatedArticle is NonNullable<typeof relatedArticle> => Boolean(relatedArticle)).slice(0, 3) : [], [article]);
+  const isBlogVisible = useBlogVisibility();
+  const article = getArticle(articleSlug, isBlogVisible);
+  const relatedArticles = useMemo(() => article ? article.relatedArticles.map((slug) => getArticle(slug, isBlogVisible)).filter((relatedArticle): relatedArticle is NonNullable<typeof relatedArticle> => Boolean(relatedArticle)).slice(0, 3) : [], [article, isBlogVisible]);
 
   if (!article) return <div className="min-h-[50vh] bg-[var(--linen)] px-6 py-20 text-center"><h1 className="font-['FreeSerif'] text-4xl text-[var(--moka)]">Article introuvable</h1><Link to="/conseils" className="inline-block mt-6 font-['MaisonNeue'] font-bold text-[10px] tracking-[2px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-1 no-underline">TOUS LES CONSEILS</Link></div>;
 
   const headings = article.body.filter((block): block is Extract<ArticleBodyBlock, { type: 'heading' }> => block.type === 'heading');
-  return <div className="bg-[var(--linen)]"><Seo title={`${article.title} — Nuances Décoration`} description={article.excerpt} path={`/conseils/${article.slug}`} />
+  return <div className="bg-[var(--linen)]"><Seo title={`${article.title} — Nuances Décoration`} description={article.excerpt} path={`/conseils/${article.slug}`} noIndex={!SHOW_BLOG} />
     <div className="max-w-6xl mx-auto px-6 md:px-12 py-8 md:py-12"><nav className="font-['MaisonNeue'] text-[10px] text-[var(--primary)] mb-12" aria-label="Fil d’Ariane"><Link to="/" className="no-underline text-inherit">Accueil</Link><span className="mx-2">/</span><Link to="/conseils" className="no-underline text-inherit">Conseils</Link><span className="mx-2">/</span><span className="text-[var(--moka)]">{article.category}</span></nav>
       <header className="text-center max-w-4xl mx-auto mb-12"><p className="font-['MaisonNeue'] font-bold text-[9px] tracking-[3px] uppercase text-[var(--primary)] mb-5">{article.category}</p><h1 className="font-['FreeSerif'] font-black text-[44px] md:text-[64px] text-[var(--moka)] leading-[0.98] mb-6">{article.title}</h1><p className="font-['MaisonNeue'] font-light text-[16px] text-[var(--charcoal)] leading-[1.7] max-w-2xl mx-auto mb-5">{article.excerpt}</p><p className="font-['MaisonNeue'] text-[11px] text-[var(--primary)]">Par l’équipe Nuances Décoration <span className="mx-2">·</span> {article.date} <span className="mx-2">·</span> {article.readingTime}</p></header>
       <figure className="mb-12"><div className="relative aspect-[16/7] overflow-hidden"><img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover" /></div><figcaption className="font-['MaisonNeue'] text-[10px] text-[var(--primary)] mt-2">{article.imageCaption}</figcaption></figure>

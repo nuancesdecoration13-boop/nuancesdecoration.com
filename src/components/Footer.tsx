@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useBlogVisibility } from '../lib/blogVisibility';
 
 const creationLinks = [
   { label: 'Rideaux', to: '/realisations/rideaux' },
@@ -13,7 +14,7 @@ const creationLinks = [
 const aboutLinks = [
   { label: 'Notre showroom', to: '/showroom' },
   { label: 'Notre histoire', to: '/histoire' },
-  { label: 'Nos conseils', to: '/conseils' },
+  { label: 'Nos conseils', to: '/conseils', blog: true },
   { label: 'Contact', to: '/contact' },
 ];
 
@@ -23,6 +24,8 @@ const titleClassName =
   "font-['MaisonNeue'] font-normal text-[10px] tracking-[0.15em] uppercase text-white mb-5";
 
 export default function Footer() {
+  const isBlogVisible = useBlogVisibility();
+
   return (
     <footer className="bg-[#8d6963] px-6 py-10 md:px-12 md:py-12">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-4 md:gap-x-10 md:gap-y-12">
@@ -52,7 +55,7 @@ export default function Footer() {
         <div>
           <h2 className={titleClassName}>Nuances décoration</h2>
           <nav aria-label="Nuances décoration" className="flex flex-col items-start gap-2">
-            {aboutLinks.map((link) => (
+            {aboutLinks.filter((link) => isBlogVisible || !('blog' in link && link.blog)).map((link) => (
               <Link key={link.to} to={link.to} className={linkClassName}>
                 {link.label}
               </Link>

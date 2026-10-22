@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X, CalendarDays } from 'lucide-react';
 import { SHOW_PROFESSIONNELS } from '../config';
+import { useBlogVisibility } from '../lib/blogVisibility';
 
 const categories = [
   { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux' },
@@ -16,6 +17,7 @@ export default function Navigation() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
+  const isBlogVisible = useBlogVisibility();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-white animate-[fadeUp_0.5s_ease_both]">
@@ -97,14 +99,16 @@ export default function Navigation() {
               Contact
             </Link>
           </li>
-          <li>
-            <Link
-              to="/conseils"
-              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
-            >
-              Nos conseils
-            </Link>
-          </li>
+          {isBlogVisible && (
+            <li>
+              <Link
+                to="/conseils"
+                className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+              >
+                Nos conseils
+              </Link>
+            </li>
+          )}
         </ul>
 
         <Link
@@ -197,15 +201,17 @@ export default function Navigation() {
               </Link>
             </li>
 
-            <li>
-              <Link
-                to="/conseils"
-                onClick={() => setShowMobileMenu(false)}
-                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
-              >
-                Nos conseils
-              </Link>
-            </li>
+            {isBlogVisible && (
+              <li>
+                <Link
+                  to="/conseils"
+                  onClick={() => setShowMobileMenu(false)}
+                  className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+                >
+                  Nos conseils
+                </Link>
+              </li>
+            )}
 
             <li className="pt-2">
               <Link
