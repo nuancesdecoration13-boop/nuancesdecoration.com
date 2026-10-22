@@ -83,6 +83,7 @@ export default function Professionnels() {
       heroAlt="Rideau sur mesure en tissu uni dans un salon"
       heroObjectPosition="50% 75%"
       hideFeatures
+      showProjectSections={false}
       heroActions={
         <div className="mt-8 flex flex-col sm:flex-row gap-3 items-stretch sm:items-start">
           <Link
@@ -138,6 +139,20 @@ export default function Professionnels() {
             </div>
           </section>
           <WorkingMethod />
+          <section className="px-6 py-12 md:px-12 md:py-20 flex flex-col sm:flex-row justify-center gap-3">
+            <Link
+              to="/contact"
+              className="w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[#3E2416] border border-[#3E2416] py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
+            >
+              NOUS CONTACTER
+            </Link>
+            <Link
+              to="/contact"
+              className="w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[#3E2416] bg-transparent border border-[#3E2416] py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[#3E2416] hover:text-[var(--linen)]"
+            >
+              PRENDRE RENDEZ-VOUS
+            </Link>
+          </section>
         </div>
       }
     />

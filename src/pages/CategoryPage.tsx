@@ -21,6 +21,7 @@ interface CategoryPageProps {
   discoveryTitle?: string;
   discoveryCards?: DiscoveryCard[];
   extraContent?: React.ReactNode;
+  showProjectSections?: boolean;
 }
 
 export default function CategoryPage({
@@ -39,6 +40,7 @@ export default function CategoryPage({
   discoveryTitle,
   discoveryCards,
   extraContent,
+  showProjectSections = true,
 }: CategoryPageProps) {
   const { pathname } = useLocation();
   const seoTitle = `${title} sur mesure — Nuances Décoration`;
@@ -139,20 +141,12 @@ export default function CategoryPage({
 
       {extraContent}
 
-      <ProjectBlock />
-      <ReassuranceStrip />
-
-      <section className="px-12 py-16 bg-[var(--moka)] text-center">
-        <h2 className="font-['FreeSerif'] italic font-normal text-[32px] text-[var(--linen)] leading-[1.5] mb-8">
-          Concrétisons votre projet ensemble
-        </h2>
-        <Link
-          to="/contact"
-          className="inline-block font-['MaisonNeue'] font-bold text-[10px] tracking-[3px] uppercase text-[var(--moka)] bg-[var(--linen)] py-4 px-8 no-underline transition-colors hover:bg-[var(--pale)]"
-        >
-          Prendre rendez-vous
-        </Link>
-      </section>
+      {showProjectSections && (
+        <>
+          <ProjectBlock />
+          <ReassuranceStrip />
+        </>
+      )}
     </div>
     </>
   );

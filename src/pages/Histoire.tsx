@@ -139,25 +139,6 @@ export default function Histoire() {
         </div>
       </section>
 
-      <section className="px-8 md:px-16 py-20 bg-[var(--moka)] text-center">
-        <p className="font-['FreeSerif'] italic font-normal text-[22px] text-[var(--linen)] leading-[1.65] max-w-3xl mx-auto mb-10">
-          Concrétisons votre projet ensemble
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            to="/contact"
-            className="inline-block font-['MaisonNeue'] font-bold text-[10px] tracking-[3px] uppercase text-[var(--moka)] bg-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-white"
-          >
-            Prendre rendez-vous
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-block font-['MaisonNeue'] font-light text-[10px] tracking-[3px] uppercase text-[var(--linen)] border border-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--linen)] hover:text-[var(--moka)]"
-          >
-            Nous contacter
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
