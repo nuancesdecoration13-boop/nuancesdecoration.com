@@ -1,13 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X, CalendarDays } from 'lucide-react';
-
-const SHOW_PROFESSIONNELS = true;
-
-const announcementMessages = [
-  { text: 'DÉCORATION SUR MESURE À MARSEILLE : RIDEAUX, VOILAGES, STORES, BANQUETTES...', link: null },
-  { text: 'ARCHITECTES, HÔTELS, RESTAURANTS : DÉCOUVREZ NOTRE OFFRE PROFESSIONNELLE →', link: '/professionnels' },
-];
+import { SHOW_PROFESSIONNELS } from '../config';
 
 const categories = [
   { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux' },
@@ -23,33 +17,16 @@ export default function Navigation() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
 
-  const announcementSequence = (duplicate = false) => (
-    <div className={`announcement-sequence${duplicate ? ' announcement-sequence-duplicate' : ''}`} aria-hidden={duplicate}>
-      {announcementMessages.map((message, index) => (
-        <span key={`${message.text}-${index}`} className="announcement-item">
-          {message.link ? (
-            <Link to={message.link} className="announcement-professional no-underline hover:underline">
-              {message.text}
-            </Link>
-          ) : (
-            message.text
-          )}
-          {index < announcementMessages.length - 1 && <span className="announcement-separator">·</span>}
-        </span>
-      ))}
-    </div>
-  );
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-white animate-[fadeUp_0.5s_ease_both]">
-      <div className="announcement-bar h-9 overflow-hidden flex items-center justify-center bg-[#A0716B] text-[#F6F4F0] font-['DM_Sans'] font-normal text-[11px] md:text-[12px] tracking-[0.15em]">
+      <div className="h-9 flex items-center justify-center bg-[#A0716B] text-[#F6F4F0] font-['DM_Sans'] font-normal text-[11px] md:text-[12px] tracking-[0.15em] text-center">
         {SHOW_PROFESSIONNELS ? (
-          <div className="announcement-track">
-            {announcementSequence()}
-            {announcementSequence(true)}
-          </div>
+          <Link to="/professionnels" className="no-underline hover:underline">
+            <span className="hidden md:inline">ARCHITECTES, HÔTELS, RESTAURANTS : DÉCOUVREZ NOTRE OFFRE PROFESSIONNELLE →</span>
+            <span className="md:hidden">PROFESSIONNELS : DÉCOUVREZ NOTRE OFFRE →</span>
+          </Link>
         ) : (
-          <span>{announcementMessages[0].text}</span>
+          <span>DÉCORATION SUR MESURE À MARSEILLE : RIDEAUX, VOILAGES, STORES, BANQUETTES...</span>
         )}
       </div>
       <div className="flex items-center justify-between px-4 md:px-12 py-4 md:py-6">

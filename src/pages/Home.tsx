@@ -2,6 +2,7 @@ import { useState, useRef, TouchEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import InstagramFeed from '../components/InstagramFeed';
 import Seo from '../components/Seo';
+import { SHOW_PROFESSIONNELS } from '../config';
 
 const steps = [
   {
@@ -201,6 +202,14 @@ export default function Home() {
       image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
       link: '/realisations/banquettes-exterieur-sur-mesure',
     },
+    ...(SHOW_PROFESSIONNELS ? [{
+      title: 'Professionnels',
+      subtitle: 'ARCHITECTES, HÔTELS, RESTAURANTS',
+      image: `${import.meta.env.BASE_URL}img/realisations/stores/CAMENGO_BRUGES-3-BRUG3-ambiance-automne.jpg`,
+      alt: 'Rideau terracotta et fauteuil tapissé sur mesure pour un projet professionnel',
+      link: '/professionnels',
+      objectPosition: '40% 60%',
+    }] : []),
   ];
   const total = slides.length;
   const touchStartX = useRef(0);
@@ -254,7 +263,7 @@ export default function Home() {
                 className="min-w-[25%] pr-[2px] last:pr-0 cursor-pointer no-underline group"
               >
                 <div className="w-full h-[520px] block relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.65)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
-                  <img src={s.image} alt={s.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
+                  <img src={s.image} alt={s.alt ?? s.title} style={s.objectPosition ? { objectPosition: s.objectPosition } : undefined} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110" />
                   <div className="absolute bottom-7 left-7 right-7 z-[2]">
                     <h3 className="font-['FreeSerif'] font-black text-[30px] text-[var(--linen)] leading-[1.1] mb-[5px]">
                       {s.title}
@@ -326,7 +335,8 @@ export default function Home() {
             <div className="w-full aspect-[4/5] relative after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[rgba(40,20,10,0.7)] after:via-[rgba(40,20,10,0.1)] after:to-transparent after:pointer-events-none">
               <img
                 src={slides[currentSlide].image}
-                alt={slides[currentSlide].title}
+                alt={slides[currentSlide].alt ?? slides[currentSlide].title}
+                style={slides[currentSlide].objectPosition ? { objectPosition: slides[currentSlide].objectPosition } : undefined}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute bottom-6 left-6 right-6 z-[2]">
@@ -357,8 +367,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-7 md:py-10 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
+      <section className="pt-12 pb-8 md:pt-12 md:pb-10 px-6 md:px-12 bg-white text-center animate-[fadeUp_0.7s_0.2s_ease_both]">
         <div className="max-w-xl mx-auto">
+          <h1 className="font-['DM_Sans'] font-normal text-[13px] md:text-[15px] tracking-[0.25em] uppercase text-[#7B514A] whitespace-nowrap mb-7">Décoration sur mesure à Marseille</h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
