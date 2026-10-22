@@ -79,7 +79,9 @@ export default function Professionnels() {
       description="Architectes, décorateurs, hôtels, restaurants, chambres d'hôtes : nous vous accompagnons dans vos projets d'aménagement textile, de l'étude à la pose. Chaque pièce est confectionnée dans notre atelier, selon votre cahier des charges. Nous proposons une large sélection de tissus non feu (classés M1), adaptés aux établissements recevant du public."
       features={[]}
       heroDraw={() => undefined}
-      heroImage={`${import.meta.env.BASE_URL}fabrication-locale.jpg`}
+      heroImage={`${import.meta.env.BASE_URL}CAMENGO_KAURI-2-KAURI2-ambiance-kauri-bronze.jpg`}
+      heroAlt="Rideau sur mesure en tissu uni dans un salon"
+      heroObjectPosition="50% 75%"
       hideFeatures
       heroActions={
         <div className="mt-8 flex flex-col sm:flex-row gap-3 items-stretch sm:items-start">
