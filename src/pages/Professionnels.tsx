@@ -34,7 +34,7 @@ function WorkingMethod() {
     <section className="bg-[var(--grege-p)] pt-14 md:pt-20">
       <div className="px-4 md:px-12 mb-10 md:mb-12 text-center">
         <h2 className="font-['FreeSerif'] font-normal text-[30px] md:text-[40px] text-[var(--moka)] leading-[1.1]">
-          Notre façon de travailler
+          Notre expertise pour vos projets
         </h2>
         <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto mt-5"></div>
       </div>
@@ -87,7 +87,7 @@ export default function Professionnels() {
             to="/contact"
             className="inline-block w-full sm:w-auto text-center font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
           >
-            DEMANDER UN DEVIS
+            NOUS CONTACTER
           </Link>
           <Link
             to="/contact"
@@ -103,7 +103,7 @@ export default function Professionnels() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="font-['FreeSerif'] font-black text-[40px] text-[var(--moka)] leading-[1.1] mb-4">
-                  Ils nous font confiance
+                  Un service pour professionnels
                 </h2>
                 <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
               </div>
@@ -113,7 +113,7 @@ export default function Professionnels() {
                     Architectes & décorateurs
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                    Nous réalisons vos prescriptions avec précision, sur plans ou sur site.
+                    Nous réalisons vos prescriptions avec précision : rideaux, voilages, banquettes d'intérieur ou d'extérieur.
                   </p>
                 </div>
                 <div className="text-center flex flex-col">
@@ -121,7 +121,7 @@ export default function Professionnels() {
                     Hôtels & chambres d'hôtes
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                    Rideaux, voilages, têtes de lit et coussins en tissus non feu, pour des chambres pensées dans le détail.
+                    Rideaux, voilages, têtes de lit et coussins en tissus non feu, pour chambres et pièces communes pensées dans le détail.
                   </p>
                 </div>
                 <div className="text-center flex flex-col">
@@ -129,7 +129,7 @@ export default function Professionnels() {
                     Restaurants & bars
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                    Banquettes, assises et coussins sur mesure en tissus non feu, pour l'intérieur comme pour la terrasse.
+                    Banquettes, assises et coussins sur mesure en tissus non feu, pour l'intérieur comme pour l'extérieur.
                   </p>
                 </div>
               </div>
