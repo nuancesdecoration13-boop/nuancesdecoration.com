@@ -19,7 +19,7 @@ export default function Stores() {
         'Pose professionnelle incluse',
         'Entretien et réparation assurés',
       ]}
-      heroImage={`${import.meta.env.BASE_URL}stores-cat copy 2.jpg`}
+      heroImage={`${import.meta.env.BASE_URL}images/stores-header.jpg`}
       heroAlt="Store bateau sur mesure en lin naturel au-dessus d'un évier de cuisine"
       heroDraw={(c) => drawWeave(c, '#B8A898', '#9A8878')}
       galleryDraws={[

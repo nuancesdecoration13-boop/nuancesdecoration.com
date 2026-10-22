@@ -81,7 +81,7 @@ export default function Professionnels() {
       heroDraw={() => undefined}
       heroImage={`${import.meta.env.BASE_URL}CAMENGO_KAURI-2-KAURI2-ambiance-kauri-bronze.jpg`}
       heroAlt="Rideau sur mesure en tissu uni dans un salon"
-      heroObjectPosition="50% 75%"
+      heroObjectPosition="50% 90%"
       hideFeatures
       showProjectSections={false}
       heroActions={
@@ -111,24 +111,24 @@ export default function Professionnels() {
                 <div className="w-12 h-[1px] bg-[var(--primary)] mx-auto"></div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-4xl mx-auto">
-                <div className="text-center flex flex-col">
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3 min-h-[54px] flex items-start justify-center">
+                <div className="text-center">
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3">
                     Architectes & décorateurs
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Nous réalisons vos prescriptions avec précision : rideaux, voilages, banquettes d'intérieur ou d'extérieur.
                   </p>
                 </div>
-                <div className="text-center flex flex-col">
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3 min-h-[54px] flex items-start justify-center">
+                <div className="text-center">
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3">
                     Hôtels & chambres d'hôtes
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Rideaux, voilages, têtes de lit et coussins en tissus non feu, pour chambres et pièces communes pensées dans le détail.
                   </p>
                 </div>
-                <div className="text-center flex flex-col">
-                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3 min-h-[54px] flex items-start justify-center">
+                <div className="text-center">
+                  <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.2] mb-3">
                     Restaurants & bars
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
