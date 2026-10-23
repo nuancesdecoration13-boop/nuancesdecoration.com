@@ -23,7 +23,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-white animate-[fadeUp_0.5s_ease_both]">
       <div className="h-9 flex items-center justify-center bg-[#A0716B] text-[#F6F4F0] font-['DM_Sans'] font-normal text-[11px] md:text-[12px] tracking-[0.15em] text-center">
         {SHOW_PROFESSIONNELS ? (
-          <Link to="/professionnels" className="no-underline hover:underline">
+          <Link to="/professionnels/" className="no-underline hover:underline">
             <span className="hidden md:inline">ARCHITECTES, HÔTELS, RESTAURANTS : DÉCOUVREZ NOTRE OFFRE PROFESSIONNELLE →</span>
             <span className="md:hidden">PROFESSIONNELS : DÉCOUVREZ NOTRE OFFRE →</span>
           </Link>
@@ -68,7 +68,7 @@ export default function Navigation() {
                   </Link>
                 ))}
                 <Link
-                  to="/professionnels"
+                  to="/professionnels/"
                   className="block mx-2 mt-2 px-4 pt-3 pb-2 border-t border-[rgba(160,113,107,0.35)] no-underline transition-colors hover:bg-[var(--linen)] group"
                 >
                   <span className="block font-['MaisonNeue'] font-light text-[11px] tracking-[2.5px] uppercase text-[var(--moka)] group-hover:text-[var(--charcoal)]">
@@ -84,7 +84,7 @@ export default function Navigation() {
 
           <li>
             <Link
-              to="/showroom"
+              to="/showroom/"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Notre showroom
@@ -93,7 +93,7 @@ export default function Navigation() {
 
           <li>
             <Link
-              to="/contact"
+              to="/contact/"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
               Contact
@@ -102,7 +102,7 @@ export default function Navigation() {
           {isBlogVisible && (
             <li>
               <Link
-                to="/conseils"
+                to="/conseils/"
                 className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
               >
                 Nos conseils
@@ -112,7 +112,7 @@ export default function Navigation() {
         </ul>
 
         <Link
-          to="/contact"
+          to="/contact/"
           className="hidden md:inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[2.5px] uppercase text-[var(--linen)] bg-[var(--moka)] border-none py-3 px-6 cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
           Prendre rendez-vous
@@ -165,7 +165,7 @@ export default function Navigation() {
                     </Link>
                   ))}
                   <Link
-                    to="/professionnels"
+                    to="/professionnels/"
                     onClick={() => setShowMobileMenu(false)}
                     className="block mt-2 pt-3 pb-2 border-t border-[rgba(160,113,107,0.35)] no-underline transition-colors"
                   >
@@ -182,7 +182,7 @@ export default function Navigation() {
 
             <li>
               <Link
-                to="/showroom"
+                to="/showroom/"
                 onClick={() => setShowMobileMenu(false)}
                 className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
               >
@@ -204,7 +204,7 @@ export default function Navigation() {
             {isBlogVisible && (
               <li>
                 <Link
-                  to="/conseils"
+                  to="/conseils/"
                   onClick={() => setShowMobileMenu(false)}
                   className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
                 >
