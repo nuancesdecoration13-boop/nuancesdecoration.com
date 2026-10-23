@@ -372,13 +372,13 @@ export default function Home() {
         <div className="max-w-xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
             >
               Prendre rendez-vous
             </Link>
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
             >
               Nous contacter
@@ -391,7 +391,7 @@ export default function Home() {
 
       <div className="bg-white py-10 flex justify-center">
         <Link
-          to="/contact"
+          to="/contact/"
           className="inline-block font-['MaisonNeue'] font-normal text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-12 no-underline transition-colors hover:bg-[var(--charcoal)]"
         >
           <span style={{ fontWeight: 700 }}>Prendre rendez-vous</span>
@@ -400,7 +400,7 @@ export default function Home() {
 
       <section className="grid grid-cols-2 gap-[2px] bg-[var(--pale)]">
         <Link
-          to="/realisations/rideaux"
+          to="/realisations/rideaux/"
           className="relative overflow-hidden cursor-pointer aspect-[4/3] no-underline group"
         >
           <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
@@ -424,7 +424,7 @@ export default function Home() {
         </Link>
 
         <Link
-          to="/showroom"
+          to="/showroom/"
           className="relative overflow-hidden cursor-pointer aspect-[4/3] no-underline group"
         >
           <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105">
@@ -464,7 +464,7 @@ export default function Home() {
             Née de la rencontre entre deux passionnées de création, de décoration et de belles matières, Nuances Décoration est une maison marseillaise dédiée au textile sur mesure. Rideaux, voilages, banquettes d'intérieur et d'extérieur, coussins et aménagements personnalisés prennent vie dans notre atelier, où chaque pièce est confectionnée avec soin. De la première inspiration à la pose finale, nous accompagnons chaque projet pour créer des espaces uniques.
           </p>
           <Link
-            to="/histoire"
+            to="/histoire/"
             className="inline-block font-['MaisonNeue'] font-light text-[9px] tracking-[3px] uppercase text-[var(--moka)] border-b border-[var(--primary)] pb-[3px] no-underline transition-colors hover:text-[var(--primary)] w-fit"
           >
             Découvrir notre histoire
@@ -482,13 +482,13 @@ export default function Home() {
       <section className="py-10 px-6 md:px-12 bg-white text-center">
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            to="/contact"
+            to="/contact/"
             className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-10 no-underline transition-colors hover:bg-[var(--charcoal)]"
           >
             Prendre rendez-vous
           </Link>
           <Link
-            to="/contact"
+            to="/contact/"
             className="inline-block font-['MaisonNeue'] font-bold text-[12px] tracking-[3px] uppercase bg-transparent text-[var(--moka)] border border-[var(--moka)] py-4 px-10 no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
           >
             Nous contacter
