@@ -27,7 +27,7 @@ const ROUTES = [
 
 // Anciennes URL -> nouvelles (GitHub Pages ne permet pas de vraie 301)
 const REDIRECTS = {
-  '/realisations/bateaux': '/realisations/nautique-sellerie-sur-mesure',
+  '/realisations/bateaux': '/realisations/nautique-sellerie-sur-mesure/',
 };
 
 const server = await preview({ preview: { port: PORT, strictPort: true } });
@@ -62,6 +62,16 @@ try {
     await writeFile(file, html);
     console.log(`↪ ${from} -> ${to}`);
   }
+
+  // Sitemap : mêmes URL que les canonical (avec / final)
+  const urls = ROUTES.map((r) => (r === '/' ? '/' : `${r}/`));
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join('\n')}
+</urlset>
+`;
+  await writeFile(path.join(DIST, 'sitemap.xml'), sitemap);
+  console.log(`🗺  sitemap.xml (${urls.length} URL)`);
 } finally {
   await browser.close();
   server.httpServer.close();
