@@ -5,8 +5,8 @@ const creationLinks = [
   { label: 'Rideaux', to: '/realisations/rideaux/' },
   { label: 'Voilages', to: '/realisations/voilages/' },
   { label: 'Stores', to: '/realisations/stores/' },
-  { label: 'Indoor', to: '/realisations/revetement-interieur/' },
-  { label: 'Outdoor', to: '/realisations/revetement-exterieur/' },
+  { label: 'Indoor', to: '/realisations/banquettes/' },
+  { label: 'Outdoor', to: '/realisations/banquettes-exterieur-sur-mesure/' },
   { label: 'Sellerie bateau', to: '/realisations/nautique-sellerie-sur-mesure/' },
   { label: 'Professionnels', to: '/professionnels/' },
 ];
@@ -37,7 +37,7 @@ export default function Footer() {
           />
           <p className="mt-8 max-w-[220px] font-['MaisonNeue'] text-[12px] leading-[1.6] text-white">
             Atelier de confection de décoration
-            <div>sur mesure à Marseille.</div>
+            <span className="block">sur mesure à Marseille.</span>
           </p>
         </div>
 
@@ -76,9 +76,9 @@ export default function Footer() {
       <div className="mx-auto mt-10 flex max-w-7xl flex-col items-center gap-3 border-t border-white/20 pt-5 font-['MaisonNeue'] text-[11px] text-white md:mt-12 md:flex-row md:justify-between">
         <span>© 2026 Nuances Décoration</span>
         <span className="flex flex-wrap justify-center gap-x-2">
-          <Link to="/cgv" className={linkClassName}>Mentions légales</Link>
+          <Link to="/cgv/" className={linkClassName}>Mentions légales</Link>
           <span aria-hidden="true">·</span>
-          <Link to="/cgv" className={linkClassName}>Confidentialité</Link>
+          <Link to="/cgv/" className={linkClassName}>Confidentialité</Link>
         </span>
       </div>
     </footer>
