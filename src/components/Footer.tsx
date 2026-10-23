@@ -2,20 +2,20 @@ import { Link } from 'react-router-dom';
 import { useBlogVisibility } from '../lib/blogVisibility';
 
 const creationLinks = [
-  { label: 'Rideaux', to: '/realisations/rideaux' },
-  { label: 'Voilages', to: '/realisations/voilages' },
-  { label: 'Stores', to: '/realisations/stores' },
-  { label: 'Indoor', to: '/realisations/revetement-interieur' },
-  { label: 'Outdoor', to: '/realisations/revetement-exterieur' },
-  { label: 'Sellerie bateau', to: '/realisations/nautique-sellerie-sur-mesure' },
-  { label: 'Professionnels', to: '/professionnels' },
+  { label: 'Rideaux', to: '/realisations/rideaux/' },
+  { label: 'Voilages', to: '/realisations/voilages/' },
+  { label: 'Stores', to: '/realisations/stores/' },
+  { label: 'Indoor', to: '/realisations/revetement-interieur/' },
+  { label: 'Outdoor', to: '/realisations/revetement-exterieur/' },
+  { label: 'Sellerie bateau', to: '/realisations/nautique-sellerie-sur-mesure/' },
+  { label: 'Professionnels', to: '/professionnels/' },
 ];
 
 const aboutLinks = [
-  { label: 'Notre showroom', to: '/showroom' },
-  { label: 'Notre histoire', to: '/histoire' },
-  { label: 'Nos conseils', to: '/conseils', blog: true },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Notre showroom', to: '/showroom/' },
+  { label: 'Notre histoire', to: '/histoire/' },
+  { label: 'Nos conseils', to: '/conseils/', blog: true },
+  { label: 'Contact', to: '/contact/' },
 ];
 
 const linkClassName =
