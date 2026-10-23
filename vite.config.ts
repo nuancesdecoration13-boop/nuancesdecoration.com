@@ -29,20 +29,22 @@ function safeCopyPublicDir(): Plugin {
         cpSync(indexPath, join(outDir, '404.html'));
 
         const routes = [
-          'realisations/rideaux',
-          'realisations/voilages',
-          'realisations/stores',
-          'realisations/revetement-interieur',
-          'realisations/revetement-exterieur',
-          'realisations/banquettes',
-          'realisations/bateaux',
-          'realisations/nautique-sellerie-sur-mesure',
-          'realisations/banquettes-exterieur-sur-mesure',
-          'histoire',
-          'contact',
-          'showroom',
-          'cgv',
-        ];
+  'realisations/rideaux',
+  'realisations/voilages',
+  'realisations/stores',
+  'realisations/revetement-interieur',
+  'realisations/revetement-exterieur',
+  'realisations/banquettes',
+  'realisations/bateaux',
+  'realisations/nautique-sellerie-sur-mesure',
+  'realisations/banquettes-exterieur-sur-mesure',
+  'histoire',
+  'contact',
+  'showroom',
+  'cgv',
+  'professionnels',
+  'conseils',
+];
 
         for (const route of routes) {
           const routeDir = join(outDir, route);
