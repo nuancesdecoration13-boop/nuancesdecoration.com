@@ -5,12 +5,12 @@ import { SHOW_PROFESSIONNELS } from '../config';
 import { useBlogVisibility } from '../lib/blogVisibility';
 
 const categories = [
-  { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux' },
-  { label: 'Voilages', subtitle: 'Transparents & légers', link: '/realisations/voilages' },
-  { label: 'Stores', subtitle: 'Bateaux', link: '/realisations/stores' },
-  { label: 'Indoor', subtitle: 'Banquettes & linge de maison', link: '/realisations/banquettes' },
-  { label: 'Outdoor', subtitle: 'Banquettes, coussins & transats', link: '/realisations/banquettes-exterieur-sur-mesure' },
-  { label: 'Bateaux', subtitle: 'Sellerie nautique', link: '/realisations/nautique-sellerie-sur-mesure' },
+  { label: 'Rideaux', subtitle: 'Décoratifs & occultants', link: '/realisations/rideaux/' },
+  { label: 'Voilages', subtitle: 'Transparents & légers', link: '/realisations/voilages/' },
+  { label: 'Stores', subtitle: 'Bateaux', link: '/realisations/stores/' },
+  { label: 'Indoor', subtitle: 'Banquettes & linge de maison', link: '/realisations/banquettes/' },
+  { label: 'Outdoor', subtitle: 'Banquettes, coussins & transats', link: '/realisations/banquettes-exterieur-sur-mesure/' },
+  { label: 'Bateaux', subtitle: 'Sellerie nautique', link: '/realisations/nautique-sellerie-sur-mesure/' },
 ];
 
 export default function Navigation() {
