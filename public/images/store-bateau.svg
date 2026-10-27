@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#7B514A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs><filter id="h1"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter></defs><g filter="url(#h1)">
+<path d="M30 30 L170 30 L170 200 L30 200 Z" stroke-width="1.4" opacity=".55"/>
+<path d="M100 30 L100 200 M30 120 L170 120" stroke-width="1" opacity=".35"/>
+<path d="M22 26 L178 26" stroke-width="2.4"/>
+<path d="M26 26 L26 104 L174 104 L174 26" fill="#F6F4F0"/>
+<path d="M26 50 Q100 58 174 50" /><path d="M24 50 Q20 56 26 62"/><path d="M176 50 Q180 56 174 62"/>
+<path d="M26 72 Q100 80 174 72"/><path d="M24 72 Q20 78 26 84"/><path d="M176 72 Q180 78 174 84"/>
+<path d="M24 94 Q20 100 26 106 Q100 114 174 106 Q180 100 176 94"/>
+<path d="M140 28 L140 150" stroke-width="1" opacity=".6"/><circle cx="140" cy="154" r="3" stroke-width="1.2"/>
+</g></svg>
