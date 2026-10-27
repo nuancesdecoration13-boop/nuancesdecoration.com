@@ -186,7 +186,7 @@ export default function Home() {
     },
     {
       title: 'Stores',
-      subtitle: 'Bateaux',
+      subtitle: 'BATEAUX & PANNEAUX JAPONAIS',
       image: `${import.meta.env.BASE_URL}nos_stores.jpg`,
       link: '/realisations/stores/',
     },

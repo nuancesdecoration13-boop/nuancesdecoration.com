@@ -1,6 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
 import RealisationsGrid from '../components/RealisationsGrid';
+import StoresTypesSection from '../components/StoresTypesSection';
 import { storesGallery } from '../data/galleryItems';
 
 export default function Stores() {
@@ -8,7 +9,7 @@ export default function Stores() {
     <CategoryPage
       title="Stores"
       subtitle="STORES SUR MESURE"
-      description="Nous confectionnons vos stores bateaux sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le type de store, les finitions et le niveau d'occultation. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
+      description="Nous confectionnons vos stores bateaux, stores enrouleurs et panneaux japonais sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, les finitions et le niveau d'occultation. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       hideFeatures
       showHeroActions
       features={[
@@ -30,7 +31,12 @@ export default function Stores() {
         (c) => drawWeave(c, '#B8ACA0', '#988880'),
         (c) => drawFolds(c, '#A89888', '#C0B0A0', '#887868', 6),
       ]}
-      extraContent={<RealisationsGrid items={storesGallery} />}
+      extraContent={
+        <>
+          <StoresTypesSection />
+          <RealisationsGrid items={storesGallery} />
+        </>
+      }
     />
   );
 }
