@@ -84,6 +84,15 @@ export default function Navigation() {
 
           <li>
             <Link
+              to="/collection-maison/"
+              className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
+            >
+              Collection maison
+            </Link>
+          </li>
+
+          <li>
+            <Link
               to="/showroom/"
               className="font-['MaisonNeue'] font-light text-[12px] tracking-[2.5px] uppercase text-[var(--moka)] no-underline transition-colors hover:text-[var(--charcoal)]"
             >
@@ -178,6 +187,16 @@ export default function Navigation() {
                   </Link>
                 </div>
               )}
+            </li>
+
+            <li>
+              <Link
+                to="/collection-maison/"
+                onClick={() => setShowMobileMenu(false)}
+                className="block py-2 font-['MaisonNeue'] font-light text-[11px] tracking-[2px] uppercase text-[var(--moka)] no-underline transition-colors"
+              >
+                Collection maison
+              </Link>
             </li>
 
             <li>
