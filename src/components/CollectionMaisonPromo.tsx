@@ -12,21 +12,21 @@ export default function CollectionMaisonPromo() {
           loading="lazy"
         />
       </div>
-      <div className="sm:aspect-[3/4] bg-[var(--linen)] px-6 py-10 md:px-9 flex flex-col justify-center gap-[18px]">
-        <p className="font-['DM_Sans'] text-[11px] tracking-[2.5px] uppercase text-[var(--primary)] m-0">
+      <div className="sm:aspect-[3/4] bg-[var(--linen)] px-6 py-10 md:px-9 flex flex-col justify-center gap-4">
+        <p className="font-['MaisonNeue'] font-thin text-[10px] tracking-[4px] uppercase text-[var(--primary)] m-0">
           Plaids, coussins, dessus de lit, trousses
         </p>
-        <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[32px] leading-[1.15] text-[var(--moka)] m-0">
+        <h2 className="font-['FreeSerif'] font-black text-[28px] md:text-[34px] leading-[1.05] text-[var(--moka)] m-0">
           Notre collection maison
         </h2>
         <span aria-hidden="true" className="w-12 h-px bg-[var(--primary)]" />
-        <p className="font-['DM_Sans'] font-light text-[14px] leading-[1.85] text-[var(--warm)] m-0">
+        <p className="font-['MaisonNeue'] font-light text-[13px] leading-[1.8] text-[var(--warm)] m-0">
           Des pièces choisies et confectionnées pour habiller la maison au quotidien. Disponibles dans notre showroom au 63 Avenue de Montredon, ou sur commande.
         </p>
         <div className="mt-2">
           <Link
             to="/collection-maison/"
-            className="inline-block font-['DM_Sans'] font-medium text-[12px] tracking-[2.5px] uppercase bg-[var(--moka)] text-[var(--linen)] py-[18px] px-7 text-center no-underline transition-colors hover:bg-[var(--charcoal)]"
+            className="inline-block font-['MaisonNeue'] font-bold text-[10px] tracking-[2.5px] uppercase bg-[var(--moka)] text-[var(--linen)] py-4 px-6 text-center no-underline transition-colors hover:bg-[var(--charcoal)]"
           >
             Découvrir la collection
           </Link>

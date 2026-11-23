@@ -114,7 +114,9 @@ const PLAIDS: Record<string, PlaidInfo> = {
 };
 
 const SERIF = "font-['FreeSerif'] font-black text-[var(--moka)]";
-const BTN_DARK = "font-['DM_Sans'] font-semibold text-[12px] md:text-[13px] tracking-[0.14em] uppercase bg-[var(--moka)] text-[var(--linen)] border-none cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]";
+const BTN_DARK = "font-['MaisonNeue'] font-bold text-[10px] tracking-[2.5px] uppercase bg-[var(--moka)] text-[var(--linen)] border-none cursor-pointer no-underline transition-colors hover:bg-[var(--charcoal)]";
+const BTN_LIGHT = "font-['MaisonNeue'] font-bold text-[10px] tracking-[2.5px] uppercase bg-transparent border border-[var(--moka)] text-[var(--moka)] cursor-pointer no-underline transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]";
+const LABEL = "font-['MaisonNeue'] font-bold text-[9px] tracking-[2px] uppercase text-[var(--primary)]";
 
 function ContactModal({ onClose }: { onClose: () => void }) {
   return (
@@ -129,31 +131,31 @@ function ContactModal({ onClose }: { onClose: () => void }) {
         <button type="button" aria-label="Fermer" onClick={onClose} className="absolute top-2.5 right-2.5 w-11 h-11 flex items-center justify-center bg-transparent border-none cursor-pointer text-[var(--moka)]">
           <X size={18} />
         </button>
-        <h2 id="contact-title" className={`${SERIF} text-[30px] leading-[1.15] m-0`}>Contactez-nous</h2>
-        <p className="font-['DM_Sans'] font-light text-[14px] text-[var(--warm)] mt-2.5 mb-7">
+        <h2 id="contact-title" className={`${SERIF} text-[28px] leading-[1.1] m-0`}>Contactez-nous</h2>
+        <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8] mt-3 mb-7">
           Appelez-nous ou écrivez-nous pour commander, ou pour toutes questions.
         </p>
         <div className="flex flex-col gap-[22px]">
           <div className="flex gap-3.5">
-            <Phone size={20} strokeWidth={1.6} className="text-[#A0716B] flex-none mt-px" />
+            <Phone size={18} strokeWidth={1.5} className="text-[var(--primary)] flex-none mt-px" />
             <div className="flex flex-col gap-1.5">
-              <span className="font-['DM_Sans'] font-semibold text-[11px] tracking-[0.16em] uppercase text-[#A0716B]">Téléphone</span>
-              <a href="tel:+33759574098" className="font-['DM_Sans'] text-[15px] text-[#1D1D1B] no-underline">07 59 57 40 98</a>
-              <a href="tel:+33603657997" className="font-['DM_Sans'] text-[15px] text-[#1D1D1B] no-underline">06 03 65 79 97</a>
+              <span className={LABEL}>Téléphone</span>
+              <a href="tel:+33759574098" className="font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] no-underline">07 59 57 40 98</a>
+              <a href="tel:+33603657997" className="font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] no-underline">06 03 65 79 97</a>
             </div>
           </div>
           <div className="flex gap-3.5">
-            <Mail size={20} strokeWidth={1.6} className="text-[#A0716B] flex-none mt-px" />
+            <Mail size={18} strokeWidth={1.5} className="text-[var(--primary)] flex-none mt-px" />
             <div className="flex flex-col gap-1.5 min-w-0">
-              <span className="font-['DM_Sans'] font-semibold text-[11px] tracking-[0.16em] uppercase text-[#A0716B]">Email</span>
-              <a href="mailto:contact@nuancesdecoration.com" className="font-['DM_Sans'] text-[15px] text-[#1D1D1B] no-underline break-all">contact@nuancesdecoration.com</a>
+              <span className={LABEL}>Email</span>
+              <a href="mailto:contact@nuancesdecoration.com" className="font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] no-underline break-all">contact@nuancesdecoration.com</a>
             </div>
           </div>
           <div className="flex gap-3.5">
-            <MapPin size={20} strokeWidth={1.6} className="text-[#A0716B] flex-none mt-px" />
+            <MapPin size={18} strokeWidth={1.5} className="text-[var(--primary)] flex-none mt-px" />
             <div className="flex flex-col gap-1.5">
-              <span className="font-['DM_Sans'] font-semibold text-[11px] tracking-[0.16em] uppercase text-[#A0716B]">Showroom</span>
-              <span className="font-['DM_Sans'] text-[15px] text-[#1D1D1B]">63 Avenue de Montredon, Marseille</span>
+              <span className={LABEL}>Showroom</span>
+              <span className="font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)]">63 Avenue de Montredon, Marseille</span>
             </div>
           </div>
         </div>
@@ -205,25 +207,25 @@ function PlaidModal({ product, onClose, onContact }: { product: Product; onClose
               <button type="button" aria-label="Photo suivante" onClick={() => go(1)} className="absolute right-3 top-1/2 -mt-[22px] w-11 h-11 rounded-full bg-white/90 border-none flex items-center justify-center cursor-pointer text-[var(--moka)]">
                 <ChevronRight size={18} />
               </button>
-              <span aria-live="polite" className="absolute right-3 bottom-3 bg-[#F6F4F0] text-[#3E2416] font-['DM_Sans'] text-[12px] px-2 py-1">
+              <span aria-live="polite" className="absolute right-3 bottom-3 bg-[#F6F4F0] text-[var(--moka)] font-['MaisonNeue'] font-light text-[11px] px-2 py-1">
                 {Math.min(slideIndex, slides.length - 1) + 1} / {slides.length}
               </span>
             </>
           )}
         </div>
         <div className="px-6 py-8 md:px-9 md:pt-10 md:pb-9 flex flex-col gap-3.5">
-          <h2 id="plaid-title" className={`${SERIF} text-[30px] leading-[1.15] m-0`}>{product.name}</h2>
-          <p className="font-['DM_Sans'] font-light text-[14px] text-[var(--warm)] -mt-1.5 m-0">
-            {product.sub} · <span className="text-[#3E2416] font-normal">{product.price}</span>
+          <h2 id="plaid-title" className={`${SERIF} text-[28px] leading-[1.1] m-0`}>{product.name}</h2>
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] -mt-1 m-0">
+            {product.sub} · <span className="text-[var(--moka)]">{product.price}</span>
           </p>
-          <p className="font-['DM_Sans'] font-light text-[14px] leading-[1.65] text-[#1D1D1B] m-0">{info.desc}</p>
-          <p className="font-['DM_Sans'] font-light text-[13px] text-[var(--warm)] m-0">
-            <span className="font-semibold text-[11px] tracking-[0.14em] uppercase text-[#A0716B]">Composition</span>&nbsp;&nbsp;{info.comp}
+          <p className="font-['MaisonNeue'] font-light text-[13px] leading-[1.8] text-[var(--charcoal)] m-0">{info.desc}</p>
+          <p className="font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] m-0">
+            <span className={LABEL}>Composition</span>&nbsp;&nbsp;{info.comp}
           </p>
           <div className="border-t border-[#EDE6DE] pt-4 flex flex-col gap-2.5">
-            <p className="font-['DM_Sans'] text-[14px] m-0">
-              <span className="font-semibold text-[12px] tracking-[0.14em] uppercase text-[var(--moka)]">Coloris :</span>{' '}
-              <span className="font-light text-[var(--moka)]">{current.name}</span>
+            <p className="font-['MaisonNeue'] font-light text-[13px] m-0">
+              <span className={LABEL}>Coloris :</span>{' '}
+              <span className="text-[var(--moka)]">{current.name}</span>
             </p>
             <div role="group" aria-label="Coloris disponibles" className="flex flex-wrap gap-1">
               {info.colors.map((c, i) => (
@@ -234,7 +236,7 @@ function PlaidModal({ product, onClose, onContact }: { product: Product; onClose
                   aria-pressed={i === colorIndex}
                   title={c.name}
                   onClick={() => pickColor(i)}
-                  className="w-10 h-10 p-1 bg-transparent cursor-pointer rounded-full"
+                  className="w-9 h-9 p-1 bg-transparent cursor-pointer rounded-full"
                   style={{ border: `1.5px solid ${i === colorIndex ? '#A0716B' : 'transparent'}` }}
                 >
                   <span className="block w-full h-full rounded-full border border-[#D9CFC4]" style={{ background: c.hex }} />
@@ -242,7 +244,7 @@ function PlaidModal({ product, onClose, onContact }: { product: Product; onClose
               ))}
             </div>
           </div>
-          <button type="button" onClick={onContact} className={`${BTN_DARK} mt-auto py-[18px] px-6 text-center`}>
+          <button type="button" onClick={onContact} className={`${BTN_DARK} mt-auto py-4 px-5 text-center`}>
             Contactez-nous pour commander
           </button>
         </div>
@@ -288,33 +290,33 @@ export default function CollectionMaison() {
         description="Plaids, coussins, dessus de lit et trousses : des pièces disponibles dans notre showroom au 63 Avenue de Montredon à Marseille, ou sur commande."
         path={pathname}
       />
-      <div className="bg-white text-[#1D1D1B] px-4 pt-12 pb-16 md:px-12 md:pt-[72px] md:pb-24">
+      <div className="bg-white text-[var(--charcoal)] px-4 pt-10 pb-16 md:px-12 md:pt-16 md:pb-20">
         <section className="max-w-[1200px] mx-auto">
           <div className="flex flex-col items-center text-center gap-4">
-            <h1 className={`${SERIF} text-[40px] md:text-[60px] leading-[1.05] m-0`}>Notre collection maison</h1>
-            <span aria-hidden="true" className="w-12 h-px bg-[#A0726A]" />
-            <p className="font-['DM_Sans'] font-light text-[14px] text-[var(--warm)] m-0">
+            <h1 className={`${SERIF} text-[40px] leading-[1.1] m-0`}>Notre collection maison</h1>
+            <span aria-hidden="true" className="w-12 h-px bg-[var(--primary)]" />
+            <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8] m-0">
               Des pièces disponibles dans notre showroom au 63 Avenue de Montredon, ou sur commande.
             </p>
           </div>
 
-          <nav aria-label="Catégories de la collection maison" className="flex flex-wrap justify-center gap-2 mt-8 mb-10">
+          <nav aria-label="Catégories de la collection maison" className="flex flex-wrap justify-center gap-2 mt-8 mb-12">
             {CATEGORIES.map((c) => (
               <button
                 key={c.id}
                 type="button"
                 aria-pressed={c.id === cat}
                 onClick={() => setCat(c.id)}
-                className={`min-h-[44px] px-3.5 border-none cursor-pointer font-['DM_Sans'] font-semibold text-[13px] tracking-[0.14em] uppercase ${
-                  c.id === cat ? 'bg-[#3E2416] text-[#F6F4F0]' : 'bg-[#EFEAE3] text-[#3E2416]'
+                className={`min-h-[40px] px-4 border-none cursor-pointer font-['MaisonNeue'] font-bold text-[10px] tracking-[2.5px] uppercase transition-colors ${
+                  c.id === cat ? 'bg-[var(--moka)] text-[var(--linen)]' : 'bg-[var(--grege-p)] text-[var(--moka)] hover:bg-[var(--grege-l)]'
                 }`}
               >
-                <span style={{ fontSize: '12px' }}>{c.label}</span>
+                {c.label}
               </button>
             ))}
           </nav>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 md:gap-x-6 md:gap-y-12">
             {list.map((p) => {
               const isPlaid = Boolean(PLAIDS[p.name]);
               const open = () => isPlaid && setOpenPlaid(p);
@@ -323,7 +325,7 @@ export default function CollectionMaison() {
                   <div className="relative aspect-[4/5] bg-[#EFEAE3] mb-3 overflow-hidden">
                     <img src={`${BASE}${p.img}`} alt={p.alt} className="absolute inset-0 w-full h-full object-cover block" loading="lazy" />
                     {p.badge && (
-                      <span className="absolute top-3 left-3 bg-[#F0E4DF] text-[#3E2416] font-['DM_Sans'] font-semibold text-[10px] tracking-[0.12em] uppercase leading-[1.3] px-[7px] py-1">
+                      <span className="absolute top-3 left-3 bg-[#F0E4DF] text-[var(--moka)] font-['MaisonNeue'] font-bold text-[9px] tracking-[2px] uppercase leading-[1.3] px-2 py-1">
                         {p.badge}
                       </span>
                     )}
@@ -334,27 +336,27 @@ export default function CollectionMaison() {
                         type="button"
                         aria-haspopup="dialog"
                         onClick={(e) => { e.stopPropagation(); open(); }}
-                        className="min-w-0 text-left bg-transparent border-none p-0 cursor-pointer font-['DM_Sans'] font-semibold text-[13px] md:text-[14px] tracking-[0.14em] uppercase leading-[1.3] text-[#3E2416] underline-offset-4 decoration-[#A0716B] group-hover:underline"
+                        className="min-w-0 text-left bg-transparent border-none p-0 cursor-pointer font-['FreeSerif'] font-bold text-[15px] md:text-[18px] leading-tight text-[#3E2416] underline-offset-4 decoration-[#A0716B] group-hover:underline"
                       >
                         {p.name}
                       </button>
                     ) : (
-                      <span className="min-w-0 font-['DM_Sans'] font-semibold text-[13px] md:text-[14px] tracking-[0.14em] uppercase leading-[1.3] text-[#3E2416]">{p.name}</span>
+                      <span className="min-w-0 font-['FreeSerif'] font-bold text-[15px] md:text-[18px] leading-tight text-[#3E2416]">{p.name}</span>
                     )}
                     {p.colors > 0 && (
                       <button
                         type="button"
                         aria-haspopup="dialog"
                         onClick={(e) => { e.stopPropagation(); open(); }}
-                        className="flex-none bg-transparent border-none p-0 cursor-pointer font-['DM_Sans'] font-light text-[13px] text-[var(--warm)] underline underline-offset-4 decoration-[#A0716B]"
+                        className="flex-none bg-transparent border-none p-0 cursor-pointer font-['MaisonNeue'] font-light text-[12px] text-[var(--warm)] underline underline-offset-4 decoration-[var(--primary)]"
                       >
                         {p.colors} coloris
                       </button>
                     )}
                   </div>
                   <div className="flex justify-between items-baseline gap-3">
-                    <span className="font-['DM_Sans'] font-light text-[13px] md:text-[14px] text-[var(--warm)]">{p.sub}</span>
-                    <span className="flex-none font-['DM_Sans'] text-[13px] md:text-[14px] text-[#3E2416]">{p.price}</span>
+                    <span className="font-['DM_Sans'] uppercase tracking-[0.15em] text-[11px] text-[#7B514A]">{p.sub}</span>
+                    <span className="flex-none font-['MaisonNeue'] font-light text-[13px] text-[var(--moka)]">{p.price}</span>
                   </div>
                 </div>
               );
@@ -362,34 +364,28 @@ export default function CollectionMaison() {
           </div>
 
           <div className="flex justify-center mt-10">
-            <button type="button" aria-haspopup="dialog" onClick={openContact} className={`${BTN_DARK} py-[18px] px-8 text-center`}>
+            <button type="button" aria-haspopup="dialog" onClick={openContact} className={`${BTN_DARK} py-4 px-8 text-center`}>
               Contactez-nous pour commander
             </button>
           </div>
 
-          <div className="mt-[88px] bg-[var(--grege-p)] px-5 py-10 md:px-14 md:py-16 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] gap-8 md:gap-16 items-center">
-            <div className="flex flex-col gap-4">
-              <h2 className={`${SERIF} text-[30px] md:text-[38px] leading-[1.15] m-0`}>Vous avez un projet en tête ?</h2>
-              <p className="font-['DM_Sans'] font-light text-[14px] leading-[1.85] text-[var(--moka)] max-w-[560px] m-0">
-                Housse de coussin, dessus de lit, édredon, linge de table : nous les confectionnons à l’atelier, dans le tissu et les dimensions de votre choix. Parlez-nous de votre projet, nous vous conseillerons sur les matières et vous remettrons un devis détaillé.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3">
-              <Link to="/contact" className={`${BTN_DARK} !text-[12px] py-[18px] px-5 text-center`}>
-                Prendre rendez-vous
-              </Link>
-              <button
-                type="button"
-                aria-haspopup="dialog"
-                onClick={openContact}
-                className="font-['DM_Sans'] font-semibold text-[12px] tracking-[0.14em] uppercase bg-transparent border border-[var(--moka)] text-[var(--moka)] cursor-pointer py-[17px] px-5 text-center transition-colors hover:bg-[var(--moka)] hover:text-[var(--linen)]"
-              >
-                Nous contacter
-              </button>
-            </div>
-          </div>
         </section>
       </div>
+
+      <section className="bg-[var(--grege-p)] px-6 py-14 md:px-12 md:py-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-16">
+          <div className="max-w-2xl text-center md:text-left">
+            <h2 className="font-['FreeSerif'] font-black text-[34px] md:text-[42px] text-[var(--moka)] leading-[1.05] mb-5">Vous avez un projet en tête ?</h2>
+            <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--charcoal)] leading-[1.7]">
+              Housse de coussin, dessus de lit, édredon, linge de table : nous les confectionnons à l’atelier, dans le tissu et les dimensions de votre choix. Parlez-nous de votre projet, nous vous conseillerons sur les matières et vous remettrons un devis détaillé.
+            </p>
+          </div>
+          <div className="w-full md:w-[440px] shrink-0 flex flex-col gap-3 text-center">
+            <Link to="/contact" className={`${BTN_DARK} py-4 px-5`}>Prendre rendez-vous</Link>
+            <button type="button" aria-haspopup="dialog" onClick={openContact} className={`${BTN_LIGHT} py-4 px-5`}>Nous contacter</button>
+          </div>
+        </div>
+      </section>
 
       {openPlaid && <PlaidModal product={openPlaid} onClose={() => setOpenPlaid(null)} onContact={openContact} />}
       {contactOpen && <ContactModal onClose={() => setContactOpen(false)} />}
