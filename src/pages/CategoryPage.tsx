@@ -22,6 +22,17 @@ interface CategoryPageProps {
   discoveryCards?: DiscoveryCard[];
   extraContent?: React.ReactNode;
   showProjectSections?: boolean;
+  seoTitle?: string;
+  seoDescription?: string;
+}
+
+function truncateAtSentence(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const slice = text.slice(0, max);
+  const lastStop = Math.max(slice.lastIndexOf('.'), slice.lastIndexOf('!'), slice.lastIndexOf('?'));
+  if (lastStop > max * 0.5) return slice.slice(0, lastStop + 1).trim();
+  const lastSpace = slice.lastIndexOf(' ');
+  return slice.slice(0, lastSpace > 0 ? lastSpace : max).trim();
 }
 
 export default function CategoryPage({
@@ -41,14 +52,16 @@ export default function CategoryPage({
   discoveryCards,
   extraContent,
   showProjectSections = true,
+  seoTitle,
+  seoDescription,
 }: CategoryPageProps) {
   const { pathname } = useLocation();
-  const seoTitle = `${title} sur mesure — Nuances Décoration`;
-  const seoDescription = description.slice(0, 155);
+  const finalSeoTitle = seoTitle ?? `${title} sur mesure — Nuances Décoration`;
+  const finalSeoDescription = seoDescription ?? truncateAtSentence(description, 155);
 
   return (
     <>
-    <Seo title={seoTitle} description={seoDescription} path={pathname} />
+    <Seo title={finalSeoTitle} description={finalSeoDescription} path={pathname} />
     <div className="min-h-screen">
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] bg-[var(--grege-p)]">
         <div className="flex flex-col justify-center px-8 py-16 md:px-16 md:py-20 order-2 md:order-1">

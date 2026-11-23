@@ -8,6 +8,8 @@ export default function Voilages() {
     <CategoryPage
       title="Voilages"
       subtitle="VOILAGES SUR MESURE"
+      seoTitle="Voilages sur mesure à Marseille — Nuances Décoration"
+      seoDescription="Voilages sur mesure confectionnés dans notre atelier à Marseille. Tissus légers, finitions au choix. Conseil, prise de mesures et pose à domicile."
       description="Nous confectionnons vos voilages sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble la matière, la transparence, le tombé et les finitions. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       hideFeatures
       showHeroActions

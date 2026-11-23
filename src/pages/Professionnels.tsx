@@ -76,6 +76,8 @@ export default function Professionnels() {
     <CategoryPage
       title="Professionnels"
       subtitle="PROJETS POUR PROFESSIONNELS"
+      seoTitle="Projets professionnels sur mesure à Marseille — Nuances Décoration"
+      seoDescription="Architectes, décorateurs, hôtels et restaurants : rideaux, assises et textiles sur mesure pour vos projets, confectionnés dans notre atelier à Marseille."
       description="Architectes, décorateurs, hôtels, restaurants, chambres d'hôtes : nous vous accompagnons dans vos projets d'aménagement textile, de l'étude à la pose. Chaque pièce est confectionnée dans notre atelier, selon votre cahier des charges. Nous proposons une large sélection de tissus non feu (classés M1), adaptés aux établissements recevant du public."
       features={[]}
       heroDraw={() => undefined}

@@ -8,6 +8,8 @@ export default function Bateaux() {
     <CategoryPage
       title="Sellerie bateau"
       subtitle="SELLERIE NAUTIQUE SUR MESURE"
+      seoTitle="Sellerie bateau sur mesure à Marseille — Nuances Décoration"
+      seoDescription="Sellerie bateau sur mesure : banquettes de cockpit, bains de soleil, couchages et matelas de cabine. Confection dans notre atelier à Marseille."
       description="Nous réalisons la sellerie de votre bateau sur mesure, dans notre atelier : banquettes, coussins de cockpit, bains de soleil, couchages et matelas de cabine. Nous choisissons ensemble des tissus nautiques techniques, conçus pour résister au soleil, à l'eau et au sel. Nous prenons les mesures sur votre bateau, réalisons la confection, puis assurons la pose."
       hideFeatures
       showHeroActions

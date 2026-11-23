@@ -9,6 +9,8 @@ export default function Rideaux() {
     <CategoryPage
       title="Rideaux"
       subtitle="Rideaux sur mesure"
+      seoTitle="Rideaux sur mesure à Marseille — Nuances Décoration"
+      seoDescription="Rideaux sur mesure confectionnés dans notre atelier à Marseille. Lin, velours, doublures occultantes ou thermiques. Conseil, mesures et pose à domicile."
       description="Nous confectionnons vos rideaux sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le tombé, les finitions et la doublure, thermique ou occultante. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       features={[
         'Confection sur mesure adaptée à vos dimensions',

@@ -9,6 +9,8 @@ export default function Banquettes() {
     <CategoryPage
       title="Indoor"
       subtitle="BANQUETTES & COUSSINS D'INTÉRIEUR"
+      seoTitle="Banquettes et coussins sur mesure à Marseille — Nuances Décoration"
+      seoDescription="Banquettes, coussins et linge de maison sur mesure, confectionnés dans notre atelier à Marseille. Choix des tissus au showroom ou chez vous."
       description="Nous confectionnons vos banquettes, coussins et linge de maison sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, la mousse, les dimensions et les finitions. Nous prenons les mesures, réalisons la confection, puis assurons la livraison et la pose."
       hideFeatures
       showHeroActions
