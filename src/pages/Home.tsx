@@ -1,6 +1,7 @@
 import { useState, useRef, TouchEvent, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import InstagramFeed from '../components/InstagramFeed';
+import GoogleReviews from '../components/GoogleReviews';
 import Seo from '../components/Seo';
 import { SHOW_PROFESSIONNELS } from '../config';
 
@@ -397,6 +398,8 @@ export default function Home() {
           <span style={{ fontWeight: 700 }}>Prendre rendez-vous</span>
         </Link>
       </div>
+
+      <GoogleReviews />
 
       <section className="grid grid-cols-2 gap-[2px] bg-[var(--pale)]">
         <Link
