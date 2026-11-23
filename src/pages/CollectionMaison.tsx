@@ -290,17 +290,17 @@ export default function CollectionMaison() {
         description="Plaids, coussins, dessus de lit et trousses : des pièces disponibles dans notre showroom au 63 Avenue de Montredon à Marseille, ou sur commande."
         path={pathname}
       />
-      <div className="bg-white text-[var(--charcoal)] px-4 pt-10 pb-16 md:px-12 md:pt-16 md:pb-20">
-        <section className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col items-center text-center gap-4">
-            <h1 className={`${SERIF} text-[40px] leading-[1.1] m-0`}>Notre collection maison</h1>
-            <span aria-hidden="true" className="w-12 h-px bg-[var(--primary)]" />
-            <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8] m-0">
-              Des pièces disponibles dans notre showroom au 63 Avenue de Montredon, ou sur commande.
-            </p>
-          </div>
-
-          <nav aria-label="Catégories de la collection maison" className="flex flex-wrap justify-center gap-2 mt-8 mb-12">
+      <header className="bg-[var(--grege-p)] px-4 pt-12 pb-10 md:px-12 md:pt-16 md:pb-12">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center gap-4">
+          <span className="font-['MaisonNeue'] font-thin text-[10px] tracking-[4px] uppercase text-[var(--primary)]">
+            Plaids, coussins, dessus de lit, trousses
+          </span>
+          <h1 className={`${SERIF} text-[40px] leading-[1.1] m-0`}>Notre collection maison</h1>
+          <span aria-hidden="true" className="w-12 h-px bg-[var(--primary)]" />
+          <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8] m-0">
+            Des pièces disponibles dans notre showroom au 63 Avenue de Montredon, ou sur commande.
+          </p>
+          <nav aria-label="Catégories de la collection maison" className="flex flex-wrap justify-center gap-2 mt-5">
             {CATEGORIES.map((c) => (
               <button
                 key={c.id}
@@ -308,14 +308,18 @@ export default function CollectionMaison() {
                 aria-pressed={c.id === cat}
                 onClick={() => setCat(c.id)}
                 className={`min-h-[40px] px-4 border-none cursor-pointer font-['MaisonNeue'] font-bold text-[10px] tracking-[2.5px] uppercase transition-colors ${
-                  c.id === cat ? 'bg-[var(--moka)] text-[var(--linen)]' : 'bg-[var(--grege-p)] text-[var(--moka)] hover:bg-[var(--grege-l)]'
+                  c.id === cat ? 'bg-[var(--moka)] text-[var(--linen)]' : 'bg-white text-[var(--moka)] hover:bg-[var(--linen)]'
                 }`}
               >
                 {c.label}
               </button>
             ))}
           </nav>
+        </div>
+      </header>
 
+      <div className="bg-white text-[var(--charcoal)] px-4 pt-10 pb-16 md:px-12 md:pt-12 md:pb-20">
+        <section className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-8 md:gap-x-6 md:gap-y-12">
             {list.map((p) => {
               const isPlaid = Boolean(PLAIDS[p.name]);
