@@ -42,18 +42,18 @@ const CATEGORIES: { id: Category | 'tout'; label: string }[] = [
 ];
 
 const PRODUCTS: Product[] = [
-  { cat: 'plaids', name: 'Plaid Zebra', sub: '140 × 180 cm', colors: 5, price: '90 €', badge: 'Nouveauté', img: 'plaid-zebra-vieil-or.jpg', alt: 'Plaid Zebra plié, motif zébré en jacquard' },
-  { cat: 'plaids', name: 'Plaid Uniwaffle', sub: '140 × 180 cm', colors: 6, price: '90 €', img: 'plaid-uniwaffle-vison.jpg', alt: 'Plaid Uniwaffle plié, tissage nid d’abeille' },
-  { cat: 'plaids', name: 'Plaid Zen', sub: '140 × 180 cm', colors: 12, price: '90 €', img: 'plaid-zen-bleu-nuit.jpg', alt: 'Plaid Zen plié, armure fine deux tons' },
-  { cat: 'plaids', name: 'Plaid Squares', sub: '140 × 180 cm', colors: 7, price: '90 €', img: 'plaid-squares-rose-poudre.jpg', alt: 'Plaid Squares plié, grands carreaux rose poudré' },
-  { cat: 'plaids', name: 'Plaid Curly', sub: '140 × 180 cm', colors: 6, price: '106 €', img: 'plaid-curly-naturel.jpg', alt: 'Plaid Curly plié, laine mérinos et fil bouclette' },
-  { cat: 'plaids', name: 'Plaid Stellar', sub: '140 × 180 ou 250 cm', colors: 6, price: 'Dès 90 €', img: 'plaid-stellar-corail.jpg', alt: 'Plaid Stellar plié, fil chiné corail' },
-  { cat: 'plaids', name: 'Plaid Ruby', sub: '140 × 180 ou 250 cm', colors: 5, price: 'Dès 90 €', img: 'plaid-ruby-taupe.jpg', alt: 'Plaid Ruby plié, petit damier taupe' },
-  { cat: 'dessus', name: 'Dessus de lit gaze de coton', sub: '130 × 220 cm', colors: 0, price: 'Dès 75 €', badge: 'Plusieurs coloris', img: 'dessus-de-lit-gaze.jpg', alt: 'Dessus de lit en gaze de coton à carreaux vichy terracotta, plié, avec pompons' },
-  { cat: 'coussins', name: 'Coussin velours à franges', sub: '45 × 45 ou 30 × 50 cm', colors: 0, price: 'Dès 40 €', badge: 'Plusieurs coloris', img: 'coussin-franges.jpg', alt: 'Coussin en tissu crème bordé de franges brunes' },
-  { cat: 'coussins', name: 'Coussin à volants', sub: '30 × 30 cm', colors: 0, price: '50 €', badge: 'Plusieurs coloris', img: 'coussin-volants.jpg', alt: 'Coussin rayé beige et blanc bordé de volants en lin écru' },
-  { cat: 'trousses', name: 'Petite trousse matelassée', sub: '44 × 51 cm', colors: 0, price: '38 €', badge: 'Plusieurs coloris', img: 'trousse-petite.jpg', alt: 'Deux trousses matelassées à motifs floraux, framboise et moutarde' },
-  { cat: 'trousses', name: 'Grande trousse matelassée', sub: '48 × 68 cm', colors: 0, price: '58 €', badge: 'Plusieurs coloris', img: 'trousse-grande.jpg', alt: 'Grande trousse matelassée à motif floral sur fond framboise' }
+  { cat: 'plaids', name: 'Plaid Zebra', sub: '140x180 cm', colors: 5, price: '90 €', badge: 'Nouveauté', img: 'plaid-zebra-vieil-or.jpg', alt: 'Plaid Zebra plié, motif zébré en jacquard' },
+  { cat: 'plaids', name: 'Plaid Uniwaffle', sub: '140x180 cm', colors: 6, price: '90 €', img: 'plaid-uniwaffle-vison.jpg', alt: 'Plaid Uniwaffle plié, tissage nid d’abeille' },
+  { cat: 'plaids', name: 'Plaid Zen', sub: '140x180 cm', colors: 12, price: '90 €', img: 'plaid-zen-bleu-nuit.jpg', alt: 'Plaid Zen plié, armure fine deux tons' },
+  { cat: 'plaids', name: 'Plaid Squares', sub: '140x180 cm', colors: 7, price: '90 €', img: 'plaid-squares-rose-poudre.jpg', alt: 'Plaid Squares plié, grands carreaux rose poudré' },
+  { cat: 'plaids', name: 'Plaid Curly', sub: '140x180 cm', colors: 6, price: '106 €', img: 'plaid-curly-naturel.jpg', alt: 'Plaid Curly plié, laine mérinos et fil bouclette' },
+  { cat: 'plaids', name: 'Plaid Stellar', sub: '140x180 cm ou 140x250 cm', colors: 6, price: 'Dès 90 €', img: 'plaid-stellar-corail.jpg', alt: 'Plaid Stellar plié, fil chiné corail' },
+  { cat: 'plaids', name: 'Plaid Ruby', sub: '140x180 cm ou 140x250 cm', colors: 5, price: 'Dès 90 €', img: 'plaid-ruby-taupe.jpg', alt: 'Plaid Ruby plié, petit damier taupe' },
+  { cat: 'dessus', name: 'Dessus de lit gaze de coton', sub: '130x220 cm', colors: 0, price: 'Dès 75 €', badge: 'Plusieurs coloris', img: 'dessus-de-lit-gaze.jpg', alt: 'Dessus de lit en gaze de coton à carreaux vichy terracotta, plié, avec pompons' },
+  { cat: 'coussins', name: 'Coussin velours à franges', sub: '45x45 cm ou 30x50 cm', colors: 0, price: 'Dès 40 €', badge: 'Plusieurs coloris', img: 'coussin-franges.jpg', alt: 'Coussin en tissu crème bordé de franges brunes' },
+  { cat: 'coussins', name: 'Coussin à volants', sub: '30x30 cm', colors: 0, price: '50 €', badge: 'Plusieurs coloris', img: 'coussin-volants.jpg', alt: 'Coussin rayé beige et blanc bordé de volants en lin écru' },
+  { cat: 'trousses', name: 'Petite trousse matelassée', sub: '44x51 cm', colors: 0, price: '38 €', badge: 'Plusieurs coloris', img: 'trousse-petite.jpg', alt: 'Deux trousses matelassées à motifs floraux, framboise et moutarde' },
+  { cat: 'trousses', name: 'Grande trousse matelassée', sub: '48x68 cm', colors: 0, price: '58 €', badge: 'Plusieurs coloris', img: 'trousse-grande.jpg', alt: 'Grande trousse matelassée à motif floral sur fond framboise' }
     ];
 
 const PLAIDS: Record<string, PlaidInfo> = {
@@ -336,12 +336,12 @@ export default function CollectionMaison() {
                         type="button"
                         aria-haspopup="dialog"
                         onClick={(e) => { e.stopPropagation(); open(); }}
-                        className="min-w-0 text-left bg-transparent border-none p-0 cursor-pointer font-['FreeSerif'] font-bold text-[15px] md:text-[18px] leading-tight text-[#3E2416] underline-offset-4 decoration-[#A0716B] group-hover:underline"
+                        className="min-w-0 text-left bg-transparent border-none p-0 cursor-pointer font-['FreeSerif'] font-bold text-[14px] md:text-[16px] leading-tight text-[#3E2416] underline-offset-4 decoration-[#A0716B] group-hover:underline"
                       >
                         {p.name}
                       </button>
                     ) : (
-                      <span className="min-w-0 font-['FreeSerif'] font-bold text-[15px] md:text-[18px] leading-tight text-[#3E2416]">{p.name}</span>
+                      <span className="min-w-0 font-['FreeSerif'] font-bold text-[14px] md:text-[16px] leading-tight text-[#3E2416]">{p.name}</span>
                     )}
                     {p.colors > 0 && (
                       <button
@@ -355,7 +355,7 @@ export default function CollectionMaison() {
                     )}
                   </div>
                   <div className="flex justify-between items-baseline gap-3">
-                    <span className="font-['DM_Sans'] uppercase tracking-[0.15em] text-[11px] text-[#7B514A]">{p.sub}</span>
+                    <span className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)]">{p.sub}</span>
                     <span className="flex-none font-['MaisonNeue'] font-light text-[13px] text-[var(--moka)]">{p.price}</span>
                   </div>
                 </div>
