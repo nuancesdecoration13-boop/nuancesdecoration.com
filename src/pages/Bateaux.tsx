@@ -7,7 +7,6 @@ export default function Bateaux() {
   return (
     <CategoryPage
       title="Sellerie bateau"
-      subtitle="SELLERIE NAUTIQUE SUR MESURE"
       h1Suffix="sur mesure"
       seoTitle="Sellerie bateau sur mesure à Marseille — Nuances Décoration"
       seoDescription="Sellerie bateau sur mesure : banquettes de cockpit, bains de soleil, couchages et matelas de cabine. Confection dans notre atelier à Marseille."

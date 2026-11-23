@@ -6,7 +6,7 @@ import { ProjectBlock, ReassuranceStrip } from '../components/BlogSections';
 
 interface CategoryPageProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   subtitleClassName?: string;
   description: string;
   features: string[];
@@ -67,16 +67,18 @@ export default function CategoryPage({
     <div className="min-h-screen">
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[60vh] bg-[var(--grege-p)]">
         <div className="flex flex-col justify-center px-8 py-16 md:px-16 md:py-20 order-2 md:order-1">
-          <span className={`font-['MaisonNeue'] font-thin ${subtitleClassName ?? 'text-[10px]'} tracking-[4px] uppercase text-[var(--primary)] mb-5 block`}>
-            {subtitle}
-          </span>
-          <h1 className="font-['FreeSerif'] font-black text-[44px] md:text-[60px] text-[var(--moka)] leading-[1.05] mb-6">
+          {subtitle && (
+            <span className={`font-['MaisonNeue'] font-thin ${subtitleClassName ?? 'text-[10px]'} tracking-[4px] uppercase text-[var(--primary)] mb-5 block`}>
+              {subtitle}
+            </span>
+          )}
+          <h1 className="font-['FreeSerif'] font-black text-[44px] md:text-[60px] text-[var(--moka)] leading-[1.05] mb-0">
             {title}
             {h1Suffix && (
-              <span className="block font-['DM_Sans'] font-medium text-[23px] md:text-[38px] leading-[1.1] text-[#A0716B] uppercase tracking-[0.26em] mt-1">{h1Suffix}</span>
+              <span className="block font-['MaisonNeue'] font-normal text-[17px] md:text-[24px] leading-[1.2] text-[#A0716B] uppercase tracking-[0.3em] mt-4">{h1Suffix}</span>
             )}
           </h1>
-          <div className="w-16 h-[2px] bg-[var(--primary)] mb-8"></div>
+          <div className="w-[120px] h-[3px] bg-[#A0716B] mt-8 mb-8"></div>
           <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9] max-w-md">
             {description}
           </p>

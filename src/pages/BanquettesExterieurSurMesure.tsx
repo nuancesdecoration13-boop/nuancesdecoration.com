@@ -6,12 +6,10 @@ import { outdoorGallery } from '../data/galleryItems';
 export default function BanquettesExterieurSurMesure() {
   return (
     <CategoryPage
-      title="Banquettes"
-      subtitle="BANQUETTES & COUSSINS D'EXTÉRIEUR"
-      h1Suffix="d'extérieur sur mesure"
+      title="Banquettes d'extérieur"
+      h1Suffix="sur mesure"
       seoTitle="Banquettes d'extérieur sur mesure à Marseille — Nuances Décoration"
       seoDescription="Banquettes, coussins, bains de soleil et transats d'extérieur sur mesure, en tissus d'extérieur. Confection dans notre atelier à Marseille."
-      subtitleClassName="text-[11px]"
       description="Nous confectionnons vos banquettes, coussins, bains de soleil et transats d'extérieur sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble les mousses et des tissus techniques traités pour l'extérieur, résistants aux UV et aux intempéries. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
       hideFeatures
       showHeroActions

@@ -13,20 +13,20 @@ export default function RealisationsIndoor() {
         {/* Ligne 1 — deux portraits */}
         <div className="flex gap-4 items-stretch">
           <div className="flex-1">
-            <img src={`${base}naunces-177.jpg`} alt="Réalisation indoor" className="w-full h-auto block" />
+            <img src={`${base}naunces-177.jpg`} alt="Réalisation en intérieur" className="w-full h-auto block" />
           </div>
           <div className="flex-1">
-            <img src={`${base}naunces-189.jpg`} alt="Réalisation indoor" className="w-full h-auto block" />
+            <img src={`${base}naunces-189.jpg`} alt="Réalisation en intérieur" className="w-full h-auto block" />
           </div>
         </div>
 
         {/* Ligne 2 — deux portraits */}
         <div className="flex gap-4 mt-4 items-stretch">
           <div className="flex-1">
-            <img src={`${base}naunces-202.jpg`} alt="Réalisation indoor" className="w-full h-auto block" />
+            <img src={`${base}naunces-202.jpg`} alt="Réalisation en intérieur" className="w-full h-auto block" />
           </div>
           <div className="flex-1">
-            <img src={`${base}naunces-200.jpg`} alt="Réalisation indoor" className="w-full h-auto block" />
+            <img src={`${base}naunces-200.jpg`} alt="Réalisation en intérieur" className="w-full h-auto block" />
           </div>
         </div>
       </div>

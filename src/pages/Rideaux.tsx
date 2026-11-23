@@ -8,7 +8,6 @@ export default function Rideaux() {
   return (
     <CategoryPage
       title="Rideaux"
-      subtitle="Rideaux sur mesure"
       h1Suffix="sur mesure"
       seoTitle="Rideaux sur mesure à Marseille — Nuances Décoration"
       seoDescription="Rideaux sur mesure confectionnés dans notre atelier à Marseille. Lin, velours, doublures occultantes ou thermiques. Conseil, mesures et pose à domicile."
@@ -73,7 +72,7 @@ export default function Rideaux() {
                     1. Choisissez votre tissu
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
-                    Lin, velours, tweed, coton, doublures thermiques, occultants, outdoor... Trouvez la matière qui saura répondre à vos envies !
+                    Lin, velours, tweed, coton, doublures thermiques, occultants, tissus d'extérieur... Trouvez la matière qui saura répondre à vos envies !
                   </p>
                 </div>
 

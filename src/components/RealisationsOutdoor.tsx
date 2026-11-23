@@ -24,24 +24,24 @@ export default function RealisationsOutdoor() {
         {/* Ligne 1 — deux portraits */}
         <div className="grid grid-cols-2 gap-3 aspect-[3/2]">
           <div className="h-full overflow-hidden">
-            <Img src={`${base}naunces-181.jpg`} alt="Réalisation outdoor" />
+            <Img src={`${base}naunces-181.jpg`} alt="Réalisation en extérieur" />
           </div>
           <div className="h-full overflow-hidden">
-            <Img src={`${base}naunces-182.jpg`} alt="Réalisation outdoor" />
+            <Img src={`${base}naunces-182.jpg`} alt="Réalisation en extérieur" />
           </div>
         </div>
 
         {/* Ligne 2 — portrait à gauche + deux paysages empilés à droite, même hauteur totale */}
         <div className="flex gap-3 mt-3 aspect-[3/2]">
           <div className="flex-1 overflow-hidden">
-            <Img src={`${base}IMG_1597.jpg`} alt="Réalisation outdoor" />
+            <Img src={`${base}IMG_1597.jpg`} alt="Réalisation en extérieur" />
           </div>
           <div className="grid grid-rows-2 gap-3 flex-1">
             <div className="h-full overflow-hidden">
-              <Img src={`${base}IMG_1594.jpg`} alt="Réalisation outdoor" />
+              <Img src={`${base}IMG_1594.jpg`} alt="Réalisation en extérieur" />
             </div>
             <div className="h-full overflow-hidden">
-              <Img src={`${base}IMG_1596.jpg`} alt="Réalisation outdoor" />
+              <Img src={`${base}IMG_1596.jpg`} alt="Réalisation en extérieur" />
             </div>
           </div>
         </div>

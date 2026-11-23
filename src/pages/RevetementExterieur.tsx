@@ -6,7 +6,7 @@ export default function RevetementExterieur() {
   return (
     <CategoryPage
       title="Revêtement Extérieur"
-      subtitle="Terrasses & espaces outdoor"
+      subtitle="Terrasses & espaces extérieurs"
       description="Nos revêtements extérieurs allient résistance et élégance pour vos espaces en plein air. Traités contre les UV, l'humidité et les intempéries, nos matériaux sélectionnés habillent terrasses, pergolas et façades avec un style affirmé et une longévité garantie."
       features={[
         'Matériaux traités UV et résistants aux intempéries',

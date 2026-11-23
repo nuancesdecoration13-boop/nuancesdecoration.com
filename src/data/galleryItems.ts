@@ -25,16 +25,16 @@ export const storesGallery: GalleryItem[] = [
 ];
  
 export const indoorGallery: GalleryItem[] = [
-  { image: 'naunces-177.jpg', alt: 'Réalisation indoor', reference: 'Tissu Lin Viscose', finish: 'Finition Wave' },
-  { image: 'naunces-189.jpg', alt: 'Réalisation indoor', reference: 'Tissu BAA', finish: 'Banquette et coussin' },
-  { image: 'naunces-202.jpg', alt: 'Réalisation indoor', reference: 'Tissu Flare et Gaze de Coton', finish: 'Coussins & dessus de lit' },
-  { image: 'naunces-200.jpg', alt: 'Réalisation indoor', reference: 'Tissu Lin Viscose', finish: 'Finition Wave' },
+  { image: 'naunces-177.jpg', alt: 'Réalisation en intérieur', reference: 'Tissu Lin Viscose', finish: 'Finition Wave' },
+  { image: 'naunces-189.jpg', alt: 'Réalisation en intérieur', reference: 'Tissu BAA', finish: 'Banquette et coussin' },
+  { image: 'naunces-202.jpg', alt: 'Réalisation en intérieur', reference: 'Tissu Flare et Gaze de Coton', finish: 'Coussins & dessus de lit' },
+  { image: 'naunces-200.jpg', alt: 'Réalisation en intérieur', reference: 'Tissu Lin Viscose', finish: 'Finition Wave' },
 ];
  
 export const outdoorGallery: GalleryItem[] = [
-  { image: 'naunces-181.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Cicada', finish: 'Banquettes & coussins avec passepoils' },
-  { image: 'naunces-182.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Cicada', finish: 'Banquettes & coussins avec passepoils' },
-  { image: 'IMG_1597.jpg', alt: 'Réalisation outdoor', reference: 'Tissu Polyskin', finish: 'Banquettes & coussins avec passepoils' },
+  { image: 'naunces-181.jpg', alt: 'Réalisation en extérieur', reference: 'Tissu Cicada', finish: 'Banquettes & coussins avec passepoils' },
+  { image: 'naunces-182.jpg', alt: 'Réalisation en extérieur', reference: 'Tissu Cicada', finish: 'Banquettes & coussins avec passepoils' },
+  { image: 'IMG_1597.jpg', alt: 'Réalisation en extérieur', reference: 'Tissu Polyskin', finish: 'Banquettes & coussins avec passepoils' },
 ];
  
 export const bateauxGallery: GalleryItem[] = [];
