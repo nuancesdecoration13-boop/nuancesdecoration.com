@@ -309,7 +309,7 @@ export default function CollectionMaison() {
                   c.id === cat ? 'bg-[#3E2416] text-[#F6F4F0]' : 'bg-[#EFEAE3] text-[#3E2416]'
                 }`}
               >
-                {c.label}
+                <span style={{ fontSize: '12px' }}>{c.label}</span>
               </button>
             ))}
           </nav>
