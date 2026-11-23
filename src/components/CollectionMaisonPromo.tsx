@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
-
+ 
 export default function CollectionMaisonPromo() {
   return (
-    <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start">
-      <div className="aspect-[3/4] overflow-hidden">
+    <div className="col-span-2 self-start grid grid-cols-1 sm:grid-cols-2 items-stretch">
+      <div className="relative aspect-[3/4] md:aspect-auto md:h-0 md:pb-[calc((100%_-_12px)*4/3)] overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}collection-maison-plaids.jpg`}
           alt="Trois plaids à franges suspendus : motif ondulé terracotta, motif ondulé vert olive et motif zébré camel"
-          className="w-full h-full object-cover block"
+          className="absolute inset-0 w-full h-full object-cover block"
           style={{ objectPosition: 'center 35%' }}
           loading="lazy"
         />
       </div>
-      <div className="sm:aspect-[3/4] bg-[var(--linen)] px-6 py-10 md:px-9 flex flex-col justify-center gap-4">
+      <div className="bg-[var(--linen)] px-6 py-10 md:px-9 flex flex-col justify-center gap-4">
         <p className="font-['MaisonNeue'] font-thin text-[10px] tracking-[4px] uppercase text-[var(--primary)] m-0">
           Plaids, coussins, dessus de lit, trousses
         </p>
