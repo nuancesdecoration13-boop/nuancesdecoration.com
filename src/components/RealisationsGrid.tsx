@@ -1,6 +1,6 @@
 import type { GalleryItem } from '../data/galleryItems';
 
-export default function RealisationsGrid({ items }: { items: GalleryItem[] }) {
+export default function RealisationsGrid({ items, after }: { items: GalleryItem[]; after?: React.ReactNode }) {
   if (items.length === 0) return null;
 
   return (
@@ -35,6 +35,7 @@ export default function RealisationsGrid({ items }: { items: GalleryItem[] }) {
               )}
             </div>
           ))}
+          {after}
         </div>
       </div>
     </section>
