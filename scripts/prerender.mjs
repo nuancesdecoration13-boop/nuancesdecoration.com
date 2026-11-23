@@ -25,6 +25,7 @@ const SEEDS = [
   '/histoire',
   '/contact',
   '/professionnels',
+  '/collection-maison',
   '/showroom',
   '/cgv',
 ];

@@ -16,6 +16,7 @@ import Histoire from './pages/Histoire';
 import Contact from './pages/Contact';
 import Showroom from './pages/Showroom';
 import Professionnels from './pages/Professionnels';
+import CollectionMaison from './pages/CollectionMaison';
 import CGV from './pages/CGV';
 import Conseils from './pages/Conseils';
 import Article from './pages/Article';
@@ -55,6 +56,7 @@ function App() {
             <Route path="/histoire" element={<Histoire />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/professionnels" element={<Professionnels />} />
+            <Route path="/collection-maison" element={<CollectionMaison />} />
             <Route path="/showroom" element={<Showroom />} />
             <Route path="/cgv" element={<CGV />} />
             <Route path="/conseils/:articleSlug" element={isBlogVisible ? <Article /> : <Navigate to="/" replace />} />
