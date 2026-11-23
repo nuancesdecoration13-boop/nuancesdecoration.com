@@ -9,6 +9,7 @@ export default function Rideaux() {
     <CategoryPage
       title="Rideaux"
       subtitle="Rideaux sur mesure"
+      h1Suffix="sur mesure"
       seoTitle="Rideaux sur mesure à Marseille — Nuances Décoration"
       seoDescription="Rideaux sur mesure confectionnés dans notre atelier à Marseille. Lin, velours, doublures occultantes ou thermiques. Conseil, mesures et pose à domicile."
       description="Nous confectionnons vos rideaux sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, le tombé, les finitions et la doublure, thermique ou occultante. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
@@ -101,7 +102,7 @@ export default function Rideaux() {
                     />
                   </div>
                   <h3 className="font-['FreeSerif'] font-black text-[22px] text-[var(--moka)] leading-[1.1] mb-3">
-                    3. Choissisez votre support
+                    3. Choisissez votre support
                   </h3>
                   <p className="font-['MaisonNeue'] font-light text-[13px] text-[var(--warm)] leading-[1.8]">
                     Tringle ou rails — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu et la finition choisis. Nous proposons une gamme complète en laiton, nickel satiné, noir ou blanc, brillant ou mat, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.

@@ -8,6 +8,7 @@ export default function Voilages() {
     <CategoryPage
       title="Voilages"
       subtitle="VOILAGES SUR MESURE"
+      h1Suffix="sur mesure"
       seoTitle="Voilages sur mesure à Marseille — Nuances Décoration"
       seoDescription="Voilages sur mesure confectionnés dans notre atelier à Marseille. Tissus légers, finitions au choix. Conseil, prise de mesures et pose à domicile."
       description="Nous confectionnons vos voilages sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble la matière, la transparence, le tombé et les finitions. Nous prenons les mesures, réalisons la confection, puis assurons la pose."
@@ -17,7 +18,7 @@ export default function Voilages() {
       discoveryCards={[
         { title: '1. Choisissez votre tissu', description: 'Lin, velours, tweed, coton, doublures thermiques, occultants, outdoor... Trouvez la matière qui saura répondre à vos envies !', image: `${import.meta.env.BASE_URL}500-references.jpg` },
         { title: '2. Choisissez votre finition', description: 'Wave, œillets, plis flamands, pince plate, galon fronceur... Chaque finition est réalisée avec soin pour correspondre au rendu souhaité.', image: `${import.meta.env.BASE_URL}finissions.jpg` },
-        { title: '3. Choissisez votre support', description: 'Tringle ou rails — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu et la finition choisis. Nous proposons une gamme complète en laiton, nickel satiné, noir ou blanc, brillant ou mat, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.', image: `${import.meta.env.BASE_URL}supports.jpg` },
+        { title: '3. Choisissez votre support', description: 'Tringle ou rails — chaque support est sélectionné pour sa robustesse et son harmonie avec le tissu et la finition choisis. Nous proposons une gamme complète en laiton, nickel satiné, noir ou blanc, brillant ou mat, pour un résultat cohérent du sol au plafond. Le détail qui fait toute la différence.', image: `${import.meta.env.BASE_URL}supports.jpg` },
       ]}
       features={[
         'Tissus légers et transparents de haute qualité',

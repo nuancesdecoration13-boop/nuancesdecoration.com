@@ -192,13 +192,13 @@ export default function Home() {
       link: '/realisations/stores/',
     },
     {
-      title: 'Indoor',
+      title: 'Intérieur',
       subtitle: 'Banquettes, coussins & Linge de maison',
       image: `${import.meta.env.BASE_URL}linge_maison.jpg`,
       link: '/realisations/banquettes/',
     },
     {
-      title: 'Outdoor',
+      title: 'Extérieur',
       subtitle: 'Banquettes, coussins & transats',
       image: `${import.meta.env.BASE_URL}outdoor-home.jpg`,
       link: '/realisations/banquettes-exterieur-sur-mesure/',
@@ -271,7 +271,7 @@ export default function Home() {
                       {s.title}
                     </h3>
                     <p className="h-[20px] font-['MaisonNeue'] font-normal text-[8px] tracking-[3px] uppercase text-[var(--linen)] leading-[1.2]">
-                      {s.title === 'Indoor' ? (
+                      {s.title === 'Intérieur' ? (
                         <span style={{ fontSize: '9px' }}>
                           <span style={{ fontSize: '10px' }}>{s.subtitle}</span>
                         </span>

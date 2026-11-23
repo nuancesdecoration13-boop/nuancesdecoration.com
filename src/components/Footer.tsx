@@ -5,8 +5,8 @@ const creationLinks = [
   { label: 'Rideaux', to: '/realisations/rideaux/' },
   { label: 'Voilages', to: '/realisations/voilages/' },
   { label: 'Stores', to: '/realisations/stores/' },
-  { label: 'Indoor', to: '/realisations/banquettes/' },
-  { label: 'Outdoor', to: '/realisations/banquettes-exterieur-sur-mesure/' },
+  { label: 'Intérieur', to: '/realisations/banquettes/' },
+  { label: 'Extérieur', to: '/realisations/banquettes-exterieur-sur-mesure/' },
   { label: 'Sellerie bateau', to: '/realisations/nautique-sellerie-sur-mesure/' },
   { label: 'Professionnels', to: '/professionnels/' },
 ];

@@ -9,6 +9,7 @@ export default function Stores() {
     <CategoryPage
       title="Stores"
       subtitle="STORES SUR MESURE"
+      h1Suffix="sur mesure"
       seoTitle="Stores sur mesure à Marseille — Nuances Décoration"
       seoDescription="Stores bateaux, enrouleurs et panneaux japonais sur mesure, confectionnés dans notre atelier à Marseille. Prise de mesures et pose à domicile."
       description="Nous confectionnons vos stores bateaux, stores enrouleurs et panneaux japonais sur mesure, dans notre atelier. Tout commence par un rendez-vous, en showroom ou chez vous : nous choisissons ensemble le tissu, les finitions et le niveau d'occultation. Nous prenons les mesures, réalisons la confection, puis assurons la pose."

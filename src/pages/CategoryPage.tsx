@@ -24,6 +24,7 @@ interface CategoryPageProps {
   showProjectSections?: boolean;
   seoTitle?: string;
   seoDescription?: string;
+  h1Suffix?: string;
 }
 
 function truncateAtSentence(text: string, max: number): string {
@@ -54,6 +55,7 @@ export default function CategoryPage({
   showProjectSections = true,
   seoTitle,
   seoDescription,
+  h1Suffix,
 }: CategoryPageProps) {
   const { pathname } = useLocation();
   const finalSeoTitle = seoTitle ?? `${title} sur mesure — Nuances Décoration`;
@@ -70,6 +72,9 @@ export default function CategoryPage({
           </span>
           <h1 className="font-['FreeSerif'] font-black text-[44px] md:text-[60px] text-[var(--moka)] leading-[1.05] mb-6">
             {title}
+            {h1Suffix && (
+              <span className="block text-[28px] md:text-[36px] leading-[1.1]">{h1Suffix}</span>
+            )}
           </h1>
           <div className="w-16 h-[2px] bg-[var(--primary)] mb-8"></div>
           <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--warm)] leading-[1.9] max-w-md">
