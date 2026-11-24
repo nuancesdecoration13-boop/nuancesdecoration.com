@@ -187,7 +187,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
                 tabIndex={-1}
               />
               
-              <formref={formRef} className="space-y-6" onSubmit={handleSubmit}>
+              <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="website"
