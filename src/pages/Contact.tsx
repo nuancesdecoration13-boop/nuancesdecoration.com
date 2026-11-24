@@ -10,61 +10,45 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
 
 
-const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  setSubmitState("loading");
+
+  setSubmitState("idle");
   setErrorMessage("");
 
-  const form = e.currentTarget;
-  const formData = new FormData(form);
+  const formData = new FormData(e.currentTarget);
 
-  const payload = {
-    name: String(formData.get("name") || ""),
-    email: String(formData.get("email") || ""),
-    phone: String(formData.get("phone") || ""),
-    appointment_type:
-      appointmentType === "domicile" ? "À domicile" : "Au showroom",
-    message: String(formData.get("message") || ""),
-    _subject: "Nouvelle demande - Nuances Décoration",
-    _template: "table",
-  };
+  formData.set(
+    "appointment_type",
+    appointmentType === "domicile"
+      ? "À domicile"
+      : "Au showroom"
+  );
 
-  try {
-    const response = await fetch(
-      "https://formsubmit.co/ajax/nuancesdecoration13@gmail.com",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      }
-    );
+  // Formulaire HTML pour éviter les problèmes CORS
+  const postForm = document.createElement("form");
 
-    const result = await response.json();
+  postForm.method = "POST";
+  postForm.action = "COLLER_ICI_TON_URL_GOOGLE_APPS_SCRIPT";
+  postForm.target = "_blank";
+  postForm.style.display = "none";
 
-    if (
-      !response.ok ||
-      (result.success !== true && result.success !== "true")
-    ) {
-      throw new Error(
-        result.message || "L'envoi de votre demande a échoué."
-      );
-    }
+  formData.forEach((value, key) => {
+    if (typeof value !== "string") return;
 
-    setSubmitState("success");
-    form.reset();
-    setAppointmentType("");
-  } catch (err) {
-    setSubmitState("error");
-    setErrorMessage(
-      err instanceof Error
-        ? err.message
-        : "Une erreur est survenue lors de l'envoi."
-    );
-  }
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = key;
+    input.value = value;
+    postForm.appendChild(input);
+  });
+
+  document.body.appendChild(postForm);
+  postForm.submit();
+  postForm.remove();
 };
+
 
 
   return (
