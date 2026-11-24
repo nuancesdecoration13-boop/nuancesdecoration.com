@@ -96,7 +96,15 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
               )}
 
               <form className="space-y-6" onSubmit={handleSubmit}>
-                <div>
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute left-[-10000px]"
+                />
+                                <div>
                   <label className="block font-['MaisonNeue'] font-light text-[10px] tracking-[2px] uppercase text-[var(--warm)] mb-2">
                     Nom complet
                   </label>
