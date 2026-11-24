@@ -1,7 +1,7 @@
 import CategoryPage from './CategoryPage';
 import { drawWeave, drawFolds } from '../utils/canvasDrawing';
 import RealisationsGrid from '../components/RealisationsGrid';
-import StoresTypesSection from '../components/StoresTypesSection';
+import StoresConfigurator from '../components/StoresConfigurator';
 import { storesGallery } from '../data/galleryItems';
 
 export default function Stores() {
@@ -35,7 +35,7 @@ export default function Stores() {
       ]}
       extraContent={
         <>
-          <StoresTypesSection />
+          <StoresConfigurator />
           <RealisationsGrid items={storesGallery} />
         </>
       }
