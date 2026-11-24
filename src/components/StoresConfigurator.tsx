@@ -349,7 +349,7 @@ export default function StoresConfigurator() {
     <section className="bg-[var(--linen)] px-0 pt-2 pb-8 md:px-12 md:pt-14 md:pb-16">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 items-stretch">
         <img
-          src={`${import.meta.env.BASE_URL}images/stores-header.jpg`}
+          src={`${import.meta.env.BASE_URL}config-store-bateau.jpg`}
           alt="Store bateau sur mesure en lin naturel au-dessus d'un évier de cuisine"
           className="hidden md:block w-full h-full min-h-[420px] object-cover"
           loading="lazy"
