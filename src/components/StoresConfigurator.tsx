@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { X, Info, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
 type CatId = 'types' | 'tissus' | 'pose';
@@ -56,6 +56,8 @@ type SubmitState = 'idle' | 'loading' | 'success' | 'error';
 
 function AppointmentModal({ summary, onClose }: { summary: string; onClose: () => void }) {
   const [rdv, setRdv] = useState('');
+  const pendingIdRef = useRef<string | null>(null);
+  const timeoutRef = useRef<number | null>(null);
   const [state, setState] = useState<SubmitState>('idle');
   const [error, setError] = useState('');
 
@@ -70,55 +72,141 @@ function AppointmentModal({ summary, onClose }: { summary: string; onClose: () =
     };
   }, [onClose]);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!rdv) {
-      setState('error');
-      setError('Choisissez un type de rendez-vous : au showroom ou à domicile.');
+  
+useEffect(() => {
+  const handleMessage = (event: MessageEvent) => {
+    const origineValide =
+      event.origin === "https://script.google.com" ||
+      /^https:\/\/([a-z0-9-]+\.)*googleusercontent\.com$/i.test(
+        event.origin
+      );
+
+    if (!origineValide) return;
+
+    const data = event.data;
+
+    if (
+      data?.type !== "nuances-contact-result" ||
+      !pendingIdRef.current ||
+      data.requestId !== pendingIdRef.current
+    ) {
       return;
     }
-    setState('loading');
-    setError('');
-    const form = e.currentTarget;
-    const fd = new FormData(form);
-    const details = String(fd.get('message') || '').trim();
-    const message = `Demande depuis la page Stores\nSélection : ${summary}\n\n${details || 'Pas de précision ajoutée.'}`;
 
-    const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-    if (!supabaseKey || !supabaseUrl) {
-      setState('error');
-      setError("Le formulaire n'est pas disponible pour le moment. Veuillez nous appeler ou nous écrire directement.");
-      return;
+    pendingIdRef.current = null;
+
+    if (timeoutRef.current !== null) {
+      window.clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
-    const fnBase = import.meta.env.DEV ? '/api/functions/v1' : `${supabaseUrl}/functions/v1`;
 
-    try {
-      const response = await fetch(`${fnBase}/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${supabaseKey}`,
-          apikey: supabaseKey,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: String(fd.get('name') || ''),
-          email: String(fd.get('email') || ''),
-          phone: String(fd.get('phone') || ''),
-          appointment_type: rdv,
-          message,
-        }),
-      });
-      if (!response.ok) throw new Error("Votre demande n'a pas pu être envoyée. Veuillez réessayer.");
-      const result = await response.json().catch(() => ({}));
-      if (result.error) throw new Error(result.error);
-      setState('success');
-      form.reset();
-    } catch (err) {
-      setState('error');
-      setError(err instanceof Error && err.message ? err.message : "Votre demande n'a pas pu être envoyée. Veuillez réessayer.");
+    if (data.success === true) {
+      setState("success");
+    } else {
+      setState("error");
+      setError(
+        "L'envoi a échoué. Veuillez réessayer."
+      );
     }
   };
+
+  window.addEventListener("message", handleMessage);
+
+  return () => {
+    window.removeEventListener("message", handleMessage);
+
+    if (timeoutRef.current !== null) {
+      window.clearTimeout(timeoutRef.current);
+    }
+  };
+}, []);
+
+
+
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  if (pendingIdRef.current) return;
+
+  if (!rdv) {
+    setState("error");
+    setError(
+      "Choisissez un type de rendez-vous : au showroom ou à domicile."
+    );
+    return;
+  }
+
+  setState("loading");
+  setError("");
+
+  const formData = new FormData(e.currentTarget);
+
+  const details = String(formData.get("message") || "").trim();
+
+  const message =
+    "Demande depuis la page Stores\n" +
+    "Sélection : " + summary + "\n\n" +
+    (details || "Pas de précision ajoutée.");
+
+  formData.set(
+    "appointment_type",
+    rdv === "domicile" ? "À domicile" : "Au showroom"
+  );
+
+  formData.set("message", message);
+
+  const requestId = crypto.randomUUID();
+  formData.set("request_id", requestId);
+  pendingIdRef.current = requestId;
+
+  try {
+    const postForm = document.createElement("form");
+
+    postForm.method = "POST";
+    postForm.action =
+    "https://script.google.com/macros/s/AKfycbw201Tew-7x9Dz7aJuwfISTcPxhc3lGhm71VovfTwjfWavYOilyiTw-xPMk7H-kwzmJ/exec";
+    postForm.target = "nuances-stores-target";
+    postForm.style.display = "none";
+
+    formData.forEach((value, key) => {
+      if (typeof value !== "string") return;
+
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = key;
+      input.value = value;
+
+      postForm.appendChild(input);
+    });
+
+    document.body.appendChild(postForm);
+
+    try {
+      postForm.submit();
+    } finally {
+      postForm.remove();
+    }
+
+    timeoutRef.current = window.setTimeout(() => {
+      if (pendingIdRef.current !== requestId) return;
+
+      pendingIdRef.current = null;
+      setState("error");
+      setError(
+        "Confirmation indisponible. Vérifiez votre boîte Gmail " +
+        "avant de réessayer pour éviter un doublon."
+      );
+    }, 30000);
+
+  } catch {
+    pendingIdRef.current = null;
+    setState("error");
+    setError(
+      "Impossible de lancer l'envoi. Veuillez réessayer."
+    );
+  }
+};
+
 
   return (
     <div className="fixed inset-0 z-[200] bg-black/45 flex items-start justify-center p-3 md:p-10 overflow-y-auto" onClick={onClose}>
@@ -129,11 +217,21 @@ function AppointmentModal({ summary, onClose }: { summary: string; onClose: () =
         onClick={(e) => e.stopPropagation()}
         className="relative w-full max-w-[560px] bg-white px-5 pt-8 pb-6 md:px-11 md:pt-11 md:pb-9"
       >
-        <button type="button" aria-label="Fermer" onClick={onClose} className="absolute top-2 right-2 w-11 h-11 flex items-center justify-center bg-transparent border-none cursor-pointer text-[var(--moka)]">
-          <X size={18} />
-        </button>
+        
+<button type="button" aria-label="Fermer" onClick={onClose} className="absolute top-2 right-2 w-11 h-11 flex items-center justify-center bg-transparent border-none cursor-pointer text-[var(--moka)]">
+  <X size={18} />
+</button>
 
-        {state === 'success' ? (
+<iframe
+  name="nuances-stores-target"
+  title="Confirmation de l'envoi"
+  className="hidden"
+  aria-hidden="true"
+  tabIndex={-1}
+/>
+
+{state === 'success' ? (
+
           <div className="flex flex-col items-center text-center gap-3.5 pt-6 pb-2">
             <CheckCircle2 size={40} strokeWidth={1.4} className="text-[var(--primary)]" />
             <h2 className="font-['FreeSerif'] font-black text-[28px] text-[var(--moka)] leading-[1.15] m-0">Demande envoyée</h2>
@@ -159,6 +257,7 @@ function AppointmentModal({ summary, onClose }: { summary: string; onClose: () =
             <div className="bg-[var(--linen)] px-5 py-4 mb-6">
               <p className={`${LABEL} m-0 mb-1.5`}>Votre store sur mesure</p>
               <p className="font-['MaisonNeue'] font-light text-[14px] text-[var(--moka)] m-0">{summary}</p>
+              
             </div>
 
             {state === 'error' && (
@@ -169,6 +268,16 @@ function AppointmentModal({ summary, onClose }: { summary: string; onClose: () =
             )}
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-[18px]">
+              
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="absolute left-[-10000px]"
+            />
+
               <div>
                 <label htmlFor="rdv-name" className={FIELD_LABEL}>Nom complet</label>
                 <input id="rdv-name" type="text" name="name" required placeholder="Jean Dupont" disabled={state === 'loading'} className={FIELD} />
