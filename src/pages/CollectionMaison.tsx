@@ -286,8 +286,8 @@ export default function CollectionMaison() {
   return (
     <>
       <Seo
-        title="Notre collection maison — Nuances Décoration"
-        description="Plaids, coussins, dessus de lit et trousses : des pièces disponibles dans notre showroom au 63 Avenue de Montredon à Marseille, ou sur commande."
+        title="Plaids, coussins et linge de maison à Marseille | Nuances Décoration"
+        description="Découvrez notre collection de plaids, coussins, dessus de lit et trousses à Marseille. Pièces disponibles au showroom ou sur commande."
         path={pathname}
       />
       <header className="bg-[var(--grege-p)] px-4 pt-12 pb-10 md:px-12 md:pt-16 md:pb-12">
