@@ -9,76 +9,63 @@ export default function Contact() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitState("loading");
-    setErrorMessage("");
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const name = String(formData.get("name") || "");
-    const email = String(formData.get("email") || "");
-    const phone = String(formData.get("phone") || "");
-    const message = String(formData.get("message") || "");
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setSubmitState("loading");
+  setErrorMessage("");
 
-    const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const form = e.currentTarget;
+  const formData = new FormData(form);
 
-    if (!supabaseKey || !supabaseUrl) {
-      setSubmitState("error");
-      setErrorMessage("Le formulaire de contact n'est pas disponible pour le moment. Veuillez nous appeler ou envoyer un email directement.");
-      return;
-    }
-
-    // In dev/preview, use the Vite proxy to avoid CORS issues.
-    // In production (static hosting), call Supabase directly — the edge function has CORS *.
-    const fnBase = import.meta.env.DEV
-      ? "/api/functions/v1"
-      : `${supabaseUrl}/functions/v1`;
-
-    try {
-      const response = await fetch(
-        `${fnBase}/send-contact-email`,
-        {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${supabaseKey}`,
-            "apikey": supabaseKey,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            phone,
-            appointment_type: appointmentType,
-            message,
-          }),
-        },
-      );
-
-      if (!response.ok) {
-        const errText = await response.text().catch(() => "");
-        console.error("Contact form failed:", response.status, errText);
-        throw new Error("Votre demande n'a pas pu être enregistrée. Veuillez réessayer.");
-      }
-
-      const result = await response.json().catch(() => ({}));
-      if (result.error) {
-        throw new Error(result.error);
-      }
-
-      setSubmitState("success");
-      form.reset();
-      setAppointmentType("");
-    } catch (err) {
-      setSubmitState("error");
-      setErrorMessage(
-        err instanceof Error && err.message
-          ? err.message
-          : "Votre demande n'a pas pu être enregistrée. Veuillez réessayer.",
-      );
-    }
+  const payload = {
+    name: String(formData.get("name") || ""),
+    email: String(formData.get("email") || ""),
+    phone: String(formData.get("phone") || ""),
+    appointment_type:
+      appointmentType === "domicile" ? "À domicile" : "Au showroom",
+    message: String(formData.get("message") || ""),
+    _subject: "Nouvelle demande - Nuances Décoration",
+    _template: "table",
   };
+
+  try {
+    const response = await fetch(
+      "https://formsubmit.co/ajax/nuancesdecoration13@gmail.com",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    const result = await response.json();
+
+    if (
+      !response.ok ||
+      (result.success !== true && result.success !== "true")
+    ) {
+      throw new Error(
+        result.message || "L'envoi de votre demande a échoué."
+      );
+    }
+
+    setSubmitState("success");
+    form.reset();
+    setAppointmentType("");
+  } catch (err) {
+    setSubmitState("error");
+    setErrorMessage(
+      err instanceof Error
+        ? err.message
+        : "Une erreur est survenue lors de l'envoi."
+    );
+  }
+};
+
 
   return (
     <div className="min-h-screen">
