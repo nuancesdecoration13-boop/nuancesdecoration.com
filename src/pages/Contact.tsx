@@ -30,7 +30,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   const postForm = document.createElement("form");
 
   postForm.method = "POST";
-  postForm.action = "COLLER_ICI_TON_URL_GOOGLE_APPS_SCRIPT";
+  postForm.action = "https://script.google.com/macros/s/AKfycbw201Tew-7x9Dz7aJuwfISTcPxhc3lGhm71VovfTwjfWavYOilyiTw-xPMk7H-kwzmJ/exec";
   postForm.target = "_blank";
   postForm.style.display = "none";
 
