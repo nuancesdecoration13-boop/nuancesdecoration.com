@@ -75,7 +75,7 @@ export default function CategoryPage({
           <h1 className="font-['FreeSerif'] font-black text-[44px] md:text-[60px] text-[var(--moka)] leading-[1.05] mb-0">
             {title}
             {h1Suffix && (
-              <span className="block font-['MaisonNeue'] font-normal text-[17px] md:text-[24px] leading-[1.2] text-[#A0716B] uppercase tracking-[0.3em] mt-4">{h1Suffix}</span>
+              <span className="block font-['MaisonNeue'] font-light text-[10px] md:text-[14px] leading-[1.2] text-[#A0716B] uppercase tracking-[0.5em] mt-2 md:mt-3">{h1Suffix}</span>
             )}
           </h1>
           <div className="w-[120px] h-[3px] bg-[#A0716B] mt-8 mb-8"></div>
