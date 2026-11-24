@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, useRef, type FormEvent } from "react";
 import { MapPin, Phone, Mail, Clock, Info, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import Seo from "../components/Seo";
 
@@ -10,11 +10,67 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
 
 
+const formRef = useRef<HTMLFormElement>(null);
+const pendingIdRef = useRef<string | null>(null);
+const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+useEffect(() => {
+  const handleMessage = (event: MessageEvent) => {
+    const origineValide =
+      event.origin === "https://script.google.com" ||
+      /^https:\/\/([a-z0-9-]+\.)*googleusercontent\.com$/i.test(
+        event.origin
+      );
+
+    if (!origineValide) return;
+
+    const data = event.data;
+
+    if (
+      data?.type !== "nuances-contact-result" ||
+      !pendingIdRef.current ||
+      data.requestId !== pendingIdRef.current
+    ) {
+      return;
+    }
+
+    pendingIdRef.current = null;
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+
+    if (data.success === true) {
+      setSubmitState("success");
+      formRef.current?.reset();
+      setAppointmentType("");
+    } else {
+      setSubmitState("error");
+      setErrorMessage(
+        "L'envoi a échoué. Veuillez réessayer."
+      );
+    }
+  };
+
+  window.addEventListener("message", handleMessage);
+
+  return () => {
+    window.removeEventListener("message", handleMessage);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
+}, []);
+
+
+
+
 
 const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  setSubmitState("idle");
+  if (pendingIdRef.current) return;
+
+  setSubmitState("loading");
   setErrorMessage("");
 
   const formData = new FormData(e.currentTarget);
@@ -26,28 +82,56 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       : "Au showroom"
   );
 
-  // Formulaire HTML pour éviter les problèmes CORS
-  const postForm = document.createElement("form");
+  const requestId = crypto.randomUUID();
+  formData.set("request_id", requestId);
+  pendingIdRef.current = requestId;
 
-  postForm.method = "POST";
-  postForm.action = "https://script.google.com/macros/s/AKfycbw201Tew-7x9Dz7aJuwfISTcPxhc3lGhm71VovfTwjfWavYOilyiTw-xPMk7H-kwzmJ/exec";
-  postForm.target = "_blank";
-  postForm.style.display = "none";
+  try {
+    const postForm = document.createElement("form");
 
-  formData.forEach((value, key) => {
-    if (typeof value !== "string") return;
+    postForm.method = "POST";
+    postForm.action = "https://script.google.com/macros/s/AKfycbw201Tew-7x9Dz7aJuwfISTcPxhc3lGhm71VovfTwjfWavYOilyiTw-xPMk7H-kwzmJ/exec";
+    postForm.target = "nuances-contact-target";
+    postForm.style.display = "none";
 
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = key;
-    input.value = value;
-    postForm.appendChild(input);
-  });
+    formData.forEach((value, key) => {
+      if (typeof value !== "string") return;
 
-  document.body.appendChild(postForm);
-  postForm.submit();
-  postForm.remove();
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = key;
+      input.value = value;
+      postForm.appendChild(input);
+    });
+
+    document.body.appendChild(postForm);
+
+    try {
+      postForm.submit();
+    } finally {
+      postForm.remove();
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      if (pendingIdRef.current !== requestId) return;
+
+      pendingIdRef.current = null;
+      setSubmitState("error");
+      setErrorMessage(
+        "Confirmation indisponible. Vérifiez la réception " +
+        "du message avant de réessayer pour éviter un doublon."
+      );
+    }, 30000);
+
+  } catch {
+    pendingIdRef.current = null;
+    setSubmitState("error");
+    setErrorMessage(
+      "Impossible de lancer l'envoi. Veuillez réessayer."
+    );
+  }
 };
+
 
 
 
@@ -95,7 +179,15 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
                 </div>
               )}
 
-              <form className="space-y-6" onSubmit={handleSubmit}>
+              <iframe
+                name="nuances-contact-target"
+                title="Confirmation de l'envoi"
+                className="hidden"
+                aria-hidden="true"
+                tabIndex={-1}
+              />
+              
+              <formref={formRef} className="space-y-6" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="website"
