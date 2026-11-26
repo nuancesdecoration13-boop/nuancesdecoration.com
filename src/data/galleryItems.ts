@@ -32,8 +32,8 @@ export const indoorGallery: GalleryItem[] = [
 ];
  
 export const outdoorGallery: GalleryItem[] = [
-  { image: 'exterieur-natte-enduit-1.jpg', alt: 'Banquette d’extérieur maçonnée sur mesure sur une terrasse, coussins écrus et bleus à passepoils', reference: 'Tissu Natte Enduit', finish: 'Banquettes & coussins avec passepoils' },
   { image: 'exterieur-natte-enduit-2.jpg', alt: 'Détail de l’assise d’une banquette d’extérieur sur mesure, passepoil blanc le long de l’arête', reference: 'Tissu Natte Enduit', finish: 'Banquettes & coussins avec passepoils' },
+  { image: 'exterieur-natte-enduit-1.jpg', alt: 'Banquette d’extérieur maçonnée sur mesure sur une terrasse, coussins écrus et bleus à passepoils', reference: 'Tissu Natte Enduit', finish: 'Banquettes & coussins avec passepoils' },
   { image: 'naunces-181.jpg', alt: 'Réalisation en extérieur', reference: 'Tissu Cicada', finish: 'Banquettes & coussins avec passepoils' },
   { image: 'naunces-182.jpg', alt: 'Réalisation en extérieur', reference: 'Tissu Cicada', finish: 'Banquettes & coussins avec passepoils' },
   { image: 'IMG_1597.jpg', alt: 'Réalisation en extérieur', reference: 'Tissu Polyskin', finish: 'Banquettes & coussins avec passepoils' },
